@@ -1,0 +1,4379 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local Gui = {
+	Character = Instance.new("Frame"),
+	Title = Instance.new("TextLabel"),
+	Line = Instance.new("ImageLabel"),
+	listFrame = Instance.new("Frame"),
+	UIListLayout = Instance.new("UIListLayout"),
+	_2_Jumpheight = Instance.new("Frame"),
+	Slider = Instance.new("Frame"),
+	Slider_2 = Instance.new("TextButton"),
+	Indicator = Instance.new("Frame"),
+	HolderButton = Instance.new("TextLabel"),
+	UICorner = Instance.new("UICorner"),
+	Value = Instance.new("TextLabel"),
+	UICorner_2 = Instance.new("UICorner"),
+	SliderImg = Instance.new("ImageLabel"),
+	UICorner_3 = Instance.new("UICorner"),
+	UICorner_4 = Instance.new("UICorner"),
+	UIGradient = Instance.new("UIGradient"),
+	Sliderbg = Instance.new("ImageLabel"),
+	JumpheightTitle = Instance.new("TextLabel"),
+	Value_2 = Instance.new("TextLabel"),
+	UICorner_5 = Instance.new("UICorner"),
+	AbsoluteValue = Instance.new("TextLabel"),
+	_1_Walkspeed = Instance.new("Frame"),
+	Slider_3 = Instance.new("Frame"),
+	Slider_4 = Instance.new("TextButton"),
+	Indicator_2 = Instance.new("Frame"),
+	HolderButton_2 = Instance.new("TextLabel"),
+	UICorner_6 = Instance.new("UICorner"),
+	Value_3 = Instance.new("TextLabel"),
+	UICorner_7 = Instance.new("UICorner"),
+	SliderImg_2 = Instance.new("ImageLabel"),
+	UICorner_8 = Instance.new("UICorner"),
+	UICorner_9 = Instance.new("UICorner"),
+	UIGradient_2 = Instance.new("UIGradient"),
+	Sliderbg_2 = Instance.new("ImageLabel"),
+	WalkspeedTitle = Instance.new("TextLabel"),
+	Value_4 = Instance.new("TextLabel"),
+	UICorner_10 = Instance.new("UICorner"),
+	AbsoluteValue_2 = Instance.new("TextLabel"),
+	_3_Fly = Instance.new("Frame"),
+	Checkbox = Instance.new("ImageButton"),
+	Title_2 = Instance.new("TextLabel"),
+	_7_ClickToTP = Instance.new("Frame"),
+	Checkbox_2 = Instance.new("ImageButton"),
+	Title_3 = Instance.new("TextLabel"),
+	_8_InfiniteJump = Instance.new("Frame"),
+	Checkbox_3 = Instance.new("ImageButton"),
+	Title_4 = Instance.new("TextLabel"),
+	_4_NoClip = Instance.new("Frame"),
+	Checkbox_4 = Instance.new("ImageButton"),
+	Title_5 = Instance.new("TextLabel"),
+	_5_PartXray = Instance.new("Frame"),
+	Checkbox_5 = Instance.new("ImageButton"),
+	Title_6 = Instance.new("TextLabel"),
+	_6_PlayerXray = Instance.new("Frame"),
+	Checkbox_6 = Instance.new("ImageButton"),
+	Title_7 = Instance.new("TextLabel"),
+	_2_zFlySpeed = Instance.new("Frame"),
+	Slider_5 = Instance.new("Frame"),
+	Slider_6 = Instance.new("TextButton"),
+	Indicator_3 = Instance.new("Frame"),
+	HolderButton_3 = Instance.new("TextLabel"),
+	UICorner_11 = Instance.new("UICorner"),
+	Value_5 = Instance.new("TextLabel"),
+	UICorner_12 = Instance.new("UICorner"),
+	SliderImg_3 = Instance.new("ImageLabel"),
+	UICorner_13 = Instance.new("UICorner"),
+	UICorner_14 = Instance.new("UICorner"),
+	UIGradient_3 = Instance.new("UIGradient"),
+	Sliderbg_3 = Instance.new("ImageLabel"),
+	WalkspeedTitle_2 = Instance.new("TextLabel"),
+	Value_6 = Instance.new("TextLabel"),
+	UICorner_15 = Instance.new("UICorner"),
+	AbsoluteValue_3 = Instance.new("TextLabel"),
+	coordsFrame = Instance.new("Frame"),
+	CurrentCoords = Instance.new("TextLabel"),
+	CoordsLabel = Instance.new("TextLabel"),
+	Coords2Clipboard = Instance.new("ImageButton"),
+	HatScripts = Instance.new("Frame"),
+	Title_8 = Instance.new("TextLabel"),
+	Pages = Instance.new("Frame"),
+	UIPageLayout = Instance.new("UIPageLayout"),
+	Page1 = Instance.new("Frame"),
+	BrickCarScript = Instance.new("Frame"),
+	ScriptLoadButton = Instance.new("TextButton"),
+	BG = Instance.new("ImageLabel"),
+	ViewHats = Instance.new("ImageButton"),
+	SwordWingsScript = Instance.new("Frame"),
+	ScriptLoadButton_2 = Instance.new("TextButton"),
+	BG_2 = Instance.new("ImageLabel"),
+	ViewHats_2 = Instance.new("ImageButton"),
+	ElephantTrunk = Instance.new("Frame"),
+	ScriptLoadButton_3 = Instance.new("TextButton"),
+	BG_3 = Instance.new("ImageLabel"),
+	ViewHats_3 = Instance.new("ImageButton"),
+	PageSelector = Instance.new("Frame"),
+	Next = Instance.new("ImageButton"),
+	PrevButton = Instance.new("TextButton"),
+	NextButton = Instance.new("TextButton"),
+	Previous = Instance.new("ImageButton"),
+	PageLabel = Instance.new("TextLabel"),
+	Line_2 = Instance.new("ImageLabel"),
+	HatViewer = Instance.new("Frame"),
+	Hat1 = Instance.new("Frame"),
+	bg = Instance.new("ImageLabel"),
+	HatImage = Instance.new("ImageLabel"),
+	HatName = Instance.new("TextLabel"),
+	Hat2 = Instance.new("Frame"),
+	bg_2 = Instance.new("ImageLabel"),
+	HatImage_2 = Instance.new("ImageLabel"),
+	HatName_2 = Instance.new("TextLabel"),
+	Hat3 = Instance.new("Frame"),
+	bg_3 = Instance.new("ImageLabel"),
+	HatImage_3 = Instance.new("ImageLabel"),
+	HatName_3 = Instance.new("TextLabel"),
+	Hat4 = Instance.new("Frame"),
+	bg_4 = Instance.new("ImageLabel"),
+	HatImage_4 = Instance.new("ImageLabel"),
+	HatName_4 = Instance.new("TextLabel"),
+	Hat5 = Instance.new("Frame"),
+	bg_5 = Instance.new("ImageLabel"),
+	HatImage_5 = Instance.new("ImageLabel"),
+	HatName_5 = Instance.new("TextLabel"),
+	Hat6 = Instance.new("Frame"),
+	bg_6 = Instance.new("ImageLabel"),
+	HatImage_6 = Instance.new("ImageLabel"),
+	HatName_6 = Instance.new("TextLabel"),
+	Hat7 = Instance.new("Frame"),
+	bg_7 = Instance.new("ImageLabel"),
+	HatImage_7 = Instance.new("ImageLabel"),
+	HatName_7 = Instance.new("TextLabel"),
+	Hat8 = Instance.new("Frame"),
+	bg_8 = Instance.new("ImageLabel"),
+	HatImage_8 = Instance.new("ImageLabel"),
+	HatName_8 = Instance.new("TextLabel"),
+	Hat9 = Instance.new("Frame"),
+	bg_9 = Instance.new("ImageLabel"),
+	HatImage_9 = Instance.new("ImageLabel"),
+	HatName_9 = Instance.new("TextLabel"),
+	Hat10 = Instance.new("Frame"),
+	bg_10 = Instance.new("ImageLabel"),
+	HatImage_10 = Instance.new("ImageLabel"),
+	HatName_10 = Instance.new("TextLabel"),
+	PlayerTP = Instance.new("Frame"),
+	Title_9 = Instance.new("TextLabel"),
+	Line_3 = Instance.new("ImageLabel"),
+	playerList = Instance.new("Frame"),
+	playerScrollFrame = Instance.new("ScrollingFrame"),
+	UIListLayout_2 = Instance.new("UIListLayout"),
+	searchBar = Instance.new("Frame"),
+	searchBarBG = Instance.new("ImageLabel"),
+	searchBar_2 = Instance.new("TextBox"),
+	magnifyingGlass = Instance.new("ImageLabel"),
+	background = Instance.new("ImageLabel"),
+	Scripts = Instance.new("Frame"),
+	Pages_2 = Instance.new("Frame"),
+	UIPageLayout_2 = Instance.new("UIPageLayout"),
+	Page1_2 = Instance.new("Frame"),
+	Title_10 = Instance.new("TextLabel"),
+	scrollFrame = Instance.new("ScrollingFrame"),
+	ShindoLifeGUI = Instance.new("ImageLabel"),
+	ShindoLifeButton = Instance.new("TextButton"),
+	AssassinGUI = Instance.new("ImageLabel"),
+	AssassinButton = Instance.new("TextButton"),
+	CartRideSpammerGUI = Instance.new("ImageLabel"),
+	CartRideButton = Instance.new("TextButton"),
+	MurderMystery2GUI = Instance.new("ImageLabel"),
+	MM2Button = Instance.new("TextButton"),
+	SushiShopSimulatorSimGui = Instance.new("ImageLabel"),
+	SSSButton = Instance.new("TextButton"),
+	UIGridLayout = Instance.new("UIGridLayout"),
+	ProjectPokemonSpawner = Instance.new("ImageLabel"),
+	ProjectPokeButton = Instance.new("TextButton"),
+	searchBar_3 = Instance.new("TextBox"),
+	searchBarBG_2 = Instance.new("ImageLabel"),
+	magnifyingGlass_2 = Instance.new("ImageLabel"),
+	Page2 = Instance.new("Frame"),
+	Title_11 = Instance.new("TextLabel"),
+	scrollFrame_2 = Instance.new("ScrollingFrame"),
+	SpecHub1 = Instance.new("ImageLabel"),
+	SpecHub1Button = Instance.new("TextButton"),
+	SpecHub2 = Instance.new("ImageLabel"),
+	SpecHub2Button = Instance.new("TextButton"),
+	ChatBypassGUI = Instance.new("ImageLabel"),
+	ChatBypassButton = Instance.new("TextButton"),
+	NullwareNullWareHub = Instance.new("ImageLabel"),
+	NullwareHubButton = Instance.new("TextButton"),
+	UIGridLayout_2 = Instance.new("UIGridLayout"),
+	searchBar_4 = Instance.new("TextBox"),
+	searchBarBG_3 = Instance.new("ImageLabel"),
+	magnifyingGlass_3 = Instance.new("ImageLabel"),
+	PageSelector_2 = Instance.new("Frame"),
+	Next_2 = Instance.new("ImageButton"),
+	PrevButton_2 = Instance.new("TextButton"),
+	NextButton_2 = Instance.new("TextButton"),
+	Previous_2 = Instance.new("ImageButton"),
+	PageLabel_2 = Instance.new("TextLabel"),
+	Line_4 = Instance.new("ImageLabel"),
+	ToolConfig = Instance.new("Frame"),
+	Title_12 = Instance.new("TextLabel"),
+	listFrame_2 = Instance.new("Frame"),
+	UIListLayout_3 = Instance.new("UIListLayout"),
+	_1_Size = Instance.new("Frame"),
+	Title_13 = Instance.new("TextLabel"),
+	num1 = Instance.new("ImageLabel"),
+	num1input = Instance.new("TextBox"),
+	num2 = Instance.new("ImageLabel"),
+	num2input = Instance.new("TextBox"),
+	num3 = Instance.new("ImageLabel"),
+	num3input = Instance.new("TextBox"),
+	_1 = Instance.new("TextLabel"),
+	_2 = Instance.new("TextLabel"),
+	_3_Massless = Instance.new("Frame"),
+	Checkbox_7 = Instance.new("ImageButton"),
+	Title_14 = Instance.new("TextLabel"),
+	_4_HasMesh = Instance.new("Frame"),
+	Checkbox_8 = Instance.new("ImageButton"),
+	Title_15 = Instance.new("TextLabel"),
+	_2_Transparency = Instance.new("Frame"),
+	Title_16 = Instance.new("TextLabel"),
+	transparencyValue = Instance.new("ImageLabel"),
+	transparencyinput = Instance.new("TextBox"),
+	_5_HasDecal = Instance.new("Frame"),
+	Checkbox_9 = Instance.new("ImageButton"),
+	Title_17 = Instance.new("TextLabel"),
+	_6_CastShadow = Instance.new("Frame"),
+	Checkbox_10 = Instance.new("ImageButton"),
+	Title_18 = Instance.new("TextLabel"),
+	_7_CanCollide = Instance.new("Frame"),
+	Checkbox_11 = Instance.new("ImageButton"),
+	Title_19 = Instance.new("TextLabel"),
+	applyBtn = Instance.new("ImageLabel"),
+	applyBtn_2 = Instance.new("TextButton"),
+}
+
+--Properties:
+
+Gui.Character.Name = "Character"
+Gui.Character.Parent = game.Players.LocalPlayer.PlayerGui.WindowsXP.MainFrame.Menus
+Gui.Character.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui.Character.BackgroundTransparency = 1.000
+Gui.Character.Size = UDim2.new(0, 250, 0, 434)
+Gui.Character.Visible = false
+Gui.Character.ZIndex = 2
+
+Gui.Title.Name = "Title"
+Gui.Title.Parent = Gui.Character
+Gui.Title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui.Title.BackgroundTransparency = 1.000
+Gui.Title.Size = UDim2.new(0, 250, 0, 36)
+Gui.Title.ZIndex = 2
+Gui.Title.Font = Enum.Font.Arcade
+Gui.Title.Text = "CHARACTER"
+Gui.Title.TextColor3 = Color3.fromRGB(139, 139, 139)
+Gui.Title.TextScaled = true
+Gui.Title.TextSize = 14.000
+Gui.Title.TextWrapped = true
+
+Gui.Line.Name = "Line"
+Gui.Line.Parent = Gui.Character
+Gui.Line.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui.Line.BackgroundTransparency = 1.000
+Gui.Line.Position = UDim2.new(0.00472570816, 0, 0.0829493105, 0)
+Gui.Line.Size = UDim2.new(0, 249, 0, 6)
+Gui.Line.Image = "rbxassetid://6531586437"
+
+Gui.listFrame.Name = "listFrame"
+Gui.listFrame.Parent = Gui.Character
+Gui.listFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui.listFrame.BackgroundTransparency = 1.000
+Gui.listFrame.Position = UDim2.new(0.0169520881, 0, 0.0967741907, 0)
+Gui.listFrame.Size = UDim2.new(0, 245, 0, 364)
+
+Gui.UIListLayout.Parent = Gui.listFrame
+
+Gui._2_Jumpheight.Name = "2_Jumpheight"
+Gui._2_Jumpheight.Parent = Gui.listFrame
+Gui._2_Jumpheight.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui._2_Jumpheight.BackgroundTransparency = 0.900
+Gui._2_Jumpheight.Position = UDim2.new(0, 0, 0.13827841, 0)
+Gui._2_Jumpheight.Size = UDim2.new(0, 245, 0, 50)
+
+Gui.Slider.Name = "Slider"
+Gui.Slider.Parent = Gui._2_Jumpheight
+Gui.Slider.AnchorPoint = Vector2.new(0.5, 0.5)
+Gui.Slider.BackgroundColor3 = Color3.fromRGB(68, 68, 68)
+Gui.Slider.BackgroundTransparency = 1.000
+Gui.Slider.BorderSizePixel = 0
+Gui.Slider.Position = UDim2.new(0.133919001, 0, 0.439763218, 0)
+Gui.Slider.Size = UDim2.new(0.272838116, 0, 0.926929832, 0)
+
+Gui.Slider_2.Name = "Slider"
+Gui.Slider_2.Parent = Gui.Slider
+Gui.Slider_2.BackgroundColor3 = Color3.fromRGB(120, 120, 120)
+Gui.Slider_2.BackgroundTransparency = 1.000
+Gui.Slider_2.BorderSizePixel = 0
+Gui.Slider_2.Position = UDim2.new(0.171901539, 0, 0.373747259, 0)
+Gui.Slider_2.Size = UDim2.new(0, 224, 0, 19)
+Gui.Slider_2.AutoButtonColor = false
+Gui.Slider_2.Font = Enum.Font.SourceSans
+Gui.Slider_2.Text = ""
+Gui.Slider_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+Gui.Slider_2.TextSize = 14.000
+
+Gui.Indicator.Name = "Indicator"
+Gui.Indicator.Parent = Gui.Slider_2
+Gui.Indicator.BackgroundColor3 = Color3.fromRGB(85, 170, 0)
+Gui.Indicator.BackgroundTransparency = 1.000
+Gui.Indicator.BorderSizePixel = 0
+Gui.Indicator.Position = UDim2.new(-0.00131054246, 0, 0, 0)
+Gui.Indicator.Size = UDim2.new(0, 0, 1, 0)
+
+Gui.HolderButton.Name = "HolderButton"
+Gui.HolderButton.Parent = Gui.Indicator
+Gui.HolderButton.AnchorPoint = Vector2.new(0.5, 0.5)
+Gui.HolderButton.BackgroundColor3 = Color3.fromRGB(190, 190, 190)
+Gui.HolderButton.BackgroundTransparency = 1.000
+Gui.HolderButton.Position = UDim2.new(1, 0, 0.5, 0)
+Gui.HolderButton.Size = UDim2.new(0, 13, 0, 25)
+Gui.HolderButton.ZIndex = 5
+Gui.HolderButton.Font = Enum.Font.SourceSans
+Gui.HolderButton.Text = ""
+Gui.HolderButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+Gui.HolderButton.TextSize = 14.000
+Gui.HolderButton.TextTransparency = 2.000
+
+Gui.UICorner.CornerRadius = UDim.new(0, 3)
+Gui.UICorner.Parent = Gui.HolderButton
+
+Gui.Value.Name = "Value"
+Gui.Value.Parent = Gui.HolderButton
+Gui.Value.AnchorPoint = Vector2.new(0.5, 0.5)
+Gui.Value.BackgroundColor3 = Color3.fromRGB(38, 38, 38)
+Gui.Value.BackgroundTransparency = 1.000
+Gui.Value.Position = UDim2.new(0.699999988, 0, -0.360000014, 0)
+Gui.Value.Size = UDim2.new(0, 36, 0, 18)
+Gui.Value.Font = Enum.Font.Arcade
+Gui.Value.Text = "0"
+Gui.Value.TextColor3 = Color3.fromRGB(209, 209, 209)
+Gui.Value.TextSize = 14.000
+Gui.Value.TextTransparency = 1.000
+
+Gui.UICorner_2.CornerRadius = UDim.new(0, 3)
+Gui.UICorner_2.Parent = Gui.Value
+
+Gui.SliderImg.Name = "SliderImg"
+Gui.SliderImg.Parent = Gui.HolderButton
+Gui.SliderImg.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui.SliderImg.BackgroundTransparency = 1.000
+Gui.SliderImg.Position = UDim2.new(-0.0787956268, 0, 1.2207031e-06, 0)
+Gui.SliderImg.Size = UDim2.new(0, 14, 0, 24)
+Gui.SliderImg.Image = "rbxassetid://6597165862"
+
+Gui.UICorner_3.CornerRadius = UDim.new(0, 2)
+Gui.UICorner_3.Parent = Gui.Indicator
+
+Gui.UICorner_4.CornerRadius = UDim.new(0, 2)
+Gui.UICorner_4.Parent = Gui.Slider_2
+
+Gui.UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(200, 200, 200)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(255, 255, 255))}
+Gui.UIGradient.Parent = Gui.Slider_2
+
+Gui.Sliderbg.Name = "Sliderbg"
+Gui.Sliderbg.Parent = Gui.Slider_2
+Gui.Sliderbg.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui.Sliderbg.BackgroundTransparency = 1.000
+Gui.Sliderbg.Position = UDim2.new(-0.0197321121, 0, 0.354421526, 0)
+Gui.Sliderbg.Size = UDim2.new(0, 232, 0, 6)
+Gui.Sliderbg.ZIndex = 0
+Gui.Sliderbg.Image = "rbxassetid://6597213248"
+
+Gui.JumpheightTitle.Name = "JumpheightTitle"
+Gui.JumpheightTitle.Parent = Gui.Slider_2
+Gui.JumpheightTitle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui.JumpheightTitle.BackgroundTransparency = 1.000
+Gui.JumpheightTitle.Position = UDim2.new(0, 0, 0.670211017, 0)
+Gui.JumpheightTitle.Size = UDim2.new(0, 227, 0, 12)
+Gui.JumpheightTitle.ZIndex = 0
+Gui.JumpheightTitle.Font = Enum.Font.Arcade
+Gui.JumpheightTitle.Text = "Jump Height Value"
+Gui.JumpheightTitle.TextColor3 = Color3.fromRGB(139, 139, 139)
+Gui.JumpheightTitle.TextSize = 14.000
+
+Gui.Value_2.Name = "Value"
+Gui.Value_2.Parent = Gui.Slider
+Gui.Value_2.AnchorPoint = Vector2.new(0.5, 0.5)
+Gui.Value_2.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+Gui.Value_2.BackgroundTransparency = 1.000
+Gui.Value_2.Position = UDim2.new(0.497957259, 0, 0.409193426, 0)
+Gui.Value_2.Size = UDim2.new(0, 168, 0, 17)
+Gui.Value_2.Font = Enum.Font.Ubuntu
+Gui.Value_2.Text = "Val | Max"
+Gui.Value_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+Gui.Value_2.TextScaled = true
+Gui.Value_2.TextSize = 18.000
+Gui.Value_2.TextStrokeTransparency = 0.500
+Gui.Value_2.TextTransparency = 1.000
+Gui.Value_2.TextWrapped = true
+
+Gui.UICorner_5.CornerRadius = UDim.new(0, 3)
+Gui.UICorner_5.Parent = Gui.Value_2
+
+Gui.AbsoluteValue.Name = "AbsoluteValue"
+Gui.AbsoluteValue.Parent = Gui.Slider
+Gui.AbsoluteValue.AnchorPoint = Vector2.new(0.5, 0.5)
+Gui.AbsoluteValue.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+Gui.AbsoluteValue.BackgroundTransparency = 1.000
+Gui.AbsoluteValue.Position = UDim2.new(0.502419353, 0, 0.878188074, 0)
+Gui.AbsoluteValue.Size = UDim2.new(0, 80, 0, 30)
+Gui.AbsoluteValue.Font = Enum.Font.Ubuntu
+Gui.AbsoluteValue.Text = ""
+Gui.AbsoluteValue.TextColor3 = Color3.fromRGB(113, 113, 113)
+Gui.AbsoluteValue.TextSize = 12.000
+Gui.AbsoluteValue.TextTransparency = 1.000
+
+Gui._1_Walkspeed.Name = "1_Walkspeed"
+Gui._1_Walkspeed.Parent = Gui.listFrame
+Gui._1_Walkspeed.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui._1_Walkspeed.BackgroundTransparency = 0.900
+Gui._1_Walkspeed.Size = UDim2.new(0, 245, 0, 50)
+
+Gui.Slider_3.Name = "Slider"
+Gui.Slider_3.Parent = Gui._1_Walkspeed
+Gui.Slider_3.AnchorPoint = Vector2.new(0.5, 0.5)
+Gui.Slider_3.BackgroundColor3 = Color3.fromRGB(68, 68, 68)
+Gui.Slider_3.BackgroundTransparency = 1.000
+Gui.Slider_3.BorderSizePixel = 0
+Gui.Slider_3.Position = UDim2.new(0.133919001, 0, 0.439763218, 0)
+Gui.Slider_3.Size = UDim2.new(0.272838116, 0, 0.926929832, 0)
+
+Gui.Slider_4.Name = "Slider"
+Gui.Slider_4.Parent = Gui.Slider_3
+Gui.Slider_4.BackgroundColor3 = Color3.fromRGB(120, 120, 120)
+Gui.Slider_4.BackgroundTransparency = 1.000
+Gui.Slider_4.BorderSizePixel = 0
+Gui.Slider_4.Position = UDim2.new(0.171901539, 0, 0.373747259, 0)
+Gui.Slider_4.Size = UDim2.new(0, 224, 0, 19)
+Gui.Slider_4.AutoButtonColor = false
+Gui.Slider_4.Font = Enum.Font.SourceSans
+Gui.Slider_4.Text = ""
+Gui.Slider_4.TextColor3 = Color3.fromRGB(0, 0, 0)
+Gui.Slider_4.TextSize = 14.000
+
+Gui.Indicator_2.Name = "Indicator"
+Gui.Indicator_2.Parent = Gui.Slider_4
+Gui.Indicator_2.BackgroundColor3 = Color3.fromRGB(85, 170, 0)
+Gui.Indicator_2.BackgroundTransparency = 1.000
+Gui.Indicator_2.BorderSizePixel = 0
+Gui.Indicator_2.Position = UDim2.new(-0.00131054246, 0, 0, 0)
+Gui.Indicator_2.Size = UDim2.new(0, 0, 1, 0)
+
+Gui.HolderButton_2.Name = "HolderButton"
+Gui.HolderButton_2.Parent = Gui.Indicator_2
+Gui.HolderButton_2.AnchorPoint = Vector2.new(0.5, 0.5)
+Gui.HolderButton_2.BackgroundColor3 = Color3.fromRGB(190, 190, 190)
+Gui.HolderButton_2.BackgroundTransparency = 1.000
+Gui.HolderButton_2.Position = UDim2.new(1, 0, 0.5, 0)
+Gui.HolderButton_2.Size = UDim2.new(0, 13, 0, 25)
+Gui.HolderButton_2.ZIndex = 5
+Gui.HolderButton_2.Font = Enum.Font.SourceSans
+Gui.HolderButton_2.Text = ""
+Gui.HolderButton_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+Gui.HolderButton_2.TextSize = 14.000
+Gui.HolderButton_2.TextTransparency = 2.000
+
+Gui.UICorner_6.CornerRadius = UDim.new(0, 3)
+Gui.UICorner_6.Parent = Gui.HolderButton_2
+
+Gui.Value_3.Name = "Value"
+Gui.Value_3.Parent = Gui.HolderButton_2
+Gui.Value_3.AnchorPoint = Vector2.new(0.5, 0.5)
+Gui.Value_3.BackgroundColor3 = Color3.fromRGB(38, 38, 38)
+Gui.Value_3.BackgroundTransparency = 1.000
+Gui.Value_3.Position = UDim2.new(0.699999988, 0, -0.360000014, 0)
+Gui.Value_3.Size = UDim2.new(0, 36, 0, 18)
+Gui.Value_3.Font = Enum.Font.Arcade
+Gui.Value_3.Text = "0"
+Gui.Value_3.TextColor3 = Color3.fromRGB(209, 209, 209)
+Gui.Value_3.TextSize = 14.000
+Gui.Value_3.TextTransparency = 1.000
+
+Gui.UICorner_7.CornerRadius = UDim.new(0, 3)
+Gui.UICorner_7.Parent = Gui.Value_3
+
+Gui.SliderImg_2.Name = "SliderImg"
+Gui.SliderImg_2.Parent = Gui.HolderButton_2
+Gui.SliderImg_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui.SliderImg_2.BackgroundTransparency = 1.000
+Gui.SliderImg_2.Position = UDim2.new(-0.0787956268, 0, 1.2207031e-06, 0)
+Gui.SliderImg_2.Size = UDim2.new(0, 14, 0, 24)
+Gui.SliderImg_2.Image = "rbxassetid://6597165862"
+
+Gui.UICorner_8.CornerRadius = UDim.new(0, 2)
+Gui.UICorner_8.Parent = Gui.Indicator_2
+
+Gui.UICorner_9.CornerRadius = UDim.new(0, 2)
+Gui.UICorner_9.Parent = Gui.Slider_4
+
+Gui.UIGradient_2.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(200, 200, 200)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(255, 255, 255))}
+Gui.UIGradient_2.Parent = Gui.Slider_4
+
+Gui.Sliderbg_2.Name = "Sliderbg"
+Gui.Sliderbg_2.Parent = Gui.Slider_4
+Gui.Sliderbg_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui.Sliderbg_2.BackgroundTransparency = 1.000
+Gui.Sliderbg_2.Position = UDim2.new(-0.0197321121, 0, 0.354421526, 0)
+Gui.Sliderbg_2.Size = UDim2.new(0, 232, 0, 6)
+Gui.Sliderbg_2.ZIndex = 0
+Gui.Sliderbg_2.Image = "rbxassetid://6597213248"
+
+Gui.WalkspeedTitle.Name = "WalkspeedTitle"
+Gui.WalkspeedTitle.Parent = Gui.Slider_4
+Gui.WalkspeedTitle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui.WalkspeedTitle.BackgroundTransparency = 1.000
+Gui.WalkspeedTitle.Position = UDim2.new(0, 0, 0.670211017, 0)
+Gui.WalkspeedTitle.Size = UDim2.new(0, 227, 0, 12)
+Gui.WalkspeedTitle.ZIndex = 0
+Gui.WalkspeedTitle.Font = Enum.Font.Arcade
+Gui.WalkspeedTitle.Text = "Walk Speed Value"
+Gui.WalkspeedTitle.TextColor3 = Color3.fromRGB(139, 139, 139)
+Gui.WalkspeedTitle.TextSize = 14.000
+
+Gui.Value_4.Name = "Value"
+Gui.Value_4.Parent = Gui.Slider_3
+Gui.Value_4.AnchorPoint = Vector2.new(0.5, 0.5)
+Gui.Value_4.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+Gui.Value_4.BackgroundTransparency = 1.000
+Gui.Value_4.Position = UDim2.new(0.497957259, 0, 0.409193426, 0)
+Gui.Value_4.Size = UDim2.new(0, 168, 0, 17)
+Gui.Value_4.Font = Enum.Font.Ubuntu
+Gui.Value_4.Text = "Val | Max"
+Gui.Value_4.TextColor3 = Color3.fromRGB(255, 255, 255)
+Gui.Value_4.TextScaled = true
+Gui.Value_4.TextSize = 18.000
+Gui.Value_4.TextStrokeTransparency = 0.500
+Gui.Value_4.TextTransparency = 1.000
+Gui.Value_4.TextWrapped = true
+
+Gui.UICorner_10.CornerRadius = UDim.new(0, 3)
+Gui.UICorner_10.Parent = Gui.Value_4
+
+Gui.AbsoluteValue_2.Name = "AbsoluteValue"
+Gui.AbsoluteValue_2.Parent = Gui.Slider_3
+Gui.AbsoluteValue_2.AnchorPoint = Vector2.new(0.5, 0.5)
+Gui.AbsoluteValue_2.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+Gui.AbsoluteValue_2.BackgroundTransparency = 1.000
+Gui.AbsoluteValue_2.Position = UDim2.new(0.502419353, 0, 0.878188074, 0)
+Gui.AbsoluteValue_2.Size = UDim2.new(0, 80, 0, 30)
+Gui.AbsoluteValue_2.Font = Enum.Font.Ubuntu
+Gui.AbsoluteValue_2.Text = ""
+Gui.AbsoluteValue_2.TextColor3 = Color3.fromRGB(113, 113, 113)
+Gui.AbsoluteValue_2.TextSize = 12.000
+Gui.AbsoluteValue_2.TextTransparency = 1.000
+
+Gui._3_Fly.Name = "3_Fly"
+Gui._3_Fly.Parent = Gui.listFrame
+Gui._3_Fly.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui._3_Fly.BackgroundTransparency = 0.900
+Gui._3_Fly.Position = UDim2.new(0, 0, 0.302197814, 0)
+Gui._3_Fly.Size = UDim2.new(0, 245, 0, 32)
+
+Gui.Checkbox.Name = "Checkbox"
+Gui.Checkbox.Parent = Gui._3_Fly
+Gui.Checkbox.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui.Checkbox.BackgroundTransparency = 1.000
+Gui.Checkbox.Position = UDim2.new(0.850000024, 0, 0.109999999, 0)
+Gui.Checkbox.Size = UDim2.new(0, 26, 0, 26)
+Gui.Checkbox.Image = "rbxassetid://6531499312"
+
+Gui.Title_2.Name = "Title"
+Gui.Title_2.Parent = Gui._3_Fly
+Gui.Title_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui.Title_2.BackgroundTransparency = 1.000
+Gui.Title_2.Position = UDim2.new(0.0249722898, 0, 0.0742058754, 0)
+Gui.Title_2.Size = UDim2.new(0, 198, 0, 25)
+Gui.Title_2.ZIndex = 2
+Gui.Title_2.Font = Enum.Font.Arcade
+Gui.Title_2.Text = "Fly:"
+Gui.Title_2.TextColor3 = Color3.fromRGB(139, 139, 139)
+Gui.Title_2.TextScaled = true
+Gui.Title_2.TextSize = 14.000
+Gui.Title_2.TextWrapped = true
+
+Gui._7_ClickToTP.Name = "7_ClickToTP"
+Gui._7_ClickToTP.Parent = Gui.listFrame
+Gui._7_ClickToTP.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui._7_ClickToTP.BackgroundTransparency = 0.900
+Gui._7_ClickToTP.Position = UDim2.new(0, 0, 0.653846145, 0)
+Gui._7_ClickToTP.Size = UDim2.new(0, 245, 0, 32)
+
+Gui.Checkbox_2.Name = "Checkbox"
+Gui.Checkbox_2.Parent = Gui._7_ClickToTP
+Gui.Checkbox_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui.Checkbox_2.BackgroundTransparency = 1.000
+Gui.Checkbox_2.Position = UDim2.new(0.850000024, 0, 0.109999999, 0)
+Gui.Checkbox_2.Size = UDim2.new(0, 26, 0, 26)
+Gui.Checkbox_2.Image = "rbxassetid://6531499312"
+
+Gui.Title_3.Name = "Title"
+Gui.Title_3.Parent = Gui._7_ClickToTP
+Gui.Title_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui.Title_3.BackgroundTransparency = 1.000
+Gui.Title_3.Position = UDim2.new(0.0249722898, 0, 0.0742058754, 0)
+Gui.Title_3.Size = UDim2.new(0, 198, 0, 25)
+Gui.Title_3.ZIndex = 2
+Gui.Title_3.Font = Enum.Font.Arcade
+Gui.Title_3.Text = "Click To TP:"
+Gui.Title_3.TextColor3 = Color3.fromRGB(139, 139, 139)
+Gui.Title_3.TextScaled = true
+Gui.Title_3.TextSize = 14.000
+Gui.Title_3.TextWrapped = true
+
+Gui._8_InfiniteJump.Name = "8_InfiniteJump"
+Gui._8_InfiniteJump.Parent = Gui.listFrame
+Gui._8_InfiniteJump.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui._8_InfiniteJump.BackgroundTransparency = 0.900
+Gui._8_InfiniteJump.Position = UDim2.new(0, 0, 0.741758227, 0)
+Gui._8_InfiniteJump.Size = UDim2.new(0, 245, 0, 32)
+
+Gui.Checkbox_3.Name = "Checkbox"
+Gui.Checkbox_3.Parent = Gui._8_InfiniteJump
+Gui.Checkbox_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui.Checkbox_3.BackgroundTransparency = 1.000
+Gui.Checkbox_3.Position = UDim2.new(0.850000024, 0, 0.109999999, 0)
+Gui.Checkbox_3.Size = UDim2.new(0, 26, 0, 26)
+Gui.Checkbox_3.Image = "rbxassetid://6531499312"
+
+Gui.Title_4.Name = "Title"
+Gui.Title_4.Parent = Gui._8_InfiniteJump
+Gui.Title_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui.Title_4.BackgroundTransparency = 1.000
+Gui.Title_4.Position = UDim2.new(0.0249722898, 0, 0.0742058754, 0)
+Gui.Title_4.Size = UDim2.new(0, 198, 0, 25)
+Gui.Title_4.ZIndex = 2
+Gui.Title_4.Font = Enum.Font.Arcade
+Gui.Title_4.Text = "Infinite Jump:"
+Gui.Title_4.TextColor3 = Color3.fromRGB(139, 139, 139)
+Gui.Title_4.TextScaled = true
+Gui.Title_4.TextSize = 14.000
+Gui.Title_4.TextWrapped = true
+
+Gui._4_NoClip.Name = "4_NoClip"
+Gui._4_NoClip.Parent = Gui.listFrame
+Gui._4_NoClip.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui._4_NoClip.BackgroundTransparency = 0.900
+Gui._4_NoClip.Position = UDim2.new(0, 0, 0.390109897, 0)
+Gui._4_NoClip.Size = UDim2.new(0, 245, 0, 32)
+
+Gui.Checkbox_4.Name = "Checkbox"
+Gui.Checkbox_4.Parent = Gui._4_NoClip
+Gui.Checkbox_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui.Checkbox_4.BackgroundTransparency = 1.000
+Gui.Checkbox_4.Position = UDim2.new(0.850000024, 0, 0.109999999, 0)
+Gui.Checkbox_4.Size = UDim2.new(0, 26, 0, 26)
+Gui.Checkbox_4.Image = "rbxassetid://6531499312"
+
+Gui.Title_5.Name = "Title"
+Gui.Title_5.Parent = Gui._4_NoClip
+Gui.Title_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui.Title_5.BackgroundTransparency = 1.000
+Gui.Title_5.Position = UDim2.new(0.0249722898, 0, 0.0742058754, 0)
+Gui.Title_5.Size = UDim2.new(0, 198, 0, 25)
+Gui.Title_5.ZIndex = 2
+Gui.Title_5.Font = Enum.Font.Arcade
+Gui.Title_5.Text = "No Clip:"
+Gui.Title_5.TextColor3 = Color3.fromRGB(139, 139, 139)
+Gui.Title_5.TextScaled = true
+Gui.Title_5.TextSize = 14.000
+Gui.Title_5.TextWrapped = true
+
+Gui._5_PartXray.Name = "5_PartXray"
+Gui._5_PartXray.Parent = Gui.listFrame
+Gui._5_PartXray.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui._5_PartXray.BackgroundTransparency = 0.900
+Gui._5_PartXray.Position = UDim2.new(0, 0, 0.478021979, 0)
+Gui._5_PartXray.Size = UDim2.new(0, 245, 0, 32)
+
+Gui.Checkbox_5.Name = "Checkbox"
+Gui.Checkbox_5.Parent = Gui._5_PartXray
+Gui.Checkbox_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui.Checkbox_5.BackgroundTransparency = 1.000
+Gui.Checkbox_5.Position = UDim2.new(0.850000024, 0, 0.109999999, 0)
+Gui.Checkbox_5.Size = UDim2.new(0, 26, 0, 26)
+Gui.Checkbox_5.Image = "rbxassetid://6531499312"
+
+Gui.Title_6.Name = "Title"
+Gui.Title_6.Parent = Gui._5_PartXray
+Gui.Title_6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui.Title_6.BackgroundTransparency = 1.000
+Gui.Title_6.Position = UDim2.new(0.0249722898, 0, 0.0742058754, 0)
+Gui.Title_6.Size = UDim2.new(0, 198, 0, 25)
+Gui.Title_6.ZIndex = 2
+Gui.Title_6.Font = Enum.Font.Arcade
+Gui.Title_6.Text = "Part XRay:"
+Gui.Title_6.TextColor3 = Color3.fromRGB(139, 139, 139)
+Gui.Title_6.TextScaled = true
+Gui.Title_6.TextSize = 14.000
+Gui.Title_6.TextWrapped = true
+
+Gui._6_PlayerXray.Name = "6_PlayerXray"
+Gui._6_PlayerXray.Parent = Gui.listFrame
+Gui._6_PlayerXray.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui._6_PlayerXray.BackgroundTransparency = 0.900
+Gui._6_PlayerXray.Position = UDim2.new(0, 0, 0.565934062, 0)
+Gui._6_PlayerXray.Size = UDim2.new(0, 245, 0, 32)
+
+Gui.Checkbox_6.Name = "Checkbox"
+Gui.Checkbox_6.Parent = Gui._6_PlayerXray
+Gui.Checkbox_6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui.Checkbox_6.BackgroundTransparency = 1.000
+Gui.Checkbox_6.Position = UDim2.new(0.850000024, 0, 0.109999999, 0)
+Gui.Checkbox_6.Size = UDim2.new(0, 26, 0, 26)
+Gui.Checkbox_6.Image = "rbxassetid://6531499312"
+
+Gui.Title_7.Name = "Title"
+Gui.Title_7.Parent = Gui._6_PlayerXray
+Gui.Title_7.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui.Title_7.BackgroundTransparency = 1.000
+Gui.Title_7.Position = UDim2.new(0.0249722898, 0, 0.0742058754, 0)
+Gui.Title_7.Size = UDim2.new(0, 198, 0, 25)
+Gui.Title_7.ZIndex = 2
+Gui.Title_7.Font = Enum.Font.Arcade
+Gui.Title_7.Text = "Player XRay:"
+Gui.Title_7.TextColor3 = Color3.fromRGB(139, 139, 139)
+Gui.Title_7.TextScaled = true
+Gui.Title_7.TextSize = 14.000
+Gui.Title_7.TextWrapped = true
+
+Gui._2_zFlySpeed.Name = "2_zFlySpeed"
+Gui._2_zFlySpeed.Parent = Gui.listFrame
+Gui._2_zFlySpeed.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui._2_zFlySpeed.BackgroundTransparency = 0.900
+Gui._2_zFlySpeed.Position = UDim2.new(0, 0, 0.27655682, 0)
+Gui._2_zFlySpeed.Size = UDim2.new(0, 245, 0, 50)
+
+Gui.Slider_5.Name = "Slider"
+Gui.Slider_5.Parent = Gui._2_zFlySpeed
+Gui.Slider_5.AnchorPoint = Vector2.new(0.5, 0.5)
+Gui.Slider_5.BackgroundColor3 = Color3.fromRGB(68, 68, 68)
+Gui.Slider_5.BackgroundTransparency = 1.000
+Gui.Slider_5.BorderSizePixel = 0
+Gui.Slider_5.Position = UDim2.new(0.133919001, 0, 0.439763218, 0)
+Gui.Slider_5.Size = UDim2.new(0.272838116, 0, 0.926929832, 0)
+
+Gui.Slider_6.Name = "Slider"
+Gui.Slider_6.Parent = Gui.Slider_5
+Gui.Slider_6.BackgroundColor3 = Color3.fromRGB(120, 120, 120)
+Gui.Slider_6.BackgroundTransparency = 1.000
+Gui.Slider_6.BorderSizePixel = 0
+Gui.Slider_6.Position = UDim2.new(0.171901539, 0, 0.373747259, 0)
+Gui.Slider_6.Size = UDim2.new(0, 224, 0, 19)
+Gui.Slider_6.AutoButtonColor = false
+Gui.Slider_6.Font = Enum.Font.SourceSans
+Gui.Slider_6.Text = ""
+Gui.Slider_6.TextColor3 = Color3.fromRGB(0, 0, 0)
+Gui.Slider_6.TextSize = 14.000
+
+Gui.Indicator_3.Name = "Indicator"
+Gui.Indicator_3.Parent = Gui.Slider_6
+Gui.Indicator_3.BackgroundColor3 = Color3.fromRGB(85, 170, 0)
+Gui.Indicator_3.BackgroundTransparency = 1.000
+Gui.Indicator_3.BorderSizePixel = 0
+Gui.Indicator_3.Position = UDim2.new(-0.00131054246, 0, 0, 0)
+Gui.Indicator_3.Size = UDim2.new(0, 0, 1, 0)
+
+Gui.HolderButton_3.Name = "HolderButton"
+Gui.HolderButton_3.Parent = Gui.Indicator_3
+Gui.HolderButton_3.AnchorPoint = Vector2.new(0.5, 0.5)
+Gui.HolderButton_3.BackgroundColor3 = Color3.fromRGB(190, 190, 190)
+Gui.HolderButton_3.BackgroundTransparency = 1.000
+Gui.HolderButton_3.Position = UDim2.new(1, 0, 0.5, 0)
+Gui.HolderButton_3.Size = UDim2.new(0, 13, 0, 25)
+Gui.HolderButton_3.ZIndex = 5
+Gui.HolderButton_3.Font = Enum.Font.SourceSans
+Gui.HolderButton_3.Text = ""
+Gui.HolderButton_3.TextColor3 = Color3.fromRGB(0, 0, 0)
+Gui.HolderButton_3.TextSize = 14.000
+Gui.HolderButton_3.TextTransparency = 2.000
+
+Gui.UICorner_11.CornerRadius = UDim.new(0, 3)
+Gui.UICorner_11.Parent = Gui.HolderButton_3
+
+Gui.Value_5.Name = "Value"
+Gui.Value_5.Parent = Gui.HolderButton_3
+Gui.Value_5.AnchorPoint = Vector2.new(0.5, 0.5)
+Gui.Value_5.BackgroundColor3 = Color3.fromRGB(38, 38, 38)
+Gui.Value_5.BackgroundTransparency = 1.000
+Gui.Value_5.Position = UDim2.new(0.699999988, 0, -0.360000014, 0)
+Gui.Value_5.Size = UDim2.new(0, 36, 0, 18)
+Gui.Value_5.Font = Enum.Font.Arcade
+Gui.Value_5.Text = "0"
+Gui.Value_5.TextColor3 = Color3.fromRGB(209, 209, 209)
+Gui.Value_5.TextSize = 14.000
+Gui.Value_5.TextTransparency = 1.000
+
+Gui.UICorner_12.CornerRadius = UDim.new(0, 3)
+Gui.UICorner_12.Parent = Gui.Value_5
+
+Gui.SliderImg_3.Name = "SliderImg"
+Gui.SliderImg_3.Parent = Gui.HolderButton_3
+Gui.SliderImg_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui.SliderImg_3.BackgroundTransparency = 1.000
+Gui.SliderImg_3.Position = UDim2.new(-0.0787956268, 0, 1.2207031e-06, 0)
+Gui.SliderImg_3.Size = UDim2.new(0, 14, 0, 24)
+Gui.SliderImg_3.Image = "rbxassetid://6597165862"
+
+Gui.UICorner_13.CornerRadius = UDim.new(0, 2)
+Gui.UICorner_13.Parent = Gui.Indicator_3
+
+Gui.UICorner_14.CornerRadius = UDim.new(0, 2)
+Gui.UICorner_14.Parent = Gui.Slider_6
+
+Gui.UIGradient_3.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(200, 200, 200)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(255, 255, 255))}
+Gui.UIGradient_3.Parent = Gui.Slider_6
+
+Gui.Sliderbg_3.Name = "Sliderbg"
+Gui.Sliderbg_3.Parent = Gui.Slider_6
+Gui.Sliderbg_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui.Sliderbg_3.BackgroundTransparency = 1.000
+Gui.Sliderbg_3.Position = UDim2.new(-0.0197321121, 0, 0.354421526, 0)
+Gui.Sliderbg_3.Size = UDim2.new(0, 232, 0, 6)
+Gui.Sliderbg_3.ZIndex = 0
+Gui.Sliderbg_3.Image = "rbxassetid://6597213248"
+
+Gui.WalkspeedTitle_2.Name = "WalkspeedTitle"
+Gui.WalkspeedTitle_2.Parent = Gui.Slider_6
+Gui.WalkspeedTitle_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui.WalkspeedTitle_2.BackgroundTransparency = 1.000
+Gui.WalkspeedTitle_2.Position = UDim2.new(0, 0, 0.670211017, 0)
+Gui.WalkspeedTitle_2.Size = UDim2.new(0, 227, 0, 12)
+Gui.WalkspeedTitle_2.ZIndex = 0
+Gui.WalkspeedTitle_2.Font = Enum.Font.Arcade
+Gui.WalkspeedTitle_2.Text = "Fly Speed Value"
+Gui.WalkspeedTitle_2.TextColor3 = Color3.fromRGB(139, 139, 139)
+Gui.WalkspeedTitle_2.TextSize = 14.000
+
+Gui.Value_6.Name = "Value"
+Gui.Value_6.Parent = Gui.Slider_5
+Gui.Value_6.AnchorPoint = Vector2.new(0.5, 0.5)
+Gui.Value_6.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+Gui.Value_6.BackgroundTransparency = 1.000
+Gui.Value_6.Position = UDim2.new(0.497957259, 0, 0.409193426, 0)
+Gui.Value_6.Size = UDim2.new(0, 168, 0, 17)
+Gui.Value_6.Font = Enum.Font.Ubuntu
+Gui.Value_6.Text = "Val | Max"
+Gui.Value_6.TextColor3 = Color3.fromRGB(255, 255, 255)
+Gui.Value_6.TextScaled = true
+Gui.Value_6.TextSize = 18.000
+Gui.Value_6.TextStrokeTransparency = 0.500
+Gui.Value_6.TextTransparency = 1.000
+Gui.Value_6.TextWrapped = true
+
+Gui.UICorner_15.CornerRadius = UDim.new(0, 3)
+Gui.UICorner_15.Parent = Gui.Value_6
+
+Gui.AbsoluteValue_3.Name = "AbsoluteValue"
+Gui.AbsoluteValue_3.Parent = Gui.Slider_5
+Gui.AbsoluteValue_3.AnchorPoint = Vector2.new(0.5, 0.5)
+Gui.AbsoluteValue_3.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+Gui.AbsoluteValue_3.BackgroundTransparency = 1.000
+Gui.AbsoluteValue_3.Position = UDim2.new(0.502419353, 0, 0.878188074, 0)
+Gui.AbsoluteValue_3.Size = UDim2.new(0, 80, 0, 30)
+Gui.AbsoluteValue_3.Font = Enum.Font.Ubuntu
+Gui.AbsoluteValue_3.Text = ""
+Gui.AbsoluteValue_3.TextColor3 = Color3.fromRGB(113, 113, 113)
+Gui.AbsoluteValue_3.TextSize = 12.000
+Gui.AbsoluteValue_3.TextTransparency = 1.000
+
+Gui.coordsFrame.Name = "coordsFrame"
+Gui.coordsFrame.Parent = Gui.Character
+Gui.coordsFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui.coordsFrame.BackgroundTransparency = 1.000
+Gui.coordsFrame.Position = UDim2.new(0.0291937254, 0, 0.92396313, 0)
+Gui.coordsFrame.Size = UDim2.new(0, 192, 0, 26)
+
+Gui.CurrentCoords.Name = "CurrentCoords"
+Gui.CurrentCoords.Parent = Gui.coordsFrame
+Gui.CurrentCoords.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui.CurrentCoords.BackgroundTransparency = 1.000
+Gui.CurrentCoords.Position = UDim2.new(0.507799208, 0, 0, 0)
+Gui.CurrentCoords.Size = UDim2.new(0.497409046, 0, 1, 0)
+Gui.CurrentCoords.ZIndex = 2
+Gui.CurrentCoords.Font = Enum.Font.Arcade
+Gui.CurrentCoords.Text = "0,0,0"
+Gui.CurrentCoords.TextColor3 = Color3.fromRGB(139, 139, 139)
+Gui.CurrentCoords.TextScaled = true
+Gui.CurrentCoords.TextSize = 14.000
+Gui.CurrentCoords.TextWrapped = true
+
+Gui.CoordsLabel.Name = "CoordsLabel"
+Gui.CoordsLabel.Parent = Gui.coordsFrame
+Gui.CoordsLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui.CoordsLabel.BackgroundTransparency = 1.000
+Gui.CoordsLabel.Position = UDim2.new(1.58122162e-07, 0, 0, 0)
+Gui.CoordsLabel.Size = UDim2.new(0.50779891, 0, 1, 0)
+Gui.CoordsLabel.ZIndex = 2
+Gui.CoordsLabel.Font = Enum.Font.Arcade
+Gui.CoordsLabel.Text = "Coords:"
+Gui.CoordsLabel.TextColor3 = Color3.fromRGB(139, 139, 139)
+Gui.CoordsLabel.TextScaled = true
+Gui.CoordsLabel.TextSize = 14.000
+Gui.CoordsLabel.TextWrapped = true
+
+Gui.Coords2Clipboard.Name = "Coords2Clipboard"
+Gui.Coords2Clipboard.Parent = Gui.coordsFrame
+Gui.Coords2Clipboard.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui.Coords2Clipboard.BackgroundTransparency = 1.000
+Gui.Coords2Clipboard.Size = UDim2.new(1, 0, 1, 0)
+Gui.Coords2Clipboard.ZIndex = 5
+Gui.Coords2Clipboard.Image = "rbxassetid://6551631587"
+Gui.Coords2Clipboard.ImageTransparency = 1.000
+
+Gui.HatScripts.Name = "HatScripts"
+Gui.HatScripts.Parent = game.Players.LocalPlayer.PlayerGui.WindowsXP.MainFrame.Menus
+Gui.HatScripts.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui.HatScripts.BackgroundTransparency = 1.000
+Gui.HatScripts.Size = UDim2.new(0, 250, 0, 434)
+Gui.HatScripts.Visible = false
+Gui.HatScripts.ZIndex = 2
+
+Gui.Title_8.Name = "Title"
+Gui.Title_8.Parent = Gui.HatScripts
+Gui.Title_8.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui.Title_8.BackgroundTransparency = 1.000
+Gui.Title_8.Size = UDim2.new(0, 250, 0, 36)
+Gui.Title_8.ZIndex = 2
+Gui.Title_8.Font = Enum.Font.Arcade
+Gui.Title_8.Text = "HAT SCRIPTS"
+Gui.Title_8.TextColor3 = Color3.fromRGB(139, 139, 139)
+Gui.Title_8.TextScaled = true
+Gui.Title_8.TextSize = 14.000
+Gui.Title_8.TextWrapped = true
+
+Gui.Pages.Name = "Pages"
+Gui.Pages.Parent = Gui.HatScripts
+Gui.Pages.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui.Pages.BackgroundTransparency = 1.000
+Gui.Pages.ClipsDescendants = true
+Gui.Pages.Size = UDim2.new(0, 250, 0, 434)
+
+Gui.UIPageLayout.Parent = Gui.Pages
+
+Gui.Page1.Name = "Page1"
+Gui.Page1.Parent = Gui.Pages
+Gui.Page1.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui.Page1.BackgroundTransparency = 1.000
+Gui.Page1.Size = UDim2.new(0, 249, 0, 434)
+
+Gui.BrickCarScript.Name = "BrickCarScript"
+Gui.BrickCarScript.Parent = Gui.Page1
+Gui.BrickCarScript.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui.BrickCarScript.BackgroundTransparency = 1.000
+Gui.BrickCarScript.Position = UDim2.new(0, 0, 0.117511518, 0)
+Gui.BrickCarScript.Size = UDim2.new(0, 249, 0, 39)
+
+Gui.ScriptLoadButton.Name = "ScriptLoadButton"
+Gui.ScriptLoadButton.Parent = Gui.BrickCarScript
+Gui.ScriptLoadButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui.ScriptLoadButton.BackgroundTransparency = 1.000
+Gui.ScriptLoadButton.Position = UDim2.new(0.0648113713, 0, -0.0106936172, 0)
+Gui.ScriptLoadButton.Size = UDim2.new(0, 159, 0, 39)
+Gui.ScriptLoadButton.ZIndex = 2
+Gui.ScriptLoadButton.Font = Enum.Font.Arcade
+Gui.ScriptLoadButton.Text = "Brick Car"
+Gui.ScriptLoadButton.TextColor3 = Color3.fromRGB(139, 139, 139)
+Gui.ScriptLoadButton.TextScaled = true
+Gui.ScriptLoadButton.TextSize = 14.000
+Gui.ScriptLoadButton.TextWrapped = true
+
+Gui.BG.Name = "BG"
+Gui.BG.Parent = Gui.BrickCarScript
+Gui.BG.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui.BG.BackgroundTransparency = 1.000
+Gui.BG.Position = UDim2.new(0.0400481932, 0, -0.0106936172, 0)
+Gui.BG.Size = UDim2.new(0, 176, 0, 39)
+Gui.BG.Image = "rbxassetid://6533134734"
+
+Gui.ViewHats.Name = "ViewHats"
+Gui.ViewHats.Parent = Gui.BrickCarScript
+Gui.ViewHats.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui.ViewHats.BackgroundTransparency = 1.000
+Gui.ViewHats.Position = UDim2.new(0.811244905, 0, 0, 0)
+Gui.ViewHats.Size = UDim2.new(0, 39, 0, 39)
+Gui.ViewHats.Image = "rbxassetid://6539884475"
+
+Gui.SwordWingsScript.Name = "SwordWingsScript"
+Gui.SwordWingsScript.Parent = Gui.Page1
+Gui.SwordWingsScript.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui.SwordWingsScript.BackgroundTransparency = 1.000
+Gui.SwordWingsScript.Position = UDim2.new(0, 0, 0.225806445, 0)
+Gui.SwordWingsScript.Size = UDim2.new(0, 249, 0, 39)
+
+Gui.ScriptLoadButton_2.Name = "ScriptLoadButton"
+Gui.ScriptLoadButton_2.Parent = Gui.SwordWingsScript
+Gui.ScriptLoadButton_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui.ScriptLoadButton_2.BackgroundTransparency = 1.000
+Gui.ScriptLoadButton_2.Position = UDim2.new(0.0648113713, 0, -0.0106936172, 0)
+Gui.ScriptLoadButton_2.Size = UDim2.new(0, 159, 0, 39)
+Gui.ScriptLoadButton_2.ZIndex = 2
+Gui.ScriptLoadButton_2.Font = Enum.Font.Arcade
+Gui.ScriptLoadButton_2.Text = "Sword Wings"
+Gui.ScriptLoadButton_2.TextColor3 = Color3.fromRGB(139, 139, 139)
+Gui.ScriptLoadButton_2.TextScaled = true
+Gui.ScriptLoadButton_2.TextSize = 14.000
+Gui.ScriptLoadButton_2.TextWrapped = true
+
+Gui.BG_2.Name = "BG"
+Gui.BG_2.Parent = Gui.SwordWingsScript
+Gui.BG_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui.BG_2.BackgroundTransparency = 1.000
+Gui.BG_2.Position = UDim2.new(0.0400481932, 0, -0.0106936172, 0)
+Gui.BG_2.Size = UDim2.new(0, 176, 0, 39)
+Gui.BG_2.Image = "rbxassetid://6533134734"
+
+Gui.ViewHats_2.Name = "ViewHats"
+Gui.ViewHats_2.Parent = Gui.SwordWingsScript
+Gui.ViewHats_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui.ViewHats_2.BackgroundTransparency = 1.000
+Gui.ViewHats_2.Position = UDim2.new(0.811244905, 0, 0, 0)
+Gui.ViewHats_2.Size = UDim2.new(0, 39, 0, 39)
+Gui.ViewHats_2.Image = "rbxassetid://6539884475"
+
+Gui.ElephantTrunk.Name = "ElephantTrunk"
+Gui.ElephantTrunk.Parent = Gui.Page1
+Gui.ElephantTrunk.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui.ElephantTrunk.BackgroundTransparency = 1.000
+Gui.ElephantTrunk.Position = UDim2.new(0, 0, 0.331797212, 0)
+Gui.ElephantTrunk.Size = UDim2.new(0, 249, 0, 39)
+
+Gui.ScriptLoadButton_3.Name = "ScriptLoadButton"
+Gui.ScriptLoadButton_3.Parent = Gui.ElephantTrunk
+Gui.ScriptLoadButton_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui.ScriptLoadButton_3.BackgroundTransparency = 1.000
+Gui.ScriptLoadButton_3.Position = UDim2.new(0.0648113713, 0, -0.0106936172, 0)
+Gui.ScriptLoadButton_3.Size = UDim2.new(0, 159, 0, 39)
+Gui.ScriptLoadButton_3.ZIndex = 2
+Gui.ScriptLoadButton_3.Font = Enum.Font.Arcade
+Gui.ScriptLoadButton_3.Text = "Elephant Trunk"
+Gui.ScriptLoadButton_3.TextColor3 = Color3.fromRGB(139, 139, 139)
+Gui.ScriptLoadButton_3.TextScaled = true
+Gui.ScriptLoadButton_3.TextSize = 14.000
+Gui.ScriptLoadButton_3.TextWrapped = true
+
+Gui.BG_3.Name = "BG"
+Gui.BG_3.Parent = Gui.ElephantTrunk
+Gui.BG_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui.BG_3.BackgroundTransparency = 1.000
+Gui.BG_3.Position = UDim2.new(0.0400481932, 0, -0.0106936172, 0)
+Gui.BG_3.Size = UDim2.new(0, 176, 0, 39)
+Gui.BG_3.Image = "rbxassetid://6533134734"
+
+Gui.ViewHats_3.Name = "ViewHats"
+Gui.ViewHats_3.Parent = Gui.ElephantTrunk
+Gui.ViewHats_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui.ViewHats_3.BackgroundTransparency = 1.000
+Gui.ViewHats_3.Position = UDim2.new(0.811244905, 0, 0, 0)
+Gui.ViewHats_3.Size = UDim2.new(0, 39, 0, 39)
+Gui.ViewHats_3.Image = "rbxassetid://6539884475"
+
+Gui.PageSelector.Name = "PageSelector"
+Gui.PageSelector.Parent = Gui.HatScripts
+Gui.PageSelector.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui.PageSelector.BackgroundTransparency = 1.000
+Gui.PageSelector.Position = UDim2.new(0.231999993, 0, 0.910138249, 0)
+Gui.PageSelector.Size = UDim2.new(0, 135, 0, 29)
+
+Gui.Next.Name = "Next"
+Gui.Next.Parent = Gui.PageSelector
+Gui.Next.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui.Next.BackgroundTransparency = 1.000
+Gui.Next.Position = UDim2.new(1.10370374, 0, -0.068965517, 0)
+Gui.Next.Size = UDim2.new(0, 29, 0, 29)
+Gui.Next.Image = "rbxassetid://6531531478"
+
+Gui.PrevButton.Name = "PrevButton"
+Gui.PrevButton.Parent = Gui.PageSelector
+Gui.PrevButton.AnchorPoint = Vector2.new(1, 0.5)
+Gui.PrevButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui.PrevButton.BackgroundTransparency = 1.000
+Gui.PrevButton.Position = UDim2.new(0.214814812, -48, 0.461044818, 0)
+Gui.PrevButton.Size = UDim2.new(0, 29, 0, 29)
+Gui.PrevButton.ZIndex = 8
+Gui.PrevButton.Font = Enum.Font.SourceSans
+Gui.PrevButton.Text = ""
+Gui.PrevButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+Gui.PrevButton.TextSize = 30.000
+Gui.PrevButton.TextWrapped = true
+
+Gui.NextButton.Name = "NextButton"
+Gui.NextButton.Parent = Gui.PageSelector
+Gui.NextButton.AnchorPoint = Vector2.new(0, 0.5)
+Gui.NextButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui.NextButton.BackgroundTransparency = 1.000
+Gui.NextButton.Position = UDim2.new(0.742680073, 48, 0.468590051, 0)
+Gui.NextButton.Size = UDim2.new(0, 29, 0, 29)
+Gui.NextButton.ZIndex = 8
+Gui.NextButton.Font = Enum.Font.SourceSans
+Gui.NextButton.Text = ""
+Gui.NextButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+Gui.NextButton.TextSize = 30.000
+Gui.NextButton.TextWrapped = true
+
+Gui.Previous.Name = "Previous"
+Gui.Previous.Parent = Gui.PageSelector
+Gui.Previous.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui.Previous.BackgroundTransparency = 1.000
+Gui.Previous.Position = UDim2.new(-0.355555564, 0, -0.068965517, 0)
+Gui.Previous.Size = UDim2.new(0, 29, 0, 29)
+Gui.Previous.Image = "rbxassetid://6531531599"
+
+Gui.PageLabel.Name = "PageLabel"
+Gui.PageLabel.Parent = Gui.PageSelector
+Gui.PageLabel.BackgroundColor3 = Color3.fromRGB(203, 203, 203)
+Gui.PageLabel.BackgroundTransparency = 0.500
+Gui.PageLabel.BorderSizePixel = 0
+Gui.PageLabel.Position = UDim2.new(-0.140740737, 0, -0.068965517, 0)
+Gui.PageLabel.Size = UDim2.new(0, 168, 0, 29)
+Gui.PageLabel.Font = Enum.Font.Arcade
+Gui.PageLabel.Text = "1  /  1"
+Gui.PageLabel.TextColor3 = Color3.fromRGB(139, 139, 139)
+Gui.PageLabel.TextScaled = true
+Gui.PageLabel.TextSize = 14.000
+Gui.PageLabel.TextWrapped = true
+
+Gui.Line_2.Name = "Line"
+Gui.Line_2.Parent = Gui.HatScripts
+Gui.Line_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui.Line_2.BackgroundTransparency = 1.000
+Gui.Line_2.Position = UDim2.new(0.00472570816, 0, 0.0829493105, 0)
+Gui.Line_2.Size = UDim2.new(0, 249, 0, 6)
+Gui.Line_2.Image = "rbxassetid://6531586437"
+
+Gui.HatViewer.Name = "HatViewer"
+Gui.HatViewer.Parent = Gui.HatScripts
+Gui.HatViewer.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui.HatViewer.BackgroundTransparency = 1.000
+Gui.HatViewer.Position = UDim2.new(0.99999994, 0, 0.0829493105, 0)
+Gui.HatViewer.Size = UDim2.new(0, 107, 0, 398)
+
+Gui.Hat1.Name = "Hat1"
+Gui.Hat1.Parent = Gui.HatViewer
+Gui.Hat1.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui.Hat1.BackgroundTransparency = 1.000
+Gui.Hat1.Position = UDim2.new(-0.00373854488, 0, 0.0125628905, 0)
+Gui.Hat1.Size = UDim2.new(0, 78, 0, 78)
+Gui.Hat1.Visible = false
+
+Gui.bg.Name = "bg"
+Gui.bg.Parent = Gui.Hat1
+Gui.bg.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui.bg.BackgroundTransparency = 1.000
+Gui.bg.Size = UDim2.new(0, 81, 0, 81)
+Gui.bg.Image = "rbxassetid://6540035362"
+
+Gui.HatImage.Name = "HatImage"
+Gui.HatImage.Parent = Gui.Hat1
+Gui.HatImage.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui.HatImage.BackgroundTransparency = 1.000
+Gui.HatImage.Position = UDim2.new(0.111111112, 0, 0.118307985, 0)
+Gui.HatImage.Size = UDim2.new(0, 61, 0, 60)
+Gui.HatImage.ZIndex = 2
+Gui.HatImage.Image = "rbxasset://textures/ui/GuiImagePlaceholder.png"
+
+Gui.HatName.Name = "HatName"
+Gui.HatName.Parent = Gui.Hat1
+Gui.HatName.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui.HatName.BackgroundTransparency = 1.000
+Gui.HatName.Position = UDim2.new(0, 0, 0.587443411, 0)
+Gui.HatName.Size = UDim2.new(0, 78, 0, 26)
+Gui.HatName.ZIndex = 4
+Gui.HatName.Font = Enum.Font.Arcade
+Gui.HatName.TextColor3 = Color3.fromRGB(139, 139, 139)
+Gui.HatName.TextScaled = true
+Gui.HatName.TextSize = 14.000
+Gui.HatName.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
+Gui.HatName.TextStrokeTransparency = 0.000
+Gui.HatName.TextWrapped = true
+
+Gui.Hat2.Name = "Hat2"
+Gui.Hat2.Parent = Gui.HatViewer
+Gui.Hat2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui.Hat2.BackgroundTransparency = 1.000
+Gui.Hat2.Position = UDim2.new(0.728971958, 0, 0.0125628905, 0)
+Gui.Hat2.Size = UDim2.new(0, 78, 0, 78)
+Gui.Hat2.Visible = false
+
+Gui.bg_2.Name = "bg"
+Gui.bg_2.Parent = Gui.Hat2
+Gui.bg_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui.bg_2.BackgroundTransparency = 1.000
+Gui.bg_2.Size = UDim2.new(0, 81, 0, 81)
+Gui.bg_2.Image = "rbxassetid://6540035362"
+
+Gui.HatImage_2.Name = "HatImage"
+Gui.HatImage_2.Parent = Gui.Hat2
+Gui.HatImage_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui.HatImage_2.BackgroundTransparency = 1.000
+Gui.HatImage_2.Position = UDim2.new(0.111111112, 0, 0.118307985, 0)
+Gui.HatImage_2.Size = UDim2.new(0, 61, 0, 60)
+Gui.HatImage_2.ZIndex = 2
+Gui.HatImage_2.Image = "rbxasset://textures/ui/GuiImagePlaceholder.png"
+
+Gui.HatName_2.Name = "HatName"
+Gui.HatName_2.Parent = Gui.Hat2
+Gui.HatName_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui.HatName_2.BackgroundTransparency = 1.000
+Gui.HatName_2.Position = UDim2.new(0, 0, 0.587443411, 0)
+Gui.HatName_2.Size = UDim2.new(0, 81, 0, 26)
+Gui.HatName_2.ZIndex = 4
+Gui.HatName_2.Font = Enum.Font.Arcade
+Gui.HatName_2.TextColor3 = Color3.fromRGB(139, 139, 139)
+Gui.HatName_2.TextScaled = true
+Gui.HatName_2.TextSize = 14.000
+Gui.HatName_2.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
+Gui.HatName_2.TextStrokeTransparency = 0.000
+Gui.HatName_2.TextWrapped = true
+
+Gui.Hat3.Name = "Hat3"
+Gui.Hat3.Parent = Gui.HatViewer
+Gui.Hat3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui.Hat3.BackgroundTransparency = 1.000
+Gui.Hat3.Position = UDim2.new(-0.00373854488, 0, 0.209547877, 0)
+Gui.Hat3.Size = UDim2.new(0, 78, 0, 78)
+Gui.Hat3.Visible = false
+
+Gui.bg_3.Name = "bg"
+Gui.bg_3.Parent = Gui.Hat3
+Gui.bg_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui.bg_3.BackgroundTransparency = 1.000
+Gui.bg_3.Size = UDim2.new(0, 81, 0, 81)
+Gui.bg_3.Image = "rbxassetid://6540035362"
+
+Gui.HatImage_3.Name = "HatImage"
+Gui.HatImage_3.Parent = Gui.Hat3
+Gui.HatImage_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui.HatImage_3.BackgroundTransparency = 1.000
+Gui.HatImage_3.Position = UDim2.new(0.111111112, 0, 0.118307985, 0)
+Gui.HatImage_3.Size = UDim2.new(0, 61, 0, 60)
+Gui.HatImage_3.ZIndex = 2
+Gui.HatImage_3.Image = "rbxasset://textures/ui/GuiImagePlaceholder.png"
+
+Gui.HatName_3.Name = "HatName"
+Gui.HatName_3.Parent = Gui.Hat3
+Gui.HatName_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui.HatName_3.BackgroundTransparency = 1.000
+Gui.HatName_3.Position = UDim2.new(0, 0, 0.587443411, 0)
+Gui.HatName_3.Size = UDim2.new(0, 78, 0, 26)
+Gui.HatName_3.ZIndex = 4
+Gui.HatName_3.Font = Enum.Font.Arcade
+Gui.HatName_3.TextColor3 = Color3.fromRGB(139, 139, 139)
+Gui.HatName_3.TextScaled = true
+Gui.HatName_3.TextSize = 14.000
+Gui.HatName_3.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
+Gui.HatName_3.TextStrokeTransparency = 0.000
+Gui.HatName_3.TextWrapped = true
+
+Gui.Hat4.Name = "Hat4"
+Gui.Hat4.Parent = Gui.HatViewer
+Gui.Hat4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui.Hat4.BackgroundTransparency = 1.000
+Gui.Hat4.Position = UDim2.new(0.728971958, 0, 0.209547877, 0)
+Gui.Hat4.Size = UDim2.new(0, 78, 0, 78)
+Gui.Hat4.Visible = false
+
+Gui.bg_4.Name = "bg"
+Gui.bg_4.Parent = Gui.Hat4
+Gui.bg_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui.bg_4.BackgroundTransparency = 1.000
+Gui.bg_4.Size = UDim2.new(0, 81, 0, 81)
+Gui.bg_4.Image = "rbxassetid://6540035362"
+
+Gui.HatImage_4.Name = "HatImage"
+Gui.HatImage_4.Parent = Gui.Hat4
+Gui.HatImage_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui.HatImage_4.BackgroundTransparency = 1.000
+Gui.HatImage_4.Position = UDim2.new(0.111111112, 0, 0.118307985, 0)
+Gui.HatImage_4.Size = UDim2.new(0, 61, 0, 60)
+Gui.HatImage_4.ZIndex = 2
+Gui.HatImage_4.Image = "rbxasset://textures/ui/GuiImagePlaceholder.png"
+
+Gui.HatName_4.Name = "HatName"
+Gui.HatName_4.Parent = Gui.Hat4
+Gui.HatName_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui.HatName_4.BackgroundTransparency = 1.000
+Gui.HatName_4.Position = UDim2.new(0, 0, 0.587443411, 0)
+Gui.HatName_4.Size = UDim2.new(0, 81, 0, 26)
+Gui.HatName_4.ZIndex = 4
+Gui.HatName_4.Font = Enum.Font.Arcade
+Gui.HatName_4.TextColor3 = Color3.fromRGB(139, 139, 139)
+Gui.HatName_4.TextScaled = true
+Gui.HatName_4.TextSize = 14.000
+Gui.HatName_4.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
+Gui.HatName_4.TextStrokeTransparency = 0.000
+Gui.HatName_4.TextWrapped = true
+
+Gui.Hat5.Name = "Hat5"
+Gui.Hat5.Parent = Gui.HatViewer
+Gui.Hat5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui.Hat5.BackgroundTransparency = 1.000
+Gui.Hat5.Position = UDim2.new(-0.00373854488, 0, 0.406532764, 0)
+Gui.Hat5.Size = UDim2.new(0, 78, 0, 78)
+Gui.Hat5.Visible = false
+
+Gui.bg_5.Name = "bg"
+Gui.bg_5.Parent = Gui.Hat5
+Gui.bg_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui.bg_5.BackgroundTransparency = 1.000
+Gui.bg_5.Size = UDim2.new(0, 81, 0, 81)
+Gui.bg_5.Image = "rbxassetid://6540035362"
+
+Gui.HatImage_5.Name = "HatImage"
+Gui.HatImage_5.Parent = Gui.Hat5
+Gui.HatImage_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui.HatImage_5.BackgroundTransparency = 1.000
+Gui.HatImage_5.Position = UDim2.new(0.111111112, 0, 0.118307985, 0)
+Gui.HatImage_5.Size = UDim2.new(0, 61, 0, 60)
+Gui.HatImage_5.ZIndex = 2
+Gui.HatImage_5.Image = "rbxasset://textures/ui/GuiImagePlaceholder.png"
+
+Gui.HatName_5.Name = "HatName"
+Gui.HatName_5.Parent = Gui.Hat5
+Gui.HatName_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui.HatName_5.BackgroundTransparency = 1.000
+Gui.HatName_5.Position = UDim2.new(0, 0, 0.587443411, 0)
+Gui.HatName_5.Size = UDim2.new(0, 78, 0, 26)
+Gui.HatName_5.ZIndex = 4
+Gui.HatName_5.Font = Enum.Font.Arcade
+Gui.HatName_5.TextColor3 = Color3.fromRGB(139, 139, 139)
+Gui.HatName_5.TextScaled = true
+Gui.HatName_5.TextSize = 14.000
+Gui.HatName_5.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
+Gui.HatName_5.TextStrokeTransparency = 0.000
+Gui.HatName_5.TextWrapped = true
+
+Gui.Hat6.Name = "Hat6"
+Gui.Hat6.Parent = Gui.HatViewer
+Gui.Hat6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui.Hat6.BackgroundTransparency = 1.000
+Gui.Hat6.Position = UDim2.new(0.728971958, 0, 0.406532764, 0)
+Gui.Hat6.Size = UDim2.new(0, 78, 0, 78)
+Gui.Hat6.Visible = false
+
+Gui.bg_6.Name = "bg"
+Gui.bg_6.Parent = Gui.Hat6
+Gui.bg_6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui.bg_6.BackgroundTransparency = 1.000
+Gui.bg_6.Size = UDim2.new(0, 81, 0, 81)
+Gui.bg_6.Image = "rbxassetid://6540035362"
+
+Gui.HatImage_6.Name = "HatImage"
+Gui.HatImage_6.Parent = Gui.Hat6
+Gui.HatImage_6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui.HatImage_6.BackgroundTransparency = 1.000
+Gui.HatImage_6.Position = UDim2.new(0.111111112, 0, 0.118307985, 0)
+Gui.HatImage_6.Size = UDim2.new(0, 61, 0, 60)
+Gui.HatImage_6.ZIndex = 2
+Gui.HatImage_6.Image = "rbxasset://textures/ui/GuiImagePlaceholder.png"
+
+Gui.HatName_6.Name = "HatName"
+Gui.HatName_6.Parent = Gui.Hat6
+Gui.HatName_6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui.HatName_6.BackgroundTransparency = 1.000
+Gui.HatName_6.Position = UDim2.new(0, 0, 0.587443411, 0)
+Gui.HatName_6.Size = UDim2.new(0, 81, 0, 26)
+Gui.HatName_6.ZIndex = 4
+Gui.HatName_6.Font = Enum.Font.Arcade
+Gui.HatName_6.TextColor3 = Color3.fromRGB(139, 139, 139)
+Gui.HatName_6.TextScaled = true
+Gui.HatName_6.TextSize = 14.000
+Gui.HatName_6.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
+Gui.HatName_6.TextStrokeTransparency = 0.000
+Gui.HatName_6.TextWrapped = true
+
+Gui.Hat7.Name = "Hat7"
+Gui.Hat7.Parent = Gui.HatViewer
+Gui.Hat7.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui.Hat7.BackgroundTransparency = 1.000
+Gui.Hat7.Position = UDim2.new(-0.00373854488, 0, 0.603517771, 0)
+Gui.Hat7.Size = UDim2.new(0, 78, 0, 78)
+Gui.Hat7.Visible = false
+
+Gui.bg_7.Name = "bg"
+Gui.bg_7.Parent = Gui.Hat7
+Gui.bg_7.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui.bg_7.BackgroundTransparency = 1.000
+Gui.bg_7.Size = UDim2.new(0, 81, 0, 81)
+Gui.bg_7.Image = "rbxassetid://6540035362"
+
+Gui.HatImage_7.Name = "HatImage"
+Gui.HatImage_7.Parent = Gui.Hat7
+Gui.HatImage_7.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui.HatImage_7.BackgroundTransparency = 1.000
+Gui.HatImage_7.Position = UDim2.new(0.111111112, 0, 0.118307985, 0)
+Gui.HatImage_7.Size = UDim2.new(0, 61, 0, 60)
+Gui.HatImage_7.ZIndex = 2
+Gui.HatImage_7.Image = "rbxasset://textures/ui/GuiImagePlaceholder.png"
+
+Gui.HatName_7.Name = "HatName"
+Gui.HatName_7.Parent = Gui.Hat7
+Gui.HatName_7.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui.HatName_7.BackgroundTransparency = 1.000
+Gui.HatName_7.Position = UDim2.new(0, 0, 0.587443829, 0)
+Gui.HatName_7.Size = UDim2.new(0, 78, 0, 26)
+Gui.HatName_7.ZIndex = 4
+Gui.HatName_7.Font = Enum.Font.Arcade
+Gui.HatName_7.TextColor3 = Color3.fromRGB(139, 139, 139)
+Gui.HatName_7.TextScaled = true
+Gui.HatName_7.TextSize = 14.000
+Gui.HatName_7.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
+Gui.HatName_7.TextStrokeTransparency = 0.000
+Gui.HatName_7.TextWrapped = true
+
+Gui.Hat8.Name = "Hat8"
+Gui.Hat8.Parent = Gui.HatViewer
+Gui.Hat8.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui.Hat8.BackgroundTransparency = 1.000
+Gui.Hat8.Position = UDim2.new(0.728971958, 0, 0.603517771, 0)
+Gui.Hat8.Size = UDim2.new(0, 78, 0, 78)
+Gui.Hat8.Visible = false
+
+Gui.bg_8.Name = "bg"
+Gui.bg_8.Parent = Gui.Hat8
+Gui.bg_8.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui.bg_8.BackgroundTransparency = 1.000
+Gui.bg_8.Size = UDim2.new(0, 81, 0, 81)
+Gui.bg_8.Image = "rbxassetid://6540035362"
+
+Gui.HatImage_8.Name = "HatImage"
+Gui.HatImage_8.Parent = Gui.Hat8
+Gui.HatImage_8.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui.HatImage_8.BackgroundTransparency = 1.000
+Gui.HatImage_8.Position = UDim2.new(0.111111112, 0, 0.118307985, 0)
+Gui.HatImage_8.Size = UDim2.new(0, 61, 0, 60)
+Gui.HatImage_8.ZIndex = 2
+Gui.HatImage_8.Image = "rbxasset://textures/ui/GuiImagePlaceholder.png"
+
+Gui.HatName_8.Name = "HatName"
+Gui.HatName_8.Parent = Gui.Hat8
+Gui.HatName_8.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui.HatName_8.BackgroundTransparency = 1.000
+Gui.HatName_8.Position = UDim2.new(0, 0, 0.587443829, 0)
+Gui.HatName_8.Size = UDim2.new(0, 81, 0, 26)
+Gui.HatName_8.ZIndex = 4
+Gui.HatName_8.Font = Enum.Font.Arcade
+Gui.HatName_8.TextColor3 = Color3.fromRGB(139, 139, 139)
+Gui.HatName_8.TextScaled = true
+Gui.HatName_8.TextSize = 14.000
+Gui.HatName_8.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
+Gui.HatName_8.TextStrokeTransparency = 0.000
+Gui.HatName_8.TextWrapped = true
+
+Gui.Hat9.Name = "Hat9"
+Gui.Hat9.Parent = Gui.HatViewer
+Gui.Hat9.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui.Hat9.BackgroundTransparency = 1.000
+Gui.Hat9.Position = UDim2.new(-0.00373854488, 0, 0.800502717, 0)
+Gui.Hat9.Size = UDim2.new(0, 78, 0, 78)
+Gui.Hat9.Visible = false
+
+Gui.bg_9.Name = "bg"
+Gui.bg_9.Parent = Gui.Hat9
+Gui.bg_9.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui.bg_9.BackgroundTransparency = 1.000
+Gui.bg_9.Size = UDim2.new(0, 81, 0, 81)
+Gui.bg_9.Image = "rbxassetid://6540035362"
+
+Gui.HatImage_9.Name = "HatImage"
+Gui.HatImage_9.Parent = Gui.Hat9
+Gui.HatImage_9.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui.HatImage_9.BackgroundTransparency = 1.000
+Gui.HatImage_9.Position = UDim2.new(0.111111112, 0, 0.118307985, 0)
+Gui.HatImage_9.Size = UDim2.new(0, 61, 0, 60)
+Gui.HatImage_9.ZIndex = 2
+Gui.HatImage_9.Image = "rbxasset://textures/ui/GuiImagePlaceholder.png"
+
+Gui.HatName_9.Name = "HatName"
+Gui.HatName_9.Parent = Gui.Hat9
+Gui.HatName_9.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui.HatName_9.BackgroundTransparency = 1.000
+Gui.HatName_9.Position = UDim2.new(0, 0, 0.587443054, 0)
+Gui.HatName_9.Size = UDim2.new(0, 78, 0, 26)
+Gui.HatName_9.ZIndex = 4
+Gui.HatName_9.Font = Enum.Font.Arcade
+Gui.HatName_9.TextColor3 = Color3.fromRGB(139, 139, 139)
+Gui.HatName_9.TextScaled = true
+Gui.HatName_9.TextSize = 14.000
+Gui.HatName_9.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
+Gui.HatName_9.TextStrokeTransparency = 0.000
+Gui.HatName_9.TextWrapped = true
+
+Gui.Hat10.Name = "Hat10"
+Gui.Hat10.Parent = Gui.HatViewer
+Gui.Hat10.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui.Hat10.BackgroundTransparency = 1.000
+Gui.Hat10.Position = UDim2.new(0.728971958, 0, 0.800502717, 0)
+Gui.Hat10.Size = UDim2.new(0, 78, 0, 78)
+Gui.Hat10.Visible = false
+
+Gui.bg_10.Name = "bg"
+Gui.bg_10.Parent = Gui.Hat10
+Gui.bg_10.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui.bg_10.BackgroundTransparency = 1.000
+Gui.bg_10.Size = UDim2.new(0, 81, 0, 81)
+Gui.bg_10.Image = "rbxassetid://6540035362"
+
+Gui.HatImage_10.Name = "HatImage"
+Gui.HatImage_10.Parent = Gui.Hat10
+Gui.HatImage_10.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui.HatImage_10.BackgroundTransparency = 1.000
+Gui.HatImage_10.Position = UDim2.new(0.111111112, 0, 0.118307985, 0)
+Gui.HatImage_10.Size = UDim2.new(0, 61, 0, 60)
+Gui.HatImage_10.ZIndex = 2
+Gui.HatImage_10.Image = "rbxasset://textures/ui/GuiImagePlaceholder.png"
+
+Gui.HatName_10.Name = "HatName"
+Gui.HatName_10.Parent = Gui.Hat10
+Gui.HatName_10.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui.HatName_10.BackgroundTransparency = 1.000
+Gui.HatName_10.Position = UDim2.new(0, 0, 0.587443054, 0)
+Gui.HatName_10.Size = UDim2.new(0, 81, 0, 26)
+Gui.HatName_10.ZIndex = 4
+Gui.HatName_10.Font = Enum.Font.Arcade
+Gui.HatName_10.TextColor3 = Color3.fromRGB(139, 139, 139)
+Gui.HatName_10.TextScaled = true
+Gui.HatName_10.TextSize = 14.000
+Gui.HatName_10.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
+Gui.HatName_10.TextStrokeTransparency = 0.000
+Gui.HatName_10.TextWrapped = true
+
+Gui.PlayerTP.Name = "PlayerTP"
+Gui.PlayerTP.Parent = game.Players.LocalPlayer.PlayerGui.WindowsXP.MainFrame.Menus
+Gui.PlayerTP.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui.PlayerTP.BackgroundTransparency = 1.000
+Gui.PlayerTP.Size = UDim2.new(0, 250, 0, 434)
+Gui.PlayerTP.Visible = false
+Gui.PlayerTP.ZIndex = 2
+
+Gui.Title_9.Name = "Title"
+Gui.Title_9.Parent = Gui.PlayerTP
+Gui.Title_9.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui.Title_9.BackgroundTransparency = 1.000
+Gui.Title_9.Size = UDim2.new(0, 250, 0, 36)
+Gui.Title_9.ZIndex = 2
+Gui.Title_9.Font = Enum.Font.Arcade
+Gui.Title_9.Text = "PLAYERS"
+Gui.Title_9.TextColor3 = Color3.fromRGB(139, 139, 139)
+Gui.Title_9.TextScaled = true
+Gui.Title_9.TextSize = 14.000
+Gui.Title_9.TextWrapped = true
+
+Gui.Line_3.Name = "Line"
+Gui.Line_3.Parent = Gui.PlayerTP
+Gui.Line_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui.Line_3.BackgroundTransparency = 1.000
+Gui.Line_3.Position = UDim2.new(0.00472570816, 0, 0.0829493105, 0)
+Gui.Line_3.Size = UDim2.new(0, 249, 0, 6)
+Gui.Line_3.Image = "rbxassetid://6531586437"
+
+Gui.playerList.Name = "playerList"
+Gui.playerList.Parent = Gui.PlayerTP
+Gui.playerList.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui.playerList.BackgroundTransparency = 1.000
+Gui.playerList.ClipsDescendants = true
+Gui.playerList.Position = UDim2.new(0.00472558616, 0, 0.0967741907, 0)
+Gui.playerList.Size = UDim2.new(0, 248, 0, 385)
+
+Gui.playerScrollFrame.Name = "playerScrollFrame"
+Gui.playerScrollFrame.Parent = Gui.playerList
+Gui.playerScrollFrame.Active = true
+Gui.playerScrollFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui.playerScrollFrame.BackgroundTransparency = 1.000
+Gui.playerScrollFrame.BorderSizePixel = 0
+Gui.playerScrollFrame.Position = UDim2.new(0, 0, 0.0988506377, 0)
+Gui.playerScrollFrame.Size = UDim2.new(0, 250, 0, 353)
+Gui.playerScrollFrame.BottomImage = "rbxasset://textures/ui/Scroll/scroll-middle.png"
+Gui.playerScrollFrame.CanvasSize = UDim2.new(0, 0, 100, 0)
+Gui.playerScrollFrame.TopImage = "rbxasset://textures/ui/Scroll/scroll-middle.png"
+
+Gui.UIListLayout_2.Parent = Gui.playerScrollFrame
+Gui.UIListLayout_2.SortOrder = Enum.SortOrder.LayoutOrder
+
+Gui.searchBar.Name = "searchBar"
+Gui.searchBar.Parent = Gui.playerList
+Gui.searchBar.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui.searchBar.BackgroundTransparency = 1.000
+Gui.searchBar.Position = UDim2.new(-0.0240000002, 0, -0.0137931034, 0)
+Gui.searchBar.Size = UDim2.new(0, 250, 0, 43)
+
+Gui.searchBarBG.Name = "searchBarBG"
+Gui.searchBarBG.Parent = Gui.searchBar
+Gui.searchBarBG.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui.searchBarBG.BackgroundTransparency = 1.000
+Gui.searchBarBG.Position = UDim2.new(0.0320000015, 0, 0.291046858, 0)
+Gui.searchBarBG.Size = UDim2.new(0, 242, 0, 24)
+Gui.searchBarBG.Image = "rbxassetid://6531499454"
+
+Gui.searchBar_2.Name = "searchBar"
+Gui.searchBar_2.Parent = Gui.searchBarBG
+Gui.searchBar_2.BackgroundColor3 = Color3.fromRGB(200, 185, 255)
+Gui.searchBar_2.BackgroundTransparency = 1.000
+Gui.searchBar_2.BorderSizePixel = 0
+Gui.searchBar_2.Position = UDim2.new(0.107487701, 0, 0, 0)
+Gui.searchBar_2.Size = UDim2.new(0.868318796, 0, 1, 0)
+Gui.searchBar_2.ZIndex = 3
+Gui.searchBar_2.Font = Enum.Font.Arcade
+Gui.searchBar_2.PlaceholderColor3 = Color3.fromRGB(158, 158, 158)
+Gui.searchBar_2.PlaceholderText = "SEARCH"
+Gui.searchBar_2.Text = ""
+Gui.searchBar_2.TextColor3 = Color3.fromRGB(86, 86, 86)
+Gui.searchBar_2.TextScaled = true
+Gui.searchBar_2.TextSize = 14.000
+Gui.searchBar_2.TextStrokeColor3 = Color3.fromRGB(61, 61, 61)
+Gui.searchBar_2.TextWrapped = true
+
+Gui.magnifyingGlass.Name = "magnifyingGlass"
+Gui.magnifyingGlass.Parent = Gui.searchBar
+Gui.magnifyingGlass.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui.magnifyingGlass.BackgroundTransparency = 1.000
+Gui.magnifyingGlass.Position = UDim2.new(0.0560480952, 0, 0.365390509, 0)
+Gui.magnifyingGlass.Size = UDim2.new(0, 20, 0, 20)
+Gui.magnifyingGlass.ZIndex = 2
+Gui.magnifyingGlass.Image = "rbxassetid://6551762877"
+
+Gui.background.Name = "background"
+Gui.background.Parent = Gui.playerList
+Gui.background.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui.background.BackgroundTransparency = 0.500
+Gui.background.Position = UDim2.new(-0.400000006, 0, 0, 0)
+Gui.background.Size = UDim2.new(1.79619217, 0, 1, 0)
+Gui.background.ZIndex = 0
+Gui.background.Image = "rbxassetid://339387945"
+Gui.background.ImageTransparency = 0.500
+
+Gui.Scripts.Name = "Scripts"
+Gui.Scripts.Parent = game.Players.LocalPlayer.PlayerGui.WindowsXP.MainFrame.Menus
+Gui.Scripts.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui.Scripts.BackgroundTransparency = 1.000
+Gui.Scripts.Size = UDim2.new(0, 250, 0, 434)
+Gui.Scripts.Visible = false
+Gui.Scripts.ZIndex = 2
+
+Gui.Pages_2.Name = "Pages"
+Gui.Pages_2.Parent = Gui.Scripts
+Gui.Pages_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui.Pages_2.BackgroundTransparency = 1.000
+Gui.Pages_2.ClipsDescendants = true
+Gui.Pages_2.Size = UDim2.new(0, 250, 0, 434)
+
+Gui.UIPageLayout_2.Parent = Gui.Pages_2
+
+Gui.Page1_2.Name = "Page1"
+Gui.Page1_2.Parent = Gui.Pages_2
+Gui.Page1_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui.Page1_2.BackgroundTransparency = 1.000
+Gui.Page1_2.Size = UDim2.new(0, 249, 0, 434)
+
+Gui.Title_10.Name = "Title"
+Gui.Title_10.Parent = Gui.Page1_2
+Gui.Title_10.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui.Title_10.BackgroundTransparency = 1.000
+Gui.Title_10.Position = UDim2.new(0.0401606411, 0, 0, 0)
+Gui.Title_10.Size = UDim2.new(0, 231, 0, 36)
+Gui.Title_10.ZIndex = 2
+Gui.Title_10.Font = Enum.Font.Arcade
+Gui.Title_10.Text = "Game GUIs"
+Gui.Title_10.TextColor3 = Color3.fromRGB(139, 139, 139)
+Gui.Title_10.TextScaled = true
+Gui.Title_10.TextSize = 14.000
+Gui.Title_10.TextWrapped = true
+
+Gui.scrollFrame.Name = "scrollFrame"
+Gui.scrollFrame.Parent = Gui.Page1_2
+Gui.scrollFrame.Active = true
+Gui.scrollFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui.scrollFrame.BackgroundTransparency = 1.000
+Gui.scrollFrame.BorderSizePixel = 0
+Gui.scrollFrame.Position = UDim2.new(0.0280000009, 0, 0.168202758, 0)
+Gui.scrollFrame.Size = UDim2.new(0, 235, 0, 320)
+Gui.scrollFrame.BottomImage = "rbxasset://textures/ui/Scroll/scroll-middle.png"
+Gui.scrollFrame.CanvasSize = UDim2.new(0, 0, 100, 0)
+Gui.scrollFrame.TopImage = "rbxasset://textures/ui/Scroll/scroll-middle.png"
+
+Gui.ShindoLifeGUI.Name = "Shindo Life GUI"
+Gui.ShindoLifeGUI.Parent = Gui.scrollFrame
+Gui.ShindoLifeGUI.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui.ShindoLifeGUI.BackgroundTransparency = 1.000
+Gui.ShindoLifeGUI.Position = UDim2.new(0.451143563, 0, 1.22697771, 0)
+Gui.ShindoLifeGUI.Size = UDim2.new(0, 103, 0, 41)
+Gui.ShindoLifeGUI.Image = "rbxassetid://6533134734"
+
+Gui.ShindoLifeButton.Name = "ShindoLifeButton"
+Gui.ShindoLifeButton.Parent = Gui.ShindoLifeGUI
+Gui.ShindoLifeButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui.ShindoLifeButton.BackgroundTransparency = 1.000
+Gui.ShindoLifeButton.Size = UDim2.new(1, 0, 1, 0)
+Gui.ShindoLifeButton.ZIndex = 2
+Gui.ShindoLifeButton.Font = Enum.Font.Arcade
+Gui.ShindoLifeButton.Text = "Shindo Life GUI"
+Gui.ShindoLifeButton.TextColor3 = Color3.fromRGB(139, 139, 139)
+Gui.ShindoLifeButton.TextScaled = true
+Gui.ShindoLifeButton.TextSize = 14.000
+Gui.ShindoLifeButton.TextWrapped = true
+
+Gui.AssassinGUI.Name = "Assassin GUI"
+Gui.AssassinGUI.Parent = Gui.scrollFrame
+Gui.AssassinGUI.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui.AssassinGUI.BackgroundTransparency = 1.000
+Gui.AssassinGUI.Position = UDim2.new(0.0109786987, 0, 0.308563262, 0)
+Gui.AssassinGUI.Size = UDim2.new(0, 103, 0, 41)
+Gui.AssassinGUI.Image = "rbxassetid://6533134734"
+
+Gui.AssassinButton.Name = "AssassinButton"
+Gui.AssassinButton.Parent = Gui.AssassinGUI
+Gui.AssassinButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui.AssassinButton.BackgroundTransparency = 1.000
+Gui.AssassinButton.Size = UDim2.new(1, 0, 1, 0)
+Gui.AssassinButton.ZIndex = 2
+Gui.AssassinButton.Font = Enum.Font.Arcade
+Gui.AssassinButton.Text = "Assassin GUI"
+Gui.AssassinButton.TextColor3 = Color3.fromRGB(139, 139, 139)
+Gui.AssassinButton.TextScaled = true
+Gui.AssassinButton.TextSize = 14.000
+Gui.AssassinButton.TextWrapped = true
+
+Gui.CartRideSpammerGUI.Name = "Cart Ride Spammer GUI"
+Gui.CartRideSpammerGUI.Parent = Gui.scrollFrame
+Gui.CartRideSpammerGUI.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui.CartRideSpammerGUI.BackgroundTransparency = 1.000
+Gui.CartRideSpammerGUI.Position = UDim2.new(0.451143563, 0, 1.52874255, 0)
+Gui.CartRideSpammerGUI.Size = UDim2.new(0, 103, 0, 41)
+Gui.CartRideSpammerGUI.Image = "rbxassetid://6533134734"
+
+Gui.CartRideButton.Name = "CartRideButton"
+Gui.CartRideButton.Parent = Gui.CartRideSpammerGUI
+Gui.CartRideButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui.CartRideButton.BackgroundTransparency = 1.000
+Gui.CartRideButton.Size = UDim2.new(1, 0, 1, 0)
+Gui.CartRideButton.ZIndex = 2
+Gui.CartRideButton.Font = Enum.Font.Arcade
+Gui.CartRideButton.Text = "Cart Ride GUI"
+Gui.CartRideButton.TextColor3 = Color3.fromRGB(139, 139, 139)
+Gui.CartRideButton.TextScaled = true
+Gui.CartRideButton.TextSize = 14.000
+Gui.CartRideButton.TextWrapped = true
+
+Gui.MurderMystery2GUI.Name = "Murder Mystery 2 GUI"
+Gui.MurderMystery2GUI.Parent = Gui.scrollFrame
+Gui.MurderMystery2GUI.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui.MurderMystery2GUI.BackgroundTransparency = 1.000
+Gui.MurderMystery2GUI.Position = UDim2.new(0.0109787323, 0, 0.610328078, 0)
+Gui.MurderMystery2GUI.Size = UDim2.new(0, 103, 0, 41)
+Gui.MurderMystery2GUI.Image = "rbxassetid://6533134734"
+
+Gui.MM2Button.Name = "MM2Button"
+Gui.MM2Button.Parent = Gui.MurderMystery2GUI
+Gui.MM2Button.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui.MM2Button.BackgroundTransparency = 1.000
+Gui.MM2Button.Size = UDim2.new(1, 0, 1, 0)
+Gui.MM2Button.ZIndex = 2
+Gui.MM2Button.Font = Enum.Font.Arcade
+Gui.MM2Button.Text = "MM2 GUI"
+Gui.MM2Button.TextColor3 = Color3.fromRGB(139, 139, 139)
+Gui.MM2Button.TextScaled = true
+Gui.MM2Button.TextSize = 14.000
+Gui.MM2Button.TextWrapped = true
+
+Gui.SushiShopSimulatorSimGui.Name = "Sushi Shop Simulator Sim Gui"
+Gui.SushiShopSimulatorSimGui.Parent = Gui.scrollFrame
+Gui.SushiShopSimulatorSimGui.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui.SushiShopSimulatorSimGui.BackgroundTransparency = 1.000
+Gui.SushiShopSimulatorSimGui.Position = UDim2.new(0.453006238, 0, 0.00679865479, 0)
+Gui.SushiShopSimulatorSimGui.Size = UDim2.new(0, 103, 0, 41)
+Gui.SushiShopSimulatorSimGui.Image = "rbxassetid://6533134734"
+
+Gui.SSSButton.Name = "SSSButton"
+Gui.SSSButton.Parent = Gui.SushiShopSimulatorSimGui
+Gui.SSSButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui.SSSButton.BackgroundTransparency = 1.000
+Gui.SSSButton.Size = UDim2.new(1, 0, 1, 0)
+Gui.SSSButton.ZIndex = 2
+Gui.SSSButton.Font = Enum.Font.Arcade
+Gui.SSSButton.Text = "Sushi Shop Sim GUI"
+Gui.SSSButton.TextColor3 = Color3.fromRGB(139, 139, 139)
+Gui.SSSButton.TextScaled = true
+Gui.SSSButton.TextSize = 14.000
+Gui.SSSButton.TextWrapped = true
+
+Gui.UIGridLayout.Parent = Gui.scrollFrame
+Gui.UIGridLayout.SortOrder = Enum.SortOrder.LayoutOrder
+Gui.UIGridLayout.CellSize = UDim2.new(0, 108, 0, 38)
+
+Gui.ProjectPokemonSpawner.Name = "Project Pokemon Spawner"
+Gui.ProjectPokemonSpawner.Parent = Gui.scrollFrame
+Gui.ProjectPokemonSpawner.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui.ProjectPokemonSpawner.BackgroundTransparency = 1.000
+Gui.ProjectPokemonSpawner.Position = UDim2.new(0.453006238, 0, 0.308563262, 0)
+Gui.ProjectPokemonSpawner.Size = UDim2.new(0, 103, 0, 41)
+Gui.ProjectPokemonSpawner.Image = "rbxassetid://6533134734"
+
+Gui.ProjectPokeButton.Name = "ProjectPokeButton"
+Gui.ProjectPokeButton.Parent = Gui.ProjectPokemonSpawner
+Gui.ProjectPokeButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui.ProjectPokeButton.BackgroundTransparency = 1.000
+Gui.ProjectPokeButton.Size = UDim2.new(1, 0, 1, 0)
+Gui.ProjectPokeButton.ZIndex = 2
+Gui.ProjectPokeButton.Font = Enum.Font.Arcade
+Gui.ProjectPokeButton.Text = "Project: Poke Spawner"
+Gui.ProjectPokeButton.TextColor3 = Color3.fromRGB(139, 139, 139)
+Gui.ProjectPokeButton.TextScaled = true
+Gui.ProjectPokeButton.TextSize = 14.000
+Gui.ProjectPokeButton.TextWrapped = true
+
+Gui.searchBar_3.Name = "searchBar"
+Gui.searchBar_3.Parent = Gui.Page1_2
+Gui.searchBar_3.BackgroundColor3 = Color3.fromRGB(200, 185, 255)
+Gui.searchBar_3.BackgroundTransparency = 1.000
+Gui.searchBar_3.BorderSizePixel = 0
+Gui.searchBar_3.Position = UDim2.new(0.156626508, 0, 0.109576039, 0)
+Gui.searchBar_3.Size = UDim2.new(0.75892365, 0, 0.0507235155, 0)
+Gui.searchBar_3.ZIndex = 3
+Gui.searchBar_3.Font = Enum.Font.Arcade
+Gui.searchBar_3.PlaceholderColor3 = Color3.fromRGB(158, 158, 158)
+Gui.searchBar_3.PlaceholderText = "SEARCH"
+Gui.searchBar_3.Text = ""
+Gui.searchBar_3.TextColor3 = Color3.fromRGB(86, 86, 86)
+Gui.searchBar_3.TextScaled = true
+Gui.searchBar_3.TextSize = 14.000
+Gui.searchBar_3.TextStrokeColor3 = Color3.fromRGB(61, 61, 61)
+Gui.searchBar_3.TextWrapped = true
+
+Gui.searchBarBG_2.Name = "searchBarBG"
+Gui.searchBarBG_2.Parent = Gui.Page1_2
+Gui.searchBarBG_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui.searchBarBG_2.BackgroundTransparency = 1.000
+Gui.searchBarBG_2.Position = UDim2.new(0.0280000009, 0, 0.105000019, 0)
+Gui.searchBarBG_2.Size = UDim2.new(0, 234, 0, 24)
+Gui.searchBarBG_2.Image = "rbxassetid://6531499454"
+
+Gui.magnifyingGlass_2.Name = "magnifyingGlass"
+Gui.magnifyingGlass_2.Parent = Gui.Page1_2
+Gui.magnifyingGlass_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui.magnifyingGlass_2.BackgroundTransparency = 1.000
+Gui.magnifyingGlass_2.Position = UDim2.new(0.0400481932, 0, 0.109576039, 0)
+Gui.magnifyingGlass_2.Size = UDim2.new(0, 20, 0, 20)
+Gui.magnifyingGlass_2.ZIndex = 2
+Gui.magnifyingGlass_2.Image = "rbxassetid://6551762877"
+
+Gui.Page2.Name = "Page2"
+Gui.Page2.Parent = Gui.Pages_2
+Gui.Page2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui.Page2.BackgroundTransparency = 1.000
+Gui.Page2.Size = UDim2.new(0, 249, 0, 434)
+
+Gui.Title_11.Name = "Title"
+Gui.Title_11.Parent = Gui.Page2
+Gui.Title_11.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui.Title_11.BackgroundTransparency = 1.000
+Gui.Title_11.Position = UDim2.new(0.0401606411, 0, 0, 0)
+Gui.Title_11.Size = UDim2.new(0, 231, 0, 36)
+Gui.Title_11.ZIndex = 2
+Gui.Title_11.Font = Enum.Font.Arcade
+Gui.Title_11.Text = "Random GUIs"
+Gui.Title_11.TextColor3 = Color3.fromRGB(139, 139, 139)
+Gui.Title_11.TextScaled = true
+Gui.Title_11.TextSize = 14.000
+Gui.Title_11.TextWrapped = true
+
+Gui.scrollFrame_2.Name = "scrollFrame"
+Gui.scrollFrame_2.Parent = Gui.Page2
+Gui.scrollFrame_2.Active = true
+Gui.scrollFrame_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui.scrollFrame_2.BackgroundTransparency = 1.000
+Gui.scrollFrame_2.BorderSizePixel = 0
+Gui.scrollFrame_2.Position = UDim2.new(0.0280000009, 0, 0.168202758, 0)
+Gui.scrollFrame_2.Size = UDim2.new(0, 235, 0, 320)
+Gui.scrollFrame_2.BottomImage = "rbxasset://textures/ui/Scroll/scroll-middle.png"
+Gui.scrollFrame_2.CanvasSize = UDim2.new(0, 0, 100, 0)
+Gui.scrollFrame_2.TopImage = "rbxasset://textures/ui/Scroll/scroll-middle.png"
+
+Gui.SpecHub1.Name = "Spec Hub 1"
+Gui.SpecHub1.Parent = Gui.scrollFrame_2
+Gui.SpecHub1.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui.SpecHub1.BackgroundTransparency = 1.000
+Gui.SpecHub1.Position = UDim2.new(0.0109786987, 0, 0.918653011, 0)
+Gui.SpecHub1.Size = UDim2.new(0, 103, 0, 41)
+Gui.SpecHub1.Image = "rbxassetid://6533134734"
+
+Gui.SpecHub1Button.Name = "SpecHub1Button"
+Gui.SpecHub1Button.Parent = Gui.SpecHub1
+Gui.SpecHub1Button.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui.SpecHub1Button.BackgroundTransparency = 1.000
+Gui.SpecHub1Button.Size = UDim2.new(1, 0, 1, 0)
+Gui.SpecHub1Button.ZIndex = 2
+Gui.SpecHub1Button.Font = Enum.Font.Arcade
+Gui.SpecHub1Button.Text = "SpecHub 1"
+Gui.SpecHub1Button.TextColor3 = Color3.fromRGB(139, 139, 139)
+Gui.SpecHub1Button.TextScaled = true
+Gui.SpecHub1Button.TextSize = 14.000
+Gui.SpecHub1Button.TextWrapped = true
+
+Gui.SpecHub2.Name = "Spec Hub 2"
+Gui.SpecHub2.Parent = Gui.scrollFrame_2
+Gui.SpecHub2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui.SpecHub2.BackgroundTransparency = 1.000
+Gui.SpecHub2.Position = UDim2.new(0.451143563, 0, 0.918653011, 0)
+Gui.SpecHub2.Size = UDim2.new(0, 103, 0, 41)
+Gui.SpecHub2.Image = "rbxassetid://6533134734"
+
+Gui.SpecHub2Button.Name = "SpecHub2Button"
+Gui.SpecHub2Button.Parent = Gui.SpecHub2
+Gui.SpecHub2Button.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui.SpecHub2Button.BackgroundTransparency = 1.000
+Gui.SpecHub2Button.Size = UDim2.new(1, 0, 1, 0)
+Gui.SpecHub2Button.ZIndex = 2
+Gui.SpecHub2Button.Font = Enum.Font.Arcade
+Gui.SpecHub2Button.Text = "SpecHub 2"
+Gui.SpecHub2Button.TextColor3 = Color3.fromRGB(139, 139, 139)
+Gui.SpecHub2Button.TextScaled = true
+Gui.SpecHub2Button.TextSize = 14.000
+Gui.SpecHub2Button.TextWrapped = true
+
+Gui.ChatBypassGUI.Name = "Chat Bypass GUI"
+Gui.ChatBypassGUI.Parent = Gui.scrollFrame_2
+Gui.ChatBypassGUI.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui.ChatBypassGUI.BackgroundTransparency = 1.000
+Gui.ChatBypassGUI.Position = UDim2.new(0.0109787323, 0, 0.00679865479, 0)
+Gui.ChatBypassGUI.Size = UDim2.new(0, 103, 0, 41)
+Gui.ChatBypassGUI.Image = "rbxassetid://6533134734"
+
+Gui.ChatBypassButton.Name = "ChatBypassButton"
+Gui.ChatBypassButton.Parent = Gui.ChatBypassGUI
+Gui.ChatBypassButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui.ChatBypassButton.BackgroundTransparency = 1.000
+Gui.ChatBypassButton.Size = UDim2.new(1, 0, 1, 0)
+Gui.ChatBypassButton.ZIndex = 2
+Gui.ChatBypassButton.Font = Enum.Font.Arcade
+Gui.ChatBypassButton.Text = "Chat Bypass GUI"
+Gui.ChatBypassButton.TextColor3 = Color3.fromRGB(139, 139, 139)
+Gui.ChatBypassButton.TextScaled = true
+Gui.ChatBypassButton.TextSize = 14.000
+Gui.ChatBypassButton.TextWrapped = true
+
+Gui.NullwareNullWareHub.Name = "Nullware Null Ware Hub"
+Gui.NullwareNullWareHub.Parent = Gui.scrollFrame_2
+Gui.NullwareNullWareHub.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui.NullwareNullWareHub.BackgroundTransparency = 1.000
+Gui.NullwareNullWareHub.Position = UDim2.new(0.453006238, 0, 0.610328078, 0)
+Gui.NullwareNullWareHub.Size = UDim2.new(0, 103, 0, 41)
+Gui.NullwareNullWareHub.Image = "rbxassetid://6533134734"
+
+Gui.NullwareHubButton.Name = "NullwareHubButton"
+Gui.NullwareHubButton.Parent = Gui.NullwareNullWareHub
+Gui.NullwareHubButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui.NullwareHubButton.BackgroundTransparency = 1.000
+Gui.NullwareHubButton.Size = UDim2.new(1, 0, 1, 0)
+Gui.NullwareHubButton.ZIndex = 2
+Gui.NullwareHubButton.Font = Enum.Font.Arcade
+Gui.NullwareHubButton.Text = "NullwareHub"
+Gui.NullwareHubButton.TextColor3 = Color3.fromRGB(139, 139, 139)
+Gui.NullwareHubButton.TextScaled = true
+Gui.NullwareHubButton.TextSize = 14.000
+Gui.NullwareHubButton.TextWrapped = true
+
+Gui.UIGridLayout_2.Parent = Gui.scrollFrame_2
+Gui.UIGridLayout_2.SortOrder = Enum.SortOrder.LayoutOrder
+Gui.UIGridLayout_2.CellSize = UDim2.new(0, 108, 0, 38)
+
+Gui.searchBar_4.Name = "searchBar"
+Gui.searchBar_4.Parent = Gui.Page2
+Gui.searchBar_4.BackgroundColor3 = Color3.fromRGB(200, 185, 255)
+Gui.searchBar_4.BackgroundTransparency = 1.000
+Gui.searchBar_4.BorderSizePixel = 0
+Gui.searchBar_4.Position = UDim2.new(0.156626508, 0, 0.109576039, 0)
+Gui.searchBar_4.Size = UDim2.new(0.75892365, 0, 0.0507235155, 0)
+Gui.searchBar_4.ZIndex = 3
+Gui.searchBar_4.Font = Enum.Font.Arcade
+Gui.searchBar_4.PlaceholderColor3 = Color3.fromRGB(158, 158, 158)
+Gui.searchBar_4.PlaceholderText = "SEARCH"
+Gui.searchBar_4.Text = ""
+Gui.searchBar_4.TextColor3 = Color3.fromRGB(86, 86, 86)
+Gui.searchBar_4.TextScaled = true
+Gui.searchBar_4.TextSize = 14.000
+Gui.searchBar_4.TextStrokeColor3 = Color3.fromRGB(61, 61, 61)
+Gui.searchBar_4.TextWrapped = true
+
+Gui.searchBarBG_3.Name = "searchBarBG"
+Gui.searchBarBG_3.Parent = Gui.Page2
+Gui.searchBarBG_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui.searchBarBG_3.BackgroundTransparency = 1.000
+Gui.searchBarBG_3.Position = UDim2.new(0.0280000009, 0, 0.105000019, 0)
+Gui.searchBarBG_3.Size = UDim2.new(0, 234, 0, 24)
+Gui.searchBarBG_3.Image = "rbxassetid://6531499454"
+
+Gui.magnifyingGlass_3.Name = "magnifyingGlass"
+Gui.magnifyingGlass_3.Parent = Gui.Page2
+Gui.magnifyingGlass_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui.magnifyingGlass_3.BackgroundTransparency = 1.000
+Gui.magnifyingGlass_3.Position = UDim2.new(0.0400481932, 0, 0.109576039, 0)
+Gui.magnifyingGlass_3.Size = UDim2.new(0, 20, 0, 20)
+Gui.magnifyingGlass_3.ZIndex = 2
+Gui.magnifyingGlass_3.Image = "rbxassetid://6551762877"
+
+Gui.PageSelector_2.Name = "PageSelector"
+Gui.PageSelector_2.Parent = Gui.Scripts
+Gui.PageSelector_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui.PageSelector_2.BackgroundTransparency = 1.000
+Gui.PageSelector_2.Position = UDim2.new(0.231999993, 0, 0.910138249, 0)
+Gui.PageSelector_2.Size = UDim2.new(0, 135, 0, 29)
+
+Gui.Next_2.Name = "Next"
+Gui.Next_2.Parent = Gui.PageSelector_2
+Gui.Next_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui.Next_2.BackgroundTransparency = 1.000
+Gui.Next_2.Position = UDim2.new(1.10370374, 0, -0.068965517, 0)
+Gui.Next_2.Size = UDim2.new(0, 29, 0, 29)
+Gui.Next_2.Image = "rbxassetid://6531531478"
+
+Gui.PrevButton_2.Name = "PrevButton"
+Gui.PrevButton_2.Parent = Gui.PageSelector_2
+Gui.PrevButton_2.AnchorPoint = Vector2.new(1, 0.5)
+Gui.PrevButton_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui.PrevButton_2.BackgroundTransparency = 1.000
+Gui.PrevButton_2.Position = UDim2.new(0.214814812, -48, 0.461044818, 0)
+Gui.PrevButton_2.Size = UDim2.new(0, 29, 0, 29)
+Gui.PrevButton_2.ZIndex = 8
+Gui.PrevButton_2.Font = Enum.Font.SourceSans
+Gui.PrevButton_2.Text = ""
+Gui.PrevButton_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+Gui.PrevButton_2.TextSize = 30.000
+Gui.PrevButton_2.TextWrapped = true
+
+Gui.NextButton_2.Name = "NextButton"
+Gui.NextButton_2.Parent = Gui.PageSelector_2
+Gui.NextButton_2.AnchorPoint = Vector2.new(0, 0.5)
+Gui.NextButton_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui.NextButton_2.BackgroundTransparency = 1.000
+Gui.NextButton_2.Position = UDim2.new(0.742680073, 48, 0.468590051, 0)
+Gui.NextButton_2.Size = UDim2.new(0, 29, 0, 29)
+Gui.NextButton_2.ZIndex = 8
+Gui.NextButton_2.Font = Enum.Font.SourceSans
+Gui.NextButton_2.Text = ""
+Gui.NextButton_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+Gui.NextButton_2.TextSize = 30.000
+Gui.NextButton_2.TextWrapped = true
+
+Gui.Previous_2.Name = "Previous"
+Gui.Previous_2.Parent = Gui.PageSelector_2
+Gui.Previous_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui.Previous_2.BackgroundTransparency = 1.000
+Gui.Previous_2.Position = UDim2.new(-0.355555564, 0, -0.068965517, 0)
+Gui.Previous_2.Size = UDim2.new(0, 29, 0, 29)
+Gui.Previous_2.Image = "rbxassetid://6531531599"
+
+Gui.PageLabel_2.Name = "PageLabel"
+Gui.PageLabel_2.Parent = Gui.PageSelector_2
+Gui.PageLabel_2.BackgroundColor3 = Color3.fromRGB(203, 203, 203)
+Gui.PageLabel_2.BackgroundTransparency = 0.500
+Gui.PageLabel_2.BorderSizePixel = 0
+Gui.PageLabel_2.Position = UDim2.new(-0.140740737, 0, -0.068965517, 0)
+Gui.PageLabel_2.Size = UDim2.new(0, 168, 0, 29)
+Gui.PageLabel_2.Font = Enum.Font.Arcade
+Gui.PageLabel_2.Text = "1  /  2"
+Gui.PageLabel_2.TextColor3 = Color3.fromRGB(139, 139, 139)
+Gui.PageLabel_2.TextScaled = true
+Gui.PageLabel_2.TextSize = 14.000
+Gui.PageLabel_2.TextWrapped = true
+
+Gui.Line_4.Name = "Line"
+Gui.Line_4.Parent = Gui.Scripts
+Gui.Line_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui.Line_4.BackgroundTransparency = 1.000
+Gui.Line_4.Position = UDim2.new(0.00472570816, 0, 0.0829493105, 0)
+Gui.Line_4.Size = UDim2.new(0, 249, 0, 6)
+Gui.Line_4.Image = "rbxassetid://6531586437"
+
+Gui.ToolConfig.Name = "ToolConfig"
+Gui.ToolConfig.Parent = game.Players.LocalPlayer.PlayerGui.WindowsXP.MainFrame.Menus
+Gui.ToolConfig.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui.ToolConfig.BackgroundTransparency = 1.000
+Gui.ToolConfig.Size = UDim2.new(0, 250, 0, 434)
+Gui.ToolConfig.Visible = false
+Gui.ToolConfig.ZIndex = 2
+
+Gui.Title_12.Name = "Title"
+Gui.Title_12.Parent = Gui.ToolConfig
+Gui.Title_12.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui.Title_12.BackgroundTransparency = 1.000
+Gui.Title_12.Size = UDim2.new(0, 250, 0, 36)
+Gui.Title_12.ZIndex = 2
+Gui.Title_12.Font = Enum.Font.Arcade
+Gui.Title_12.Text = "TOOL EDITOR"
+Gui.Title_12.TextColor3 = Color3.fromRGB(139, 139, 139)
+Gui.Title_12.TextScaled = true
+Gui.Title_12.TextSize = 14.000
+Gui.Title_12.TextWrapped = true
+
+Gui.listFrame_2.Name = "listFrame"
+Gui.listFrame_2.Parent = Gui.ToolConfig
+Gui.listFrame_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui.listFrame_2.BackgroundTransparency = 1.000
+Gui.listFrame_2.Position = UDim2.new(0.0169521477, 0, 0.0967741907, 0)
+Gui.listFrame_2.Size = UDim2.new(0, 245, 0, 293)
+
+Gui.UIListLayout_3.Parent = Gui.listFrame_2
+
+Gui._1_Size.Name = "1_Size"
+Gui._1_Size.Parent = Gui.listFrame_2
+Gui._1_Size.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui._1_Size.BackgroundTransparency = 0.900
+Gui._1_Size.Size = UDim2.new(0, 245, 0, 60)
+
+Gui.Title_13.Name = "Title"
+Gui.Title_13.Parent = Gui._1_Size
+Gui.Title_13.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui.Title_13.BackgroundTransparency = 1.000
+Gui.Title_13.Size = UDim2.new(0, 244, 0, 31)
+Gui.Title_13.ZIndex = 2
+Gui.Title_13.Font = Enum.Font.Arcade
+Gui.Title_13.Text = "Handle Size:"
+Gui.Title_13.TextColor3 = Color3.fromRGB(139, 139, 139)
+Gui.Title_13.TextScaled = true
+Gui.Title_13.TextSize = 14.000
+Gui.Title_13.TextWrapped = true
+
+Gui.num1.Name = "num1"
+Gui.num1.Parent = Gui._1_Size
+Gui.num1.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui.num1.BackgroundTransparency = 1.000
+Gui.num1.Position = UDim2.new(0.0973876938, 0, 0.524205506, 0)
+Gui.num1.Size = UDim2.new(0, 45, 0, 27)
+Gui.num1.Image = "rbxassetid://6531499454"
+
+Gui.num1input.Name = "num1input"
+Gui.num1input.Parent = Gui.num1
+Gui.num1input.BackgroundColor3 = Color3.fromRGB(200, 185, 255)
+Gui.num1input.BackgroundTransparency = 1.000
+Gui.num1input.BorderSizePixel = 0
+Gui.num1input.Size = UDim2.new(1, 0, 1, 0)
+Gui.num1input.ZIndex = 3
+Gui.num1input.Font = Enum.Font.Arcade
+Gui.num1input.PlaceholderColor3 = Color3.fromRGB(191, 191, 191)
+Gui.num1input.PlaceholderText = "X"
+Gui.num1input.Text = ""
+Gui.num1input.TextColor3 = Color3.fromRGB(86, 86, 86)
+Gui.num1input.TextScaled = true
+Gui.num1input.TextSize = 14.000
+Gui.num1input.TextStrokeColor3 = Color3.fromRGB(61, 61, 61)
+Gui.num1input.TextWrapped = true
+
+Gui.num2.Name = "num2"
+Gui.num2.Parent = Gui._1_Size
+Gui.num2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui.num2.BackgroundTransparency = 1.000
+Gui.num2.Position = UDim2.new(0.399428487, 0, 0.524205506, 0)
+Gui.num2.Size = UDim2.new(0, 45, 0, 27)
+Gui.num2.Image = "rbxassetid://6531499454"
+
+Gui.num2input.Name = "num2input"
+Gui.num2input.Parent = Gui.num2
+Gui.num2input.BackgroundColor3 = Color3.fromRGB(200, 185, 255)
+Gui.num2input.BackgroundTransparency = 1.000
+Gui.num2input.BorderSizePixel = 0
+Gui.num2input.Size = UDim2.new(1, 0, 1, 0)
+Gui.num2input.ZIndex = 3
+Gui.num2input.Font = Enum.Font.Arcade
+Gui.num2input.PlaceholderColor3 = Color3.fromRGB(191, 191, 191)
+Gui.num2input.PlaceholderText = "Y"
+Gui.num2input.Text = ""
+Gui.num2input.TextColor3 = Color3.fromRGB(86, 86, 86)
+Gui.num2input.TextScaled = true
+Gui.num2input.TextSize = 14.000
+Gui.num2input.TextStrokeColor3 = Color3.fromRGB(61, 61, 61)
+Gui.num2input.TextWrapped = true
+
+Gui.num3.Name = "num3"
+Gui.num3.Parent = Gui._1_Size
+Gui.num3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui.num3.BackgroundTransparency = 1.000
+Gui.num3.Position = UDim2.new(0.717795789, 0, 0.524205506, 0)
+Gui.num3.Size = UDim2.new(0, 45, 0, 27)
+Gui.num3.Image = "rbxassetid://6531499454"
+
+Gui.num3input.Name = "num3input"
+Gui.num3input.Parent = Gui.num3
+Gui.num3input.BackgroundColor3 = Color3.fromRGB(200, 185, 255)
+Gui.num3input.BackgroundTransparency = 1.000
+Gui.num3input.BorderSizePixel = 0
+Gui.num3input.Size = UDim2.new(1, 0, 1, 0)
+Gui.num3input.ZIndex = 3
+Gui.num3input.Font = Enum.Font.Arcade
+Gui.num3input.PlaceholderColor3 = Color3.fromRGB(191, 191, 191)
+Gui.num3input.PlaceholderText = "Z"
+Gui.num3input.Text = ""
+Gui.num3input.TextColor3 = Color3.fromRGB(86, 86, 86)
+Gui.num3input.TextScaled = true
+Gui.num3input.TextSize = 14.000
+Gui.num3input.TextStrokeColor3 = Color3.fromRGB(61, 61, 61)
+Gui.num3input.TextWrapped = true
+
+Gui._1.Name = ",1"
+Gui._1.Parent = Gui._1_Size
+Gui._1.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui._1.BackgroundTransparency = 1.000
+Gui._1.Position = UDim2.new(0.281061172, 0, 0.524205506, 0)
+Gui._1.Size = UDim2.new(0, 28, 0, 27)
+Gui._1.ZIndex = 2
+Gui._1.Font = Enum.Font.Arcade
+Gui._1.Text = ","
+Gui._1.TextColor3 = Color3.fromRGB(139, 139, 139)
+Gui._1.TextScaled = true
+Gui._1.TextSize = 14.000
+Gui._1.TextWrapped = true
+
+Gui._2.Name = ",2"
+Gui._2.Parent = Gui._1_Size
+Gui._2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui._2.BackgroundTransparency = 1.000
+Gui._2.Position = UDim2.new(0.583101988, 0, 0.524205506, 0)
+Gui._2.Size = UDim2.new(0, 32, 0, 27)
+Gui._2.ZIndex = 2
+Gui._2.Font = Enum.Font.Arcade
+Gui._2.Text = ","
+Gui._2.TextColor3 = Color3.fromRGB(139, 139, 139)
+Gui._2.TextScaled = true
+Gui._2.TextSize = 14.000
+Gui._2.TextWrapped = true
+
+Gui._3_Massless.Name = "3_Massless"
+Gui._3_Massless.Parent = Gui.listFrame_2
+Gui._3_Massless.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui._3_Massless.BackgroundTransparency = 0.900
+Gui._3_Massless.Position = UDim2.new(0, 0, 0.302197814, 0)
+Gui._3_Massless.Size = UDim2.new(0, 245, 0, 32)
+
+Gui.Checkbox_7.Name = "Checkbox"
+Gui.Checkbox_7.Parent = Gui._3_Massless
+Gui.Checkbox_7.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui.Checkbox_7.BackgroundTransparency = 1.000
+Gui.Checkbox_7.Position = UDim2.new(0.850000024, 0, 0.109999999, 0)
+Gui.Checkbox_7.Size = UDim2.new(0, 26, 0, 26)
+Gui.Checkbox_7.Image = "rbxassetid://6531499312"
+
+Gui.Title_14.Name = "Title"
+Gui.Title_14.Parent = Gui._3_Massless
+Gui.Title_14.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui.Title_14.BackgroundTransparency = 1.000
+Gui.Title_14.Position = UDim2.new(0.0249722898, 0, 0.0742058754, 0)
+Gui.Title_14.Size = UDim2.new(0, 198, 0, 25)
+Gui.Title_14.ZIndex = 2
+Gui.Title_14.Font = Enum.Font.Arcade
+Gui.Title_14.Text = "Massless:"
+Gui.Title_14.TextColor3 = Color3.fromRGB(139, 139, 139)
+Gui.Title_14.TextScaled = true
+Gui.Title_14.TextSize = 14.000
+Gui.Title_14.TextWrapped = true
+
+Gui._4_HasMesh.Name = "4_HasMesh"
+Gui._4_HasMesh.Parent = Gui.listFrame_2
+Gui._4_HasMesh.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui._4_HasMesh.BackgroundTransparency = 0.900
+Gui._4_HasMesh.Position = UDim2.new(0, 0, 0.302197814, 0)
+Gui._4_HasMesh.Size = UDim2.new(0, 245, 0, 32)
+
+Gui.Checkbox_8.Name = "Checkbox"
+Gui.Checkbox_8.Parent = Gui._4_HasMesh
+Gui.Checkbox_8.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui.Checkbox_8.BackgroundTransparency = 1.000
+Gui.Checkbox_8.Position = UDim2.new(0.850000024, 0, 0.109999999, 0)
+Gui.Checkbox_8.Size = UDim2.new(0, 26, 0, 26)
+Gui.Checkbox_8.Image = "rbxassetid://6531499312"
+
+Gui.Title_15.Name = "Title"
+Gui.Title_15.Parent = Gui._4_HasMesh
+Gui.Title_15.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui.Title_15.BackgroundTransparency = 1.000
+Gui.Title_15.Position = UDim2.new(0.0249722898, 0, 0.0742058754, 0)
+Gui.Title_15.Size = UDim2.new(0, 198, 0, 25)
+Gui.Title_15.ZIndex = 2
+Gui.Title_15.Font = Enum.Font.Arcade
+Gui.Title_15.Text = "Destroy Mesh:"
+Gui.Title_15.TextColor3 = Color3.fromRGB(139, 139, 139)
+Gui.Title_15.TextScaled = true
+Gui.Title_15.TextSize = 14.000
+Gui.Title_15.TextWrapped = true
+
+Gui._2_Transparency.Name = "2_Transparency"
+Gui._2_Transparency.Parent = Gui.listFrame_2
+Gui._2_Transparency.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui._2_Transparency.BackgroundTransparency = 0.900
+Gui._2_Transparency.Position = UDim2.new(0, 0, 0.302197814, 0)
+Gui._2_Transparency.Size = UDim2.new(0, 245, 0, 32)
+
+Gui.Title_16.Name = "Title"
+Gui.Title_16.Parent = Gui._2_Transparency
+Gui.Title_16.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui.Title_16.BackgroundTransparency = 1.000
+Gui.Title_16.Position = UDim2.new(0.0249723475, 0, 0.0742053986, 0)
+Gui.Title_16.Size = UDim2.new(0, 169, 0, 25)
+Gui.Title_16.ZIndex = 2
+Gui.Title_16.Font = Enum.Font.Arcade
+Gui.Title_16.Text = "Transparency:"
+Gui.Title_16.TextColor3 = Color3.fromRGB(139, 139, 139)
+Gui.Title_16.TextScaled = true
+Gui.Title_16.TextSize = 14.000
+Gui.Title_16.TextWrapped = true
+
+Gui.transparencyValue.Name = "transparencyValue"
+Gui.transparencyValue.Parent = Gui._2_Transparency
+Gui.transparencyValue.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui.transparencyValue.BackgroundTransparency = 1.000
+Gui.transparencyValue.Position = UDim2.new(0.717795849, 0, 0.105455399, 0)
+Gui.transparencyValue.Size = UDim2.new(0, 58, 0, 25)
+Gui.transparencyValue.Image = "rbxassetid://6531499454"
+
+Gui.transparencyinput.Name = "transparencyinput"
+Gui.transparencyinput.Parent = Gui.transparencyValue
+Gui.transparencyinput.BackgroundColor3 = Color3.fromRGB(200, 185, 255)
+Gui.transparencyinput.BackgroundTransparency = 1.000
+Gui.transparencyinput.BorderSizePixel = 0
+Gui.transparencyinput.Size = UDim2.new(1, 0, 1, 0)
+Gui.transparencyinput.ZIndex = 3
+Gui.transparencyinput.Font = Enum.Font.Arcade
+Gui.transparencyinput.PlaceholderColor3 = Color3.fromRGB(191, 191, 191)
+Gui.transparencyinput.PlaceholderText = "0"
+Gui.transparencyinput.Text = ""
+Gui.transparencyinput.TextColor3 = Color3.fromRGB(86, 86, 86)
+Gui.transparencyinput.TextScaled = true
+Gui.transparencyinput.TextSize = 14.000
+Gui.transparencyinput.TextStrokeColor3 = Color3.fromRGB(61, 61, 61)
+Gui.transparencyinput.TextWrapped = true
+
+Gui._5_HasDecal.Name = "5_HasDecal"
+Gui._5_HasDecal.Parent = Gui.listFrame_2
+Gui._5_HasDecal.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui._5_HasDecal.BackgroundTransparency = 0.900
+Gui._5_HasDecal.Position = UDim2.new(0, 0, 0.302197814, 0)
+Gui._5_HasDecal.Size = UDim2.new(0, 245, 0, 32)
+
+Gui.Checkbox_9.Name = "Checkbox"
+Gui.Checkbox_9.Parent = Gui._5_HasDecal
+Gui.Checkbox_9.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui.Checkbox_9.BackgroundTransparency = 1.000
+Gui.Checkbox_9.Position = UDim2.new(0.850000024, 0, 0.109999999, 0)
+Gui.Checkbox_9.Size = UDim2.new(0, 26, 0, 26)
+Gui.Checkbox_9.Image = "rbxassetid://6531499312"
+
+Gui.Title_17.Name = "Title"
+Gui.Title_17.Parent = Gui._5_HasDecal
+Gui.Title_17.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui.Title_17.BackgroundTransparency = 1.000
+Gui.Title_17.Position = UDim2.new(0.0249722898, 0, 0.0742058754, 0)
+Gui.Title_17.Size = UDim2.new(0, 198, 0, 25)
+Gui.Title_17.ZIndex = 2
+Gui.Title_17.Font = Enum.Font.Arcade
+Gui.Title_17.Text = "Destroy Decal:"
+Gui.Title_17.TextColor3 = Color3.fromRGB(139, 139, 139)
+Gui.Title_17.TextScaled = true
+Gui.Title_17.TextSize = 14.000
+Gui.Title_17.TextWrapped = true
+
+Gui._6_CastShadow.Name = "6_CastShadow"
+Gui._6_CastShadow.Parent = Gui.listFrame_2
+Gui._6_CastShadow.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui._6_CastShadow.BackgroundTransparency = 0.900
+Gui._6_CastShadow.Position = UDim2.new(0, 0, 0.302197814, 0)
+Gui._6_CastShadow.Size = UDim2.new(0, 245, 0, 32)
+
+Gui.Checkbox_10.Name = "Checkbox"
+Gui.Checkbox_10.Parent = Gui._6_CastShadow
+Gui.Checkbox_10.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui.Checkbox_10.BackgroundTransparency = 1.000
+Gui.Checkbox_10.Position = UDim2.new(0.850000024, 0, 0.109999999, 0)
+Gui.Checkbox_10.Size = UDim2.new(0, 26, 0, 26)
+Gui.Checkbox_10.Image = "rbxassetid://6531499312"
+
+Gui.Title_18.Name = "Title"
+Gui.Title_18.Parent = Gui._6_CastShadow
+Gui.Title_18.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui.Title_18.BackgroundTransparency = 1.000
+Gui.Title_18.Position = UDim2.new(0.0249722898, 0, 0.0742058754, 0)
+Gui.Title_18.Size = UDim2.new(0, 198, 0, 25)
+Gui.Title_18.ZIndex = 2
+Gui.Title_18.Font = Enum.Font.Arcade
+Gui.Title_18.Text = "Shadow:"
+Gui.Title_18.TextColor3 = Color3.fromRGB(139, 139, 139)
+Gui.Title_18.TextScaled = true
+Gui.Title_18.TextSize = 14.000
+Gui.Title_18.TextWrapped = true
+
+Gui._7_CanCollide.Name = "7_CanCollide"
+Gui._7_CanCollide.Parent = Gui.listFrame_2
+Gui._7_CanCollide.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui._7_CanCollide.BackgroundTransparency = 0.900
+Gui._7_CanCollide.Position = UDim2.new(0, 0, 0.302197814, 0)
+Gui._7_CanCollide.Size = UDim2.new(0, 245, 0, 32)
+
+Gui.Checkbox_11.Name = "Checkbox"
+Gui.Checkbox_11.Parent = Gui._7_CanCollide
+Gui.Checkbox_11.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui.Checkbox_11.BackgroundTransparency = 1.000
+Gui.Checkbox_11.Position = UDim2.new(0.850000024, 0, 0.109999999, 0)
+Gui.Checkbox_11.Size = UDim2.new(0, 26, 0, 26)
+Gui.Checkbox_11.Image = "rbxassetid://6531499312"
+
+Gui.Title_19.Name = "Title"
+Gui.Title_19.Parent = Gui._7_CanCollide
+Gui.Title_19.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui.Title_19.BackgroundTransparency = 1.000
+Gui.Title_19.Position = UDim2.new(0.0249722898, 0, 0.0742058754, 0)
+Gui.Title_19.Size = UDim2.new(0, 198, 0, 25)
+Gui.Title_19.ZIndex = 2
+Gui.Title_19.Font = Enum.Font.Arcade
+Gui.Title_19.Text = "Can Collide:"
+Gui.Title_19.TextColor3 = Color3.fromRGB(139, 139, 139)
+Gui.Title_19.TextScaled = true
+Gui.Title_19.TextSize = 14.000
+Gui.Title_19.TextWrapped = true
+
+Gui.applyBtn.Name = "applyBtn"
+Gui.applyBtn.Parent = Gui.ToolConfig
+Gui.applyBtn.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui.applyBtn.BackgroundTransparency = 1.000
+Gui.applyBtn.Position = UDim2.new(0.198978752, 0, 0.879991829, 0)
+Gui.applyBtn.Size = UDim2.new(0, 152, 0, 41)
+Gui.applyBtn.Image = "rbxassetid://6533134734"
+
+Gui.applyBtn_2.Name = "applyBtn"
+Gui.applyBtn_2.Parent = Gui.applyBtn
+Gui.applyBtn_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui.applyBtn_2.BackgroundTransparency = 1.000
+Gui.applyBtn_2.Size = UDim2.new(1.00232458, 0, 1, 0)
+Gui.applyBtn_2.ZIndex = 2
+Gui.applyBtn_2.Font = Enum.Font.Arcade
+Gui.applyBtn_2.Text = "APPLY"
+Gui.applyBtn_2.TextColor3 = Color3.fromRGB(139, 139, 139)
+Gui.applyBtn_2.TextScaled = true
+Gui.applyBtn_2.TextSize = 14.000
+Gui.applyBtn_2.TextWrapped = true
+
+-- Scripts:
+
+local function AGAIYW_fake_script() -- Gui.Slider.SliderController 
+	local script = Instance.new('LocalScript', Gui.Slider)
+
+	local Slider = script.Parent.Slider
+	local UserInputService = game:GetService("UserInputService")
+	local TweenService = game:GetService("TweenService")
+	local Dragging = false
+	
+	local Player = game.Players.LocalPlayer
+	local Character = Player.Character
+	
+	local MaxValue = 500
+	local MinValue = 50
+	
+	local currentSlideValue = Instance.new("IntValue")
+	currentSlideValue.Value = 50
+	currentSlideValue.Parent = Slider
+	
+	local function Update()
+		local Character = Player.Character
+		if Dragging == true then
+			local MousePos = UserInputService:GetMouseLocation()
+			local MinPoint = (Slider.AbsolutePosition.X)
+			local MaxPoint = (Slider.AbsolutePosition.X + Slider.AbsoluteSize.X)
+			
+			if MousePos.X < MinPoint then
+				Slider.Indicator:TweenSize(UDim2.fromScale(0, 1), "Out", "Sine", 0.1, true)
+			elseif MousePos.X > MaxPoint then
+				Slider.Indicator:TweenSize(UDim2.fromScale(1, 1), "Out", "Sine", 0.1, true)
+			else
+				Slider.Indicator:TweenSize(UDim2.fromScale((MousePos.X - Slider.AbsolutePosition.X) / Slider.AbsoluteSize.X, 1), "Out", "Sine", 0.1, true)
+			end
+			
+			wait(0.1)
+			
+			local Percent = (Slider.Indicator.HolderButton.AbsolutePosition.X - Slider.AbsolutePosition.X) / (Slider.AbsoluteSize.X - Slider.Indicator.HolderButton.Size.X.Offset) * MaxValue
+	
+			Slider.Value.Value = Percent
+	
+			if math.floor(Slider.Value.Value) < MinValue then
+				Slider.Value.Value = MinValue
+			elseif math.floor(Slider.Value.Value) > MaxValue then
+				Slider.Value.Value = MaxValue
+			end
+			
+			Slider.Parent.AbsoluteValue.Text = Percent
+			Slider.Indicator.HolderButton.Value.Text = tostring(math.floor(Slider.Value.Value))
+			Slider.Parent.Value.Text = tostring(math.floor(Slider.Value.Value)).." | "..MaxValue
+			
+			Character.Humanoid.JumpPower = Slider.Value.Value
+		end
+	end
+	
+	Slider.MouseEnter:Connect(function()
+		if Dragging == false then
+			TweenService:Create(Slider.Indicator, TweenInfo.new(0.1, Enum.EasingStyle.Sine, Enum.EasingDirection.Out), {BackgroundColor3 = Color3.fromRGB(85, 130, 0)}):Play()
+			TweenService:Create(Slider.Indicator.HolderButton, TweenInfo.new(0.1, Enum.EasingStyle.Sine, Enum.EasingDirection.Out), {BackgroundColor3 = Color3.fromRGB(200, 200, 200)}):Play()
+		end
+	end)
+	
+	Slider.MouseLeave:Connect(function()
+		if Dragging == false then
+			TweenService:Create(Slider.Indicator, TweenInfo.new(0.1, Enum.EasingStyle.Sine, Enum.EasingDirection.Out), {BackgroundColor3 = Color3.fromRGB(85, 170, 0)}):Play()
+			TweenService:Create(Slider.Indicator.HolderButton, TweenInfo.new(0.1, Enum.EasingStyle.Sine, Enum.EasingDirection.Out), {BackgroundColor3 = Color3.fromRGB(190, 190, 190)}):Play()
+		end	
+	end)
+	
+	Slider.MouseButton1Down:Connect(function()
+		Dragging = true
+		TweenService:Create(Slider.Indicator, TweenInfo.new(0.1, Enum.EasingStyle.Sine, Enum.EasingDirection.Out), {BackgroundColor3 = Color3.fromRGB(85, 190, 0)}):Play()
+		TweenService:Create(Slider.Indicator.HolderButton, TweenInfo.new(0.1, Enum.EasingStyle.Sine, Enum.EasingDirection.Out), {BackgroundColor3 = Color3.fromRGB(255, 255, 255)}):Play()
+		TweenService:Create(Slider.Indicator.HolderButton.Value, TweenInfo.new(0.1, Enum.EasingStyle.Sine, Enum.EasingDirection.Out), {BackgroundTransparency = 0, TextTransparency = 0}):Play()
+		Update()
+	end)
+	
+	UserInputService.InputEnded:Connect(function(Input)
+		if Input.UserInputType == Enum.UserInputType.MouseButton1 then
+			Dragging = false
+			TweenService:Create(Slider.Indicator, TweenInfo.new(0.1, Enum.EasingStyle.Sine, Enum.EasingDirection.Out), {BackgroundColor3 = Color3.fromRGB(85, 170, 0)}):Play()
+			TweenService:Create(Slider.Indicator.HolderButton, TweenInfo.new(0.1, Enum.EasingStyle.Sine, Enum.EasingDirection.Out), {BackgroundColor3 = Color3.fromRGB(190, 190, 190)}):Play()
+			TweenService:Create(Slider.Indicator.HolderButton.Value, TweenInfo.new(0.1, Enum.EasingStyle.Sine, Enum.EasingDirection.Out), {BackgroundTransparency = 1, TextTransparency = 1}):Play()
+		end
+	end)
+	
+	UserInputService.InputChanged:Connect(Update)
+	
+	local Percent = (Slider.Indicator.HolderButton.AbsolutePosition.X - Slider.AbsolutePosition.X) / (Slider.AbsoluteSize.X - Slider.Indicator.HolderButton.Size.X.Offset) * MaxValue
+	
+	Slider.Value.Value = Percent
+	
+	if math.floor(Slider.Value.Value) < MinValue then
+		Slider.Value.Value = MinValue
+	elseif math.floor(Slider.Value.Value) > MaxValue then
+		Slider.Value.Value = MaxValue
+	end
+	
+	Slider.Indicator.HolderButton.Value.Text = tostring(math.floor(Slider.Value.Value))
+	Slider.Parent.Value.Text = tostring(math.floor(Slider.Value.Value)).." | "..MaxValue
+end
+coroutine.wrap(AGAIYW_fake_script)()
+local function TPAXQNV_fake_script() -- Gui.Slider_3.SliderController 
+	local script = Instance.new('LocalScript', Gui.Slider_3)
+
+	local Slider = script.Parent.Slider
+	local UserInputService = game:GetService("UserInputService")
+	local TweenService = game:GetService("TweenService")
+	local Dragging = false
+	
+	local Player = game.Players.LocalPlayer
+	local Character = Player.Character
+	
+	local MaxValue = 250
+	local MinValue = 16
+	
+	local currentSlideValue = Instance.new("IntValue")
+	currentSlideValue.Value = 16
+	currentSlideValue.Parent = Slider
+	
+	local function Update()
+		local Character = Player.Character
+		if Dragging == true then
+			local MousePos = UserInputService:GetMouseLocation()
+			local MinPoint = (Slider.AbsolutePosition.X)
+			local MaxPoint = (Slider.AbsolutePosition.X + Slider.AbsoluteSize.X)
+			
+			if MousePos.X < MinPoint then
+				Slider.Indicator:TweenSize(UDim2.fromScale(0, 1), "Out", "Sine", 0.1, true)
+			elseif MousePos.X > MaxPoint then
+				Slider.Indicator:TweenSize(UDim2.fromScale(1, 1), "Out", "Sine", 0.1, true)
+			else
+				Slider.Indicator:TweenSize(UDim2.fromScale((MousePos.X - Slider.AbsolutePosition.X) / Slider.AbsoluteSize.X, 1), "Out", "Sine", 0.1, true)
+			end
+			
+			wait(0.1)
+			
+			local Percent = (Slider.Indicator.HolderButton.AbsolutePosition.X - Slider.AbsolutePosition.X) / (Slider.AbsoluteSize.X - Slider.Indicator.HolderButton.Size.X.Offset) * MaxValue
+	
+			Slider.Value.Value = Percent
+	
+			if math.floor(Slider.Value.Value) < MinValue then
+				Slider.Value.Value = MinValue
+			elseif math.floor(Slider.Value.Value) > MaxValue then
+				Slider.Value.Value = MaxValue
+			end
+			
+			Slider.Parent.AbsoluteValue.Text = Percent
+			Slider.Indicator.HolderButton.Value.Text = tostring(math.floor(Slider.Value.Value))
+			Slider.Parent.Value.Text = tostring(math.floor(Slider.Value.Value)).." | "..MaxValue
+			
+			Character.Humanoid.WalkSpeed = Slider.Value.Value
+		end
+	end
+	
+	Slider.MouseEnter:Connect(function()
+		if Dragging == false then
+			TweenService:Create(Slider.Indicator, TweenInfo.new(0.1, Enum.EasingStyle.Sine, Enum.EasingDirection.Out), {BackgroundColor3 = Color3.fromRGB(85, 130, 0)}):Play()
+			TweenService:Create(Slider.Indicator.HolderButton, TweenInfo.new(0.1, Enum.EasingStyle.Sine, Enum.EasingDirection.Out), {BackgroundColor3 = Color3.fromRGB(200, 200, 200)}):Play()
+		end
+	end)
+	
+	Slider.MouseLeave:Connect(function()
+		if Dragging == false then
+			TweenService:Create(Slider.Indicator, TweenInfo.new(0.1, Enum.EasingStyle.Sine, Enum.EasingDirection.Out), {BackgroundColor3 = Color3.fromRGB(85, 170, 0)}):Play()
+			TweenService:Create(Slider.Indicator.HolderButton, TweenInfo.new(0.1, Enum.EasingStyle.Sine, Enum.EasingDirection.Out), {BackgroundColor3 = Color3.fromRGB(190, 190, 190)}):Play()
+		end	
+	end)
+	
+	Slider.MouseButton1Down:Connect(function()
+		Dragging = true
+		TweenService:Create(Slider.Indicator, TweenInfo.new(0.1, Enum.EasingStyle.Sine, Enum.EasingDirection.Out), {BackgroundColor3 = Color3.fromRGB(85, 190, 0)}):Play()
+		TweenService:Create(Slider.Indicator.HolderButton, TweenInfo.new(0.1, Enum.EasingStyle.Sine, Enum.EasingDirection.Out), {BackgroundColor3 = Color3.fromRGB(255, 255, 255)}):Play()
+		TweenService:Create(Slider.Indicator.HolderButton.Value, TweenInfo.new(0.1, Enum.EasingStyle.Sine, Enum.EasingDirection.Out), {BackgroundTransparency = 0, TextTransparency = 0}):Play()
+		Update()
+	end)
+	
+	UserInputService.InputEnded:Connect(function(Input)
+		if Input.UserInputType == Enum.UserInputType.MouseButton1 then
+			Dragging = false
+			TweenService:Create(Slider.Indicator, TweenInfo.new(0.1, Enum.EasingStyle.Sine, Enum.EasingDirection.Out), {BackgroundColor3 = Color3.fromRGB(85, 170, 0)}):Play()
+			TweenService:Create(Slider.Indicator.HolderButton, TweenInfo.new(0.1, Enum.EasingStyle.Sine, Enum.EasingDirection.Out), {BackgroundColor3 = Color3.fromRGB(190, 190, 190)}):Play()
+			TweenService:Create(Slider.Indicator.HolderButton.Value, TweenInfo.new(0.1, Enum.EasingStyle.Sine, Enum.EasingDirection.Out), {BackgroundTransparency = 1, TextTransparency = 1}):Play()
+		end
+	end)
+	
+	UserInputService.InputChanged:Connect(Update)
+	
+	local Percent = (Slider.Indicator.HolderButton.AbsolutePosition.X - Slider.AbsolutePosition.X) / (Slider.AbsoluteSize.X - Slider.Indicator.HolderButton.Size.X.Offset) * MaxValue
+	
+	Slider.Value.Value = Percent
+	
+	if math.floor(Slider.Value.Value) < MinValue then
+		Slider.Value.Value = MinValue
+	elseif math.floor(Slider.Value.Value) > MaxValue then
+		Slider.Value.Value = MaxValue
+	end
+	
+	Slider.Indicator.HolderButton.Value.Text = tostring(math.floor(Slider.Value.Value))
+	Slider.Parent.Value.Text = tostring(math.floor(Slider.Value.Value)).." | "..MaxValue
+end
+coroutine.wrap(TPAXQNV_fake_script)()
+local function FUCCIFY_fake_script() -- Gui.Checkbox.SetValue 
+	local script = Instance.new('LocalScript', Gui.Checkbox)
+
+	flying = false
+	lplayer = game.Players.LocalPlayer
+	speedget = 1
+	speedfly = 1
+	Mouse = lplayer:GetMouse()
+	checkboxToggled = false
+	
+	local flySpeedValue = Instance.new('NumberValue')
+	flySpeedValue.Parent = script.Parent.Parent
+	flySpeedValue.Name = 'FlySpeed'
+	flySpeedValue.Value = 1
+	
+	flySpeedValue:GetPropertyChangedSignal("Value"):Connect(function()
+		speedfly = flySpeedValue.Value
+	end)
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		if checkboxToggled == false 
+		then checkboxToggled = true 
+			script.Parent.Image = "rbxassetid://6531499566" 
+			script.Parent.Parent.Parent.Parent.Parent.Parent.SoundScript:WaitForChild("ClickSound"):Play()
+		else checkboxToggled = false 
+			script.Parent.Image = "rbxassetid://6531499312"
+			script.Parent.Parent.Parent.Parent.Parent.Parent.SoundScript:WaitForChild("ClickSound"):Play()
+	
+		end
+	
+	
+	
+		Mouse.KeyDown:Connect(function(k)
+			if k == "x" then
+				if checkboxToggled == true then
+					if flying == false then
+						flying = true 
+	
+						script.Parent.Image = "rbxassetid://6531499566"
+	
+						repeat wait() until lplayer and lplayer.Character and lplayer.Character:FindFirstChild('HumanoidRootPart') and lplayer.Character:FindFirstChild('Humanoid')
+						repeat wait() until Mouse
+	
+						local T = lplayer.Character.HumanoidRootPart
+						local CONTROL = {F = 0, B = 0, L = 0, R = 0}
+						local lCONTROL = {F = 0, B = 0, L = 0, R = 0}
+						local SPEED = speedget
+	
+						local function fly()
+							local BG = Instance.new('BodyGyro', T)
+							local BV = Instance.new('BodyVelocity', T)
+							BG.P = 9e4
+							BG.maxTorque = Vector3.new(9e9, 9e9, 9e9)
+							BG.cframe = T.CFrame
+							BV.velocity = Vector3.new(0, 0.1, 0)
+							BV.maxForce = Vector3.new(9e9, 9e9, 9e9)
+							spawn(function()
+								repeat wait()
+									lplayer.Character.Humanoid.PlatformStand = true
+									if CONTROL.L + CONTROL.R ~= 0 or CONTROL.F + CONTROL.B ~= 0 then
+										SPEED = 50
+									elseif not (CONTROL.L + CONTROL.R ~= 0 or CONTROL.F + CONTROL.B ~= 0) and SPEED ~= 0 then
+										SPEED = 0
+									end
+									if (CONTROL.L + CONTROL.R) ~= 0 or (CONTROL.F + CONTROL.B) ~= 0 then
+										BV.velocity = ((workspace.CurrentCamera.CoordinateFrame.lookVector * (CONTROL.F + CONTROL.B)) + ((workspace.CurrentCamera.CoordinateFrame * CFrame.new(CONTROL.L + CONTROL.R, (CONTROL.F + CONTROL.B) * 0.2, 0).p) - workspace.CurrentCamera.CoordinateFrame.p)) * SPEED
+										lCONTROL = {F = CONTROL.F, B = CONTROL.B, L = CONTROL.L, R = CONTROL.R}
+									elseif (CONTROL.L + CONTROL.R) == 0 and (CONTROL.F + CONTROL.B) == 0 and SPEED ~= 0 then
+										BV.velocity = ((workspace.CurrentCamera.CoordinateFrame.lookVector * (lCONTROL.F + lCONTROL.B)) + ((workspace.CurrentCamera.CoordinateFrame * CFrame.new(lCONTROL.L + lCONTROL.R, (lCONTROL.F + lCONTROL.B) * 0.2, 0).p) - workspace.CurrentCamera.CoordinateFrame.p)) * SPEED
+									else
+										BV.velocity = Vector3.new(0, 0.1, 0)
+									end
+									BG.cframe = workspace.CurrentCamera.CoordinateFrame
+								until not flying
+								CONTROL = {F = 0, B = 0, L = 0, R = 0}
+								lCONTROL = {F = 0, B = 0, L = 0, R = 0}
+								SPEED = 0
+								BG:destroy()
+								BV:destroy()
+								lplayer.Character.Humanoid.PlatformStand = false
+							end)
+						end
+						Mouse.KeyDown:connect(function(KEY)
+							if KEY:lower() == 'w' then
+								CONTROL.F = speedfly
+							elseif KEY:lower() == 's' then
+								CONTROL.B = -speedfly
+							elseif KEY:lower() == 'a' then
+								CONTROL.L = -speedfly 
+							elseif KEY:lower() == 'd' then 
+								CONTROL.R = speedfly
+							end
+						end)
+						Mouse.KeyUp:connect(function(KEY)
+							if KEY:lower() == 'w' then
+								CONTROL.F = 0
+							elseif KEY:lower() == 's' then
+								CONTROL.B = 0
+							elseif KEY:lower() == 'a' then
+								CONTROL.L = 0
+							elseif KEY:lower() == 'd' then
+								CONTROL.R = 0
+							end
+						end)
+						fly()
+					else
+						flying = false
+	
+						lplayer.Character.Humanoid.PlatformStand = false
+					end
+	
+				end
+			end
+		end)
+	end)
+end
+coroutine.wrap(FUCCIFY_fake_script)()
+local function IZHMBH_fake_script() -- Gui.Checkbox_2.SetValue 
+	local script = Instance.new('LocalScript', Gui.Checkbox_2)
+
+	
+	local Player = game.Players.LocalPlayer
+	local Mouse = Player:GetMouse()
+	local UserInputService = game:GetService('UserInputService')
+	
+	local HoldingControl = false
+	local Checked = false
+	
+	Mouse.Button1Down:connect(function()
+		if HoldingControl and Checked then
+			Player.Character:MoveTo(Mouse.Hit.p)
+		end
+	end)
+	
+	UserInputService.InputBegan:connect(function(Input, Processed)
+		if Input.UserInputType == Enum.UserInputType.Keyboard then
+			if Input.KeyCode == Enum.KeyCode.LeftControl then
+				HoldingControl = true
+			elseif Input.KeyCode == Enum.KeyCode.RightControl then
+				HoldingControl = true 
+			end
+		end
+	end)
+	
+	UserInputService.InputEnded:connect(function(Input, Processed)
+		if Input.UserInputType == Enum.UserInputType.Keyboard then
+			if Input.KeyCode == Enum.KeyCode.LeftControl then
+				HoldingControl = false
+			elseif Input.KeyCode == Enum.KeyCode.RightControl then
+				HoldingControl = false
+			end
+		end
+	end)
+	
+	script.Parent.MouseButton1Down:connect(function()
+		script.Parent.Parent.Parent.Parent.Parent.Parent.SoundScript:WaitForChild("ClickSound"):Play()
+		if Checked == false then Checked = true script.Parent.Image = "rbxassetid://6531499566"  else Checked = false script.Parent.Image = "rbxassetid://6531499312"
+	
+		end
+	end)
+	
+	
+	
+end
+coroutine.wrap(IZHMBH_fake_script)()
+local function TWMG_fake_script() -- Gui.Checkbox_3.SetValue 
+	local script = Instance.new('LocalScript', Gui.Checkbox_3)
+
+	_G.infinjump = false
+	
+	local Player = game:GetService("Players").LocalPlayer
+	local Mouse = Player:GetMouse()
+	Mouse.KeyDown:connect(function(k)
+		if _G.infinjump then
+			if k:byte() == 32 then
+				local Humanoid = game:GetService("Players").LocalPlayer.Character:FindFirstChildOfClass("Humanoid")
+				Humanoid:ChangeState("Jumping")
+				wait(0.1)
+				Humanoid:ChangeState("Seated")
+			end
+		end
+	end)
+	
+	function leftClick()
+		if _G.infinjump == false then
+			_G.infinjump = true
+			script.Parent.Image = "rbxassetid://6531499566"
+			script.Parent.Parent.Parent.Parent.Parent.Parent.SoundScript:WaitForChild("ClickSound"):Play()
+		else
+			_G.infinjump = false
+			script.Parent.Image = "rbxassetid://6531499312"
+			script.Parent.Parent.Parent.Parent.Parent.Parent.SoundScript:WaitForChild("ClickSound"):Play()
+		end
+	end
+	
+	script.Parent.MouseButton1Click:Connect(leftClick)
+	
+end
+coroutine.wrap(TWMG_fake_script)()
+local function YNKPWX_fake_script() -- Gui.Checkbox_4.SetValue 
+	local script = Instance.new('LocalScript', Gui.Checkbox_4)
+
+	
+	
+	local player = game.Players.LocalPlayer
+	local mouse = player:GetMouse()
+	local runservice = game:GetService("RunService")
+	local noclip = false
+	
+	runservice.Stepped:Connect(function()
+		if noclip then
+			player.Character.Humanoid:ChangeState(11)
+		end
+	end)
+	
+	function leftClick()
+		if noclip == false then
+			noclip = true
+			script.Parent.Image = "rbxassetid://6531499566"
+			script.Parent.Parent.Parent.Parent.Parent.Parent.SoundScript:WaitForChild("ClickSound"):Play()
+		else
+			noclip = false
+			script.Parent.Image = "rbxassetid://6531499312"
+			script.Parent.Parent.Parent.Parent.Parent.Parent.SoundScript:WaitForChild("ClickSound"):Play()
+		end
+	end
+	
+	script.Parent.MouseButton1Click:Connect(leftClick)
+	
+end
+coroutine.wrap(YNKPWX_fake_script)()
+local function SAIZXKV_fake_script() -- Gui.Checkbox_5.SetValue 
+	local script = Instance.new('LocalScript', Gui.Checkbox_5)
+
+	local obj = game.workspace
+	function XrayOn(obj) --Enables xray
+	
+		for _,v in pairs(obj:GetChildren()) do
+			if (v:IsA("BasePart")) and not v.Parent:FindFirstChild("Humanoid") then
+				v.LocalTransparencyModifier = 0.75
+			end
+			XrayOn(v)
+		end
+	end
+	
+	function XrayOff(obj) --Disables xray
+	
+		for _,v in pairs(obj:GetChildren()) do
+			if (v:IsA("BasePart")) and not v.Parent:FindFirstChild("Humanoid") then
+				v.LocalTransparencyModifier = 0
+			end XrayOff(v)
+		end
+	end
+	
+	local toggle = false
+	
+	script.Parent.MouseButton1Click:Connect(function()	
+		if toggle == false then
+			toggle = true
+			script.Parent.Image = "rbxassetid://6531499566"
+			XrayOn(obj)
+			script.Parent.Parent.Parent.Parent.Parent.Parent.SoundScript:WaitForChild("ClickSound"):Play()
+		else
+			toggle = false
+			script.Parent.Image = "rbxassetid://6531499312"
+			XrayOff(obj)
+			script.Parent.Parent.Parent.Parent.Parent.Parent.SoundScript:WaitForChild("ClickSound"):Play()
+		end
+	end)
+end
+coroutine.wrap(SAIZXKV_fake_script)()
+local function KKXCBQ_fake_script() -- Gui.Checkbox_6.SetValue 
+	local script = Instance.new('LocalScript', Gui.Checkbox_6)
+
+	local crashy = true -- CHANGE THIS TO TRUE IF IT CRASHES THIS GAME
+	local on = false
+	if game.CoreGui:FindFirstChild('ESP') then
+		game.CoreGui.ESP:Destroy()
+	elseif game.Players.LocalPlayer.PlayerGui:FindFirstChild('ESP') then
+		game.Players.LocalPlayer.PlayerGui.ESP:Destroy()
+	end
+	local but = script.Parent
+	
+	function doit(hey)
+		local t1 = Instance.new('SurfaceGui',hey)
+		t1.AlwaysOnTop = true
+		local t1g = Instance.new('Frame',t1)
+		t1g.Size = UDim2.new(1,0,1,0)
+		t1g.BackgroundColor3 = t1.Parent.BrickColor.Color
+		local t2 = Instance.new('SurfaceGui',hey)      
+		t2.AlwaysOnTop = true
+		t2.Face = Enum.NormalId.Right
+		local t2g = Instance.new('Frame',t2)
+		t2g.Size = UDim2.new(1,0,1,0)
+		t2g.BackgroundColor3 = t2.Parent.BrickColor.Color
+		local t3 = Instance.new('SurfaceGui',hey)
+		t3.AlwaysOnTop = true
+		t3.Face = Enum.NormalId.Left
+		local t3g = Instance.new('Frame',t3)
+		t3g.Size = UDim2.new(1,0,1,0)
+		t3g.BackgroundColor3 = t3.Parent.BrickColor.Color
+		local t4 = Instance.new('SurfaceGui',hey)
+		t4.AlwaysOnTop = true
+		t4.Face = Enum.NormalId.Back
+		local t4g = Instance.new('Frame',t4)
+		t4g.Size = UDim2.new(1,0,1,0)
+		t4g.BackgroundColor3 = t4.Parent.BrickColor.Color
+		local t5 = Instance.new('SurfaceGui',hey)
+		t5.AlwaysOnTop = true
+		t5.Face = Enum.NormalId.Top
+		local t5g = Instance.new('Frame',t5)
+		t5g.Size = UDim2.new(1,0,1,0)
+		t5g.BackgroundColor3 = t5.Parent.BrickColor.Color
+		local t6 = Instance.new('SurfaceGui',hey)
+		t6.AlwaysOnTop = true
+		t6.Face = Enum.NormalId.Bottom
+		local t6g = Instance.new('Frame',t6)
+		t6g.Size = UDim2.new(1,0,1,0)
+		t6g.BackgroundColor3 = t6.Parent.BrickColor.Color
+	end
+	function undo(chr)
+		for i,v in pairs(chr:GetChildren()) do
+			if v.ClassName == "Part" or v.ClassName == "MeshPart" then
+				for a,c in pairs(v:GetChildren()) do
+					if c.ClassName == "SurfaceGui" then
+						c:Destroy()
+					end
+					if c.ClassName == "BillboardGui" and c.Name == "thingyye" then
+						c:Destroy()
+					end
+				end
+			end
+		end
+	end
+	
+	
+	but.MouseButton1Down:connect(function()
+		if but.Image == "rbxassetid://6531499312" then 
+			script.Parent.Parent.Parent.Parent.Parent.Parent.SoundScript:WaitForChild("ClickSound"):Play()
+			but.Image = "rbxassetid://6531499566"
+			on = true
+			for i,v in pairs(game.Players:GetChildren()) do
+				if v.Character ~= game.Players.LocalPlayer.Character and v.Character.Head:FindFirstChild('ScreenGui') == nil then
+					if v.Character:FindFirstChild('Head') then
+						local bill = Instance.new('BillboardGui',v.Character.Head)
+						bill.Name = "thingyye"
+						bill.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+						bill.Active = true
+						bill.LightInfluence = 1.000
+						bill.Size = UDim2.new(0, 200, 0, 50)
+						bill.AlwaysOnTop = true
+						local txt = Instance.new('TextLabel',bill)
+						txt.Text = v.Name
+						txt.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+						txt.BackgroundTransparency = 1.000
+						txt.Position = UDim2.new(0, 0, 0, -40)
+						txt.Size = UDim2.new(0, 200, 0, 50)
+						txt.Font = Enum.Font.Cartoon
+						txt.TextColor3 = Color3.fromRGB(255, 255, 255)
+						txt.TextScaled = true
+						txt.TextSize = 14.000
+						txt.TextStrokeTransparency = 0.000
+						txt.TextWrapped = true
+					end
+					for a,c in pairs(v.Character:GetChildren()) do
+						if c.ClassName == "MeshPart" and c.Transparency ~= 1 then
+							doit(c)
+						elseif c.ClassName == "Part" and c.Transparency ~= 1 then
+							doit(c)
+						end
+					end
+				end
+			end
+		else
+			but.Image = "rbxassetid://6531499312"
+			on = false
+			script.Parent.Parent.Parent.Parent.Parent.Parent.SoundScript:WaitForChild("ClickSound"):Play()
+			for i,v in pairs(game.Players:GetChildren()) do
+				undo(v.Character)
+			end
+		end
+	end)
+	
+	for i,v in pairs(game.Players:GetChildren()) do
+		v.CharacterAdded:connect(function()
+			v.Character:WaitForChild('Head')
+			wait(1)
+			if on == true then
+				if v.Character ~= game.Players.LocalPlayer.Character and v.Character.Head:FindFirstChild('ScreenGui') == nil then
+					if v.Character:FindFirstChild('Head') then
+						local bill = Instance.new('BillboardGui',v.Character.Head)
+						bill.Name = "thingyye"
+						bill.AlwaysOnTop = true
+						bill.Size = UDim2.new(2,1,2)
+						bill.Adornee = v.Character.Head
+						local txt = Instance.new('TextLabel',bill)
+						txt.Text = v.Name
+						txt.BackgroundTransparency = 1
+						txt.Size = UDim2.new(1,0,1,0)
+						txt.TextColor3 = v.TeamColor.Color
+					end
+					for a,c in pairs(v.Character:GetChildren()) do
+						if c.ClassName == "MeshPart" and c.Transparency ~= 1 then
+							doit(c)
+						elseif c.ClassName == "Part" and c.Transparency ~= 1 then
+							doit(c)
+						end
+					end
+				end
+			end
+		end)
+	end  
+	
+	game.Players.PlayerAdded:connect(function(v)
+		v.CharacterAdded:connect(function()
+			v.Character:WaitForChild('Head')
+			wait(1)
+			if on == true then
+				if v.Character ~= game.Players.LocalPlayer.Character and v.Character.Head:FindFirstChild('ScreenGui') == nil then
+					if v.Character:FindFirstChild('Head') then
+						local bill = Instance.new('BillboardGui',v.Character.Head)
+						bill.Name = "thingyye"
+						bill.AlwaysOnTop = true
+						bill.Size = UDim2.new(2,1,2)
+						bill.Adornee = v.Character.Head
+						local txt = Instance.new('TextLabel',bill)
+						txt.Text = v.Name
+						txt.BackgroundTransparency = 1
+						txt.Size = UDim2.new(1,0,1,0)
+						txt.TextColor3 = v.TeamColor.Color
+					end
+					for a,c in pairs(v.Character:GetChildren()) do
+						if c.ClassName == "MeshPart" and c.Transparency ~= 1 then
+							doit(c)
+						elseif c.ClassName == "Part" and c.Transparency ~= 1 then
+							doit(c)
+						end
+					end
+				end
+			end
+		end)
+	end)
+end
+coroutine.wrap(KKXCBQ_fake_script)()
+local function WZFOCZ_fake_script() -- Gui.Slider_5.SliderController 
+	local script = Instance.new('LocalScript', Gui.Slider_5)
+
+	local Slider = script.Parent.Slider
+	local UserInputService = game:GetService("UserInputService")
+	local TweenService = game:GetService("TweenService")
+	local Dragging = false
+	
+	local Player = game.Players.LocalPlayer
+	local Character = Player.Character
+	
+	local MaxValue = 25
+	local MinValue = 1
+	
+	local currentSlideValue = Instance.new("IntValue")
+	currentSlideValue.Value = 16
+	currentSlideValue.Parent = Slider
+	
+	local function Update()
+		local Character = Player.Character
+		if Dragging == true then
+			local MousePos = UserInputService:GetMouseLocation()
+			local MinPoint = (Slider.AbsolutePosition.X)
+			local MaxPoint = (Slider.AbsolutePosition.X + Slider.AbsoluteSize.X)
+			
+			if MousePos.X < MinPoint then
+				Slider.Indicator:TweenSize(UDim2.fromScale(0, 1), "Out", "Sine", 0.1, true)
+			elseif MousePos.X > MaxPoint then
+				Slider.Indicator:TweenSize(UDim2.fromScale(1, 1), "Out", "Sine", 0.1, true)
+			else
+				Slider.Indicator:TweenSize(UDim2.fromScale((MousePos.X - Slider.AbsolutePosition.X) / Slider.AbsoluteSize.X, 1), "Out", "Sine", 0.1, true)
+			end
+			
+			wait(0.1)
+			
+			local Percent = (Slider.Indicator.HolderButton.AbsolutePosition.X - Slider.AbsolutePosition.X) / (Slider.AbsoluteSize.X - Slider.Indicator.HolderButton.Size.X.Offset) * MaxValue
+	
+			Slider.Value.Value = Percent
+	
+			if math.floor(Slider.Value.Value) < MinValue then
+				Slider.Value.Value = MinValue
+			elseif math.floor(Slider.Value.Value) > MaxValue then
+				Slider.Value.Value = MaxValue
+			end
+			
+			Slider.Parent.AbsoluteValue.Text = Percent
+			Slider.Indicator.HolderButton.Value.Text = tostring(math.floor(Slider.Value.Value))
+			Slider.Parent.Value.Text = tostring(math.floor(Slider.Value.Value)).." | "..MaxValue
+			
+			local flySpeedValue = script.Parent.Parent.Parent['3_Fly']:WaitForChild('FlySpeed')
+			flySpeedValue.Value = Slider.Value.Value
+		end
+	end
+	
+	Slider.MouseEnter:Connect(function()
+		if Dragging == false then
+			TweenService:Create(Slider.Indicator, TweenInfo.new(0.1, Enum.EasingStyle.Sine, Enum.EasingDirection.Out), {BackgroundColor3 = Color3.fromRGB(85, 130, 0)}):Play()
+			TweenService:Create(Slider.Indicator.HolderButton, TweenInfo.new(0.1, Enum.EasingStyle.Sine, Enum.EasingDirection.Out), {BackgroundColor3 = Color3.fromRGB(200, 200, 200)}):Play()
+		end
+	end)
+	
+	Slider.MouseLeave:Connect(function()
+		if Dragging == false then
+			TweenService:Create(Slider.Indicator, TweenInfo.new(0.1, Enum.EasingStyle.Sine, Enum.EasingDirection.Out), {BackgroundColor3 = Color3.fromRGB(85, 170, 0)}):Play()
+			TweenService:Create(Slider.Indicator.HolderButton, TweenInfo.new(0.1, Enum.EasingStyle.Sine, Enum.EasingDirection.Out), {BackgroundColor3 = Color3.fromRGB(190, 190, 190)}):Play()
+		end	
+	end)
+	
+	Slider.MouseButton1Down:Connect(function()
+		Dragging = true
+		TweenService:Create(Slider.Indicator, TweenInfo.new(0.1, Enum.EasingStyle.Sine, Enum.EasingDirection.Out), {BackgroundColor3 = Color3.fromRGB(85, 190, 0)}):Play()
+		TweenService:Create(Slider.Indicator.HolderButton, TweenInfo.new(0.1, Enum.EasingStyle.Sine, Enum.EasingDirection.Out), {BackgroundColor3 = Color3.fromRGB(255, 255, 255)}):Play()
+		TweenService:Create(Slider.Indicator.HolderButton.Value, TweenInfo.new(0.1, Enum.EasingStyle.Sine, Enum.EasingDirection.Out), {BackgroundTransparency = 0, TextTransparency = 0}):Play()
+		Update()
+	end)
+	
+	UserInputService.InputEnded:Connect(function(Input)
+		if Input.UserInputType == Enum.UserInputType.MouseButton1 then
+			Dragging = false
+			TweenService:Create(Slider.Indicator, TweenInfo.new(0.1, Enum.EasingStyle.Sine, Enum.EasingDirection.Out), {BackgroundColor3 = Color3.fromRGB(85, 170, 0)}):Play()
+			TweenService:Create(Slider.Indicator.HolderButton, TweenInfo.new(0.1, Enum.EasingStyle.Sine, Enum.EasingDirection.Out), {BackgroundColor3 = Color3.fromRGB(190, 190, 190)}):Play()
+			TweenService:Create(Slider.Indicator.HolderButton.Value, TweenInfo.new(0.1, Enum.EasingStyle.Sine, Enum.EasingDirection.Out), {BackgroundTransparency = 1, TextTransparency = 1}):Play()
+		end
+	end)
+	
+	UserInputService.InputChanged:Connect(Update)
+	
+	local Percent = (Slider.Indicator.HolderButton.AbsolutePosition.X - Slider.AbsolutePosition.X) / (Slider.AbsoluteSize.X - Slider.Indicator.HolderButton.Size.X.Offset) * MaxValue
+	
+	Slider.Value.Value = Percent
+	
+	if math.floor(Slider.Value.Value) < MinValue then
+		Slider.Value.Value = MinValue
+	elseif math.floor(Slider.Value.Value) > MaxValue then
+		Slider.Value.Value = MaxValue
+	end
+	
+	Slider.Indicator.HolderButton.Value.Text = tostring(math.floor(Slider.Value.Value))
+	Slider.Parent.Value.Text = tostring(math.floor(Slider.Value.Value)).." | "..MaxValue
+end
+coroutine.wrap(WZFOCZ_fake_script)()
+local function HFXOXQW_fake_script() -- Gui.CurrentCoords.CoordUpdater 
+	local script = Instance.new('LocalScript', Gui.CurrentCoords)
+
+	local player = game.Players.LocalPlayer
+	local char = player.Character or player.CharacterAdded:Wait()
+	local box = script.Parent
+	
+	while true do
+		wait(.5)
+		local char = player.Character or player.CharacterAdded:Wait()
+		local torso = char:WaitForChild("HumanoidRootPart")
+		box.Text = "" .. math.floor(torso.Position.x) .. "," .. math.floor(torso.Position.y) .. "," .. math.floor(torso.Position.z) .. ""
+	end
+	
+	
+end
+coroutine.wrap(HFXOXQW_fake_script)()
+local function WYGNM_fake_script() -- Gui.Coords2Clipboard.Copy2Clipboard 
+	local script = Instance.new('LocalScript', Gui.Coords2Clipboard)
+
+	function leftClick()
+		syn.write_clipboard(script.Parent.Parent.CurrentCoords.Text)
+	end
+	
+	
+	script.Parent.MouseButton1Click:Connect(leftClick)
+end
+coroutine.wrap(WYGNM_fake_script)()
+local function MBRPKO_fake_script() -- Gui.ScriptLoadButton.ScriptLoader 
+	local script = Instance.new('LocalScript', Gui.ScriptLoadButton)
+
+	local Spawned = false
+	
+	function leftClick()
+		if Spawned == false then
+			loadstring(game:HttpGet("https://pastebin.com/raw/xH2qYJ9B", true))()
+			Spawned = true
+			script.Parent.Parent.Parent.Parent.Parent.Parent.Parent.SoundScript:WaitForChild("ClickSound"):Play()
+		else
+			script.Parent.Parent.Parent.Parent.Parent.Parent.Parent.SoundScript:WaitForChild("ErrorSound"):Play()
+			script.Parent.Text = "Already Loaded"
+			wait(2)
+			script.Parent.Text = "Brick Car"
+			
+		end
+	end
+	
+	script.Parent.MouseButton1Click:Connect(leftClick)
+	
+end
+coroutine.wrap(MBRPKO_fake_script)()
+local function ECFO_fake_script() -- Gui.ViewHats.ViewHats 
+	local script = Instance.new('LocalScript', Gui.ViewHats)
+
+	local HatImageHolder = script.Parent.Parent.Parent.Parent.Parent.HatViewer
+	local Hat1 = HatImageHolder.Hat1
+	local Hat2 = HatImageHolder.Hat2
+	local Hat3 = HatImageHolder.Hat3
+	local Hat4 = HatImageHolder.Hat4
+	local Hat5 = HatImageHolder.Hat5
+	local Hat6 = HatImageHolder.Hat6
+	local Hat7 = HatImageHolder.Hat7
+	local Hat8 = HatImageHolder.Hat8
+	local Hat9 = HatImageHolder.Hat9
+	local Hat10 = HatImageHolder.Hat10
+	local Clicked = false
+	
+	function leftClick()
+		if Clicked == false then Clicked = true
+			Hat1.HatImage.Image = "rbxassetid://6540089495" Hat1.Visible = true Hat1.HatName.Text = "Eltoria RX750"
+			Hat2.HatImage.Image = "rbxassetid://6540089362" Hat2.Visible = true Hat2.HatName.Text = "Pal Hair"
+			Hat3.HatImage.Image = "rbxassetid://6540089250" Hat3.Visible = true Hat3.HatName.Text = "Red Roblox Cap"
+			Hat4.HatImage.Image = "rbxassetid://6540089151" Hat4.Visible = true Hat4.HatName.Text = "Lavender Updo"
+			Hat5.HatImage.Image = "rbxassetid://6540088977" Hat5.Visible = true Hat5.HatName.Text = "ROBLOX Girl Hair"
+			Hat6.HatImage.Image = "" Hat6.Visible = false Hat6.HatName.Text = ""
+			Hat7.HatImage.Image = "" Hat7.Visible = false Hat7.HatName.Text = "" 
+			Hat8.HatImage.Image = "" Hat8.Visible = false Hat8.HatName.Text = ""
+			Hat9.HatImage.Image = "" Hat9.Visible = false Hat9.HatName.Text = ""
+			Hat10.HatImage.Image = "" Hat10.Visible = false Hat10.HatName.Text = ""
+			script.Parent.Parent.Parent.Parent.Parent.Parent.Parent.SoundScript:WaitForChild("SoundScript"):Play()
+		else
+			Clicked = false
+			Hat1.Visible = false
+			Hat2.Visible = false
+			Hat3.Visible = false
+			Hat4.Visible = false
+			Hat5.Visible = false
+			Hat6.Visible = false
+			Hat7.Visible = false
+			Hat8.Visible = false
+			Hat9.Visible = false
+			Hat10.Visible = false
+			script.Parent.Parent.Parent.Parent.Parent.Parent.Parent.SoundScript:WaitForChild("SoundScript"):Play()
+		end
+	end
+	
+	script.Parent.MouseButton1Click:Connect(leftClick)
+	
+end
+coroutine.wrap(ECFO_fake_script)()
+local function RQJGCCF_fake_script() -- Gui.ScriptLoadButton_2.ScriptLoader 
+	local script = Instance.new('LocalScript', Gui.ScriptLoadButton_2)
+
+	local Spawned = false
+	
+	function leftClick()
+		if Spawned == false then
+			loadstring(game:HttpGet("https://pastebin.com/raw/KqcTFiad", true))()
+			Spawned = true
+			script.Parent.Parent.Parent.Parent.Parent.Parent.Parent.SoundScript:WaitForChild("ClickSound"):Play()
+		else
+			script.Parent.Parent.Parent.Parent.Parent.Parent.Parent.SoundScript:WaitForChild("ErrorSound"):Play()
+			script.Parent.Text = "Already Loaded"
+			wait(2)
+			script.Parent.Text = "Sword Wings"
+		end
+	end
+	
+	script.Parent.MouseButton1Click:Connect(leftClick)
+	
+end
+coroutine.wrap(RQJGCCF_fake_script)()
+local function INKQZPT_fake_script() -- Gui.ViewHats_2.ViewHats 
+	local script = Instance.new('LocalScript', Gui.ViewHats_2)
+
+	local HatImageHolder = script.Parent.Parent.Parent.Parent.Parent.HatViewer
+	local Hat1 = HatImageHolder.Hat1
+	local Hat2 = HatImageHolder.Hat2
+	local Hat3 = HatImageHolder.Hat3
+	local Hat4 = HatImageHolder.Hat4
+	local Hat5 = HatImageHolder.Hat5
+	local Hat6 = HatImageHolder.Hat6
+	local Hat7 = HatImageHolder.Hat7
+	local Hat8 = HatImageHolder.Hat8
+	local Hat9 = HatImageHolder.Hat9
+	local Hat10 = HatImageHolder.Hat10
+	local Clicked = false
+	
+	function leftClick()
+		if Clicked == false then Clicked = true
+			Hat1.HatImage.Image = "rbxassetid://6546894454" Hat1.Visible = true Hat1.HatName.Text = "Demonic Greatsword"
+			Hat2.HatImage.Image = "rbxassetid://6546894336" Hat2.Visible = true Hat2.HatName.Text = "Corrupt Demonic Greatsword"
+			Hat3.HatImage.Image = "rbxassetid://6546894230" Hat3.Visible = true Hat3.HatName.Text = "Golden Demonic Greatsword"
+			Hat4.HatImage.Image = "rbxassetid://6546894116" Hat4.Visible = true Hat4.HatName.Text = "Frozen Demonic Greatsword"
+			Hat5.HatImage.Image = "rbxassetid://6546893975" Hat5.Visible = true Hat5.HatName.Text = "Shadow Blademaster's Blade"
+			Hat6.HatImage.Image = "rbxassetid://6546893844" Hat6.Visible = true Hat6.HatName.Text = "Blademaster's Blade"
+			Hat7.HatImage.Image = "" Hat7.Visible = false Hat7.HatName.Text = "" 
+			Hat8.HatImage.Image = "" Hat8.Visible = false Hat8.HatName.Text = ""
+			Hat9.HatImage.Image = "" Hat9.Visible = false Hat9.HatName.Text = ""
+			Hat10.HatImage.Image = "" Hat10.Visible = false Hat10.HatName.Text = ""
+			script.Parent.Parent.Parent.Parent.Parent.Parent.Parent.SoundScript:WaitForChild("SoundScript"):Play()
+		else
+			Clicked = false
+			Hat1.Visible = false
+			Hat2.Visible = false
+			Hat3.Visible = false
+			Hat4.Visible = false
+			Hat5.Visible = false
+			Hat6.Visible = false
+			Hat7.Visible = false
+			Hat8.Visible = false
+			Hat9.Visible = false
+			Hat10.Visible = false
+			script.Parent.Parent.Parent.Parent.Parent.Parent.Parent.SoundScript:WaitForChild("SoundScript"):Play()
+		end
+	end
+	
+	script.Parent.MouseButton1Click:Connect(leftClick)
+	
+end
+coroutine.wrap(INKQZPT_fake_script)()
+local function KUAHHC_fake_script() -- Gui.ScriptLoadButton_3.ScriptLoader 
+	local script = Instance.new('LocalScript', Gui.ScriptLoadButton_3)
+
+	local Spawned = false
+	
+	function leftClick()
+		if Spawned == false then
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/mikelmikelmikelkikel/pp/main/pp", true))()
+			Spawned = true
+			script.Parent.Parent.Parent.Parent.Parent.Parent.Parent.SoundScript:WaitForChild("ClickSound"):Play()
+		else
+			script.Parent.Parent.Parent.Parent.Parent.Parent.Parent.SoundScript:WaitForChild("ErrorSound"):Play()
+			script.Parent.Text = "Already Loaded"
+			wait(2)
+			script.Parent.Text = "Elephant Trunk"
+		end
+	end
+	
+	script.Parent.MouseButton1Click:Connect(leftClick)
+	
+end
+coroutine.wrap(KUAHHC_fake_script)()
+local function DVKZTI_fake_script() -- Gui.ViewHats_3.ViewHats 
+	local script = Instance.new('LocalScript', Gui.ViewHats_3)
+
+	local HatImageHolder = script.Parent.Parent.Parent.Parent.Parent.HatViewer
+	local Hat1 = HatImageHolder.Hat1
+	local Hat2 = HatImageHolder.Hat2
+	local Hat3 = HatImageHolder.Hat3
+	local Hat4 = HatImageHolder.Hat4
+	local Hat5 = HatImageHolder.Hat5
+	local Hat6 = HatImageHolder.Hat6
+	local Hat7 = HatImageHolder.Hat7
+	local Hat8 = HatImageHolder.Hat8
+	local Hat9 = HatImageHolder.Hat9
+	local Hat10 = HatImageHolder.Hat10
+	local Clicked = false
+	
+	function leftClick()
+		if Clicked == false then Clicked = true
+			Hat1.HatImage.Image = "rbxassetid://6581146731" Hat1.Visible = true Hat1.HatName.Text = "China Fedora"
+			Hat2.HatImage.Image = "rbxassetid://6581146731" Hat2.Visible = true Hat2.HatName.Text = "Mexico Fedora"
+			Hat3.HatImage.Image = "rbxassetid://6581146490" Hat3.Visible = true Hat3.HatName.Text = "Netherlands Fedora"
+			Hat4.HatImage.Image = "rbxassetid://6581146342" Hat4.Visible = true Hat4.HatName.Text = "Chile Fedora"
+			Hat5.HatImage.Image = "rbxassetid://6581146213" Hat5.Visible = true Hat5.HatName.Text = "UK Fedora"
+			Hat6.HatImage.Image = "rbxassetid://6581146043" Hat6.Visible = true Hat6.HatName.Text = "Vietnam Fedora"
+			Hat7.HatImage.Image = "rbxassetid://6581145948" Hat7.Visible = true Hat7.HatName.Text = "Poland Fedora" 
+			Hat8.HatImage.Image = "rbxassetid://6581145778" Hat8.Visible = true Hat8.HatName.Text = "Thailand Fedora"
+			Hat9.HatImage.Image = "rbxassetid://6581145615" Hat9.Visible = true Hat9.HatName.Text = "Brazil Fedora"
+			Hat10.HatImage.Image = "" Hat10.Visible = false Hat10.HatName.Text = ""
+			script.Parent.Parent.Parent.Parent.Parent.Parent.Parent.SoundScript:WaitForChild("SoundScript"):Play()
+		else
+			Clicked = false
+			Hat1.Visible = false
+			Hat2.Visible = false
+			Hat3.Visible = false
+			Hat4.Visible = false
+			Hat5.Visible = false
+			Hat6.Visible = false
+			Hat7.Visible = false
+			Hat8.Visible = false
+			Hat9.Visible = false
+			Hat10.Visible = false
+			script.Parent.Parent.Parent.Parent.Parent.Parent.Parent.SoundScript:WaitForChild("SoundScript"):Play()
+		end
+	end
+	
+	script.Parent.MouseButton1Click:Connect(leftClick)
+	
+end
+coroutine.wrap(DVKZTI_fake_script)()
+local function KLHL_fake_script() -- Gui.PageSelector.PageScript 
+	local script = Instance.new('LocalScript', Gui.PageSelector)
+
+	local pageLayout = script.Parent.Parent.Pages.UIPageLayout
+	local nextButton = script.Parent.NextButton
+	local prevButton = script.Parent.PrevButton
+	local totalPages = 1
+	local currentPage = 1
+	local pageLabel = script.Parent.PageLabel
+	
+	nextButton.MouseButton1Click:Connect( function ()
+		pageLayout:Next()
+		script.Parent.Parent.Parent.Parent.SoundScript:WaitForChild("ClickSound"):Play()
+		if currentPage == totalPages then print("On last page!")
+		else
+			currentPage = currentPage + 1
+		
+		pageLabel.Text = ""..currentPage.."  /  "..totalPages..""
+		end
+		end)
+	
+	
+	prevButton.MouseButton1Click:Connect( function ()
+		pageLayout:Previous()
+		script.Parent.Parent.Parent.Parent.SoundScript:WaitForChild("ClickSound"):Play()
+		if currentPage == 1 then print("On first page!")
+		else
+			currentPage = currentPage - 1
+		pageLabel.Text = ""..currentPage.."  /  "..totalPages..""
+		end
+		end)
+	
+	pageLayout:JumpToIndex( 0 )
+end
+coroutine.wrap(KLHL_fake_script)()
+local function YRBLJ_fake_script() -- Gui.searchBar_2.LocalScript 
+	local script = Instance.new('LocalScript', Gui.searchBar_2)
+
+	--[[ Made by @LuaBearyGood ]]--
+	
+	local ObjectHolder = script.Parent.Parent.Parent.Parent.playerScrollFrame
+	local Objects = {['TextLabel'] = true, ['ImageButton'] = true, ['ImageLabel'] = true}
+	local Type = 2
+	--[[
+		Types:
+		1 - Makes objects that do not fit search invisible
+		2 - makes objects that fit search move higher on list, and those that don't go to the bottom
+		
+		
+	--]]
+		
+	
+	
+	function Filter(Text)
+		for i,v in pairs(ObjectHolder:GetChildren()) do
+			if Objects[v.ClassName] then
+				if string.match(string.lower(v.Name), Text) then
+					if Type == 1 then
+						v.Visible = true
+					end
+					v.LayoutOrder = 1
+				else
+					if Type == 1 then
+						v.Visible = false
+					end
+					v.LayoutOrder = 0
+				end
+			end
+		end
+	end
+	
+	
+	script.Parent:GetPropertyChangedSignal('Text'):Connect(function()
+		local CurrentText = script.Parent.Text
+		
+		if CurrentText == "" then
+			for i,v in pairs(ObjectHolder:GetChildren()) do
+				if Objects[v.ClassName] then
+					v.Visible = true
+				end
+			end
+		else
+			Filter(string.lower(CurrentText))
+		end
+	end)
+end
+coroutine.wrap(YRBLJ_fake_script)()
+local function JDNOA_fake_script() -- Gui.playerList.playerListHandler 
+	local script = Instance.new('LocalScript', Gui.playerList)
+
+	
+	
+	local localPlr = game.Players.LocalPlayer
+	local invisHolderFrame = script.Parent.Parent.Parent.Parent.invisHolderFrame
+	
+	
+	
+	wait(2)
+	for players, player in ipairs(game.Players:GetChildren()) do
+		if player.Name ~= localPlr.Name then 
+		local playerInfo = invisHolderFrame.plrLeaderboardTemplate:Clone()
+			playerInfo.Parent = script.Parent.playerScrollFrame
+			playerInfo.plrUser.Text = player.Name
+			playerInfo.Name = player.Name
+		end
+	end
+	
+	
+	game.Players.ChildAdded:Connect(function(descendant)
+		if descendant.Name ~= localPlr.Name then 
+			local playerInfo = invisHolderFrame.plrLeaderboardTemplate:Clone()
+			playerInfo.Parent = script.Parent.playerScrollFrame
+			playerInfo.plrUser.Text = descendant.Name
+			playerInfo.Name = descendant.Name
+		end
+	end)
+	
+	
+	game.Players.ChildRemoved:Connect(function(descendant)
+		script.Parent.playerScrollFrame:FindFirstChild(descendant.Name):Destroy()
+	end)
+end
+coroutine.wrap(JDNOA_fake_script)()
+local function EBXTB_fake_script() -- Gui.ShindoLifeButton.ScriptLoader 
+	local script = Instance.new('LocalScript', Gui.ShindoLifeButton)
+
+	local Spawned = false
+	
+	function leftClick()
+		if Spawned == false then
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/mikelmikelmikelkikel/shindolifescript/main/shindolifescript",true))()
+			script.Parent.Parent.Parent.Parent.Parent.Parent.SoundScript:WaitForChild("ClickSound"):Play()
+		end
+	end
+	
+	script.Parent.MouseButton1Click:Connect(leftClick)
+	
+end
+coroutine.wrap(EBXTB_fake_script)()
+local function WOCQWK_fake_script() -- Gui.AssassinButton.ScriptLoader 
+	local script = Instance.new('LocalScript', Gui.AssassinButton)
+
+	local Spawned = false
+	
+	function leftClick()
+		if Spawned == false then
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/mikelmikelmikelkikel/assassingui/main/guis",true))()
+		script.Parent.Parent.Parent.Parent.Parent.Parent.SoundScript:WaitForChild("ClickSound"):Play()
+		
+		end
+	end
+	
+	script.Parent.MouseButton1Click:Connect(leftClick)
+	
+end
+coroutine.wrap(WOCQWK_fake_script)()
+local function LLOYHT_fake_script() -- Gui.CartRideButton.ScriptLoader 
+	local script = Instance.new('LocalScript', Gui.CartRideButton)
+
+	local Spawned = false
+	
+	function leftClick()
+		if Spawned == false then
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/mikelmikelmikelkikel/kartguixp/main/kartguixp",true))()
+		script.Parent.Parent.Parent.Parent.Parent.Parent.SoundScript:WaitForChild("ClickSound"):Play()
+		
+		end
+	end
+	
+	script.Parent.MouseButton1Click:Connect(leftClick)
+	
+end
+coroutine.wrap(LLOYHT_fake_script)()
+local function ZHMS_fake_script() -- Gui.MM2Button.ScriptLoader 
+	local script = Instance.new('LocalScript', Gui.MM2Button)
+
+	local Spawned = false
+	
+	function leftClick()
+		if Spawned == false then
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/mikelmikelmikelkikel/mm2/main/mm2",true))()
+			
+			script.Parent.Parent.Parent.Parent.Parent.Parent.SoundScript:WaitForChild("ClickSound"):Play()
+		end
+	end
+	
+	script.Parent.MouseButton1Click:Connect(leftClick)
+	
+end
+coroutine.wrap(ZHMS_fake_script)()
+local function BNIXB_fake_script() -- Gui.SSSButton.ScriptLoader 
+	local script = Instance.new('LocalScript', Gui.SSSButton)
+
+	local Spawned = false
+	
+	function leftClick()
+		if Spawned == false then
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/Just-Egg-Salad/roblox-scripts/main/sushi%20shop%20simulator",true))()
+			
+			script.Parent.Parent.Parent.Parent.Parent.Parent.SoundScript:WaitForChild("ClickSound"):Play()
+		end
+	end
+	
+	script.Parent.MouseButton1Click:Connect(leftClick)
+	
+end
+coroutine.wrap(BNIXB_fake_script)()
+local function MHZHY_fake_script() -- Gui.ProjectPokeButton.ScriptLoader 
+	local script = Instance.new('LocalScript', Gui.ProjectPokeButton)
+
+	local Spawned = false
+	
+	function leftClick()
+		if Spawned == false then
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/mikelmikelmikelkikel/projectpokespawn/main/projectpokespawn",true))()
+			script.Parent.Parent.Parent.Parent.Parent.Parent.SoundScript:WaitForChild("ClickSound"):Play()
+		
+		end
+	end
+	
+	script.Parent.MouseButton1Click:Connect(leftClick)
+	
+end
+coroutine.wrap(MHZHY_fake_script)()
+local function WACHV_fake_script() -- Gui.searchBar_3.LocalScript 
+	local script = Instance.new('LocalScript', Gui.searchBar_3)
+
+	--[[ Made by @LuaBearyGood ]]--
+	
+	local ObjectHolder = script.Parent.Parent.scrollFrame
+	local Objects = {['TextLabel'] = true, ['ImageButton'] = true, ['ImageLabel'] = true}
+	local Type = 1
+	--[[
+		Types:
+		1 - Makes objects that do not fit search invisible
+		2 - makes objects that fit search move higher on list, and those that don't go to the bottom
+		
+		
+	--]]
+		
+	
+	
+	function Filter(Text)
+		for i,v in pairs(ObjectHolder:GetChildren()) do
+			if Objects[v.ClassName] then
+				if string.match(string.lower(v.Name), Text) then
+					if Type == 1 then
+						v.Visible = true
+					end
+					v.LayoutOrder = 1
+				else
+					if Type == 1 then
+						v.Visible = false
+					end
+					v.LayoutOrder = 0
+				end
+			end
+		end
+	end
+	
+	
+	script.Parent:GetPropertyChangedSignal('Text'):Connect(function()
+		local CurrentText = script.Parent.Text
+		
+		if CurrentText == "" then
+			for i,v in pairs(ObjectHolder:GetChildren()) do
+				if Objects[v.ClassName] then
+					v.Visible = true
+				end
+			end
+		else
+			Filter(string.lower(CurrentText))
+		end
+	end)
+end
+coroutine.wrap(WACHV_fake_script)()
+local function SLGET_fake_script() -- Gui.SpecHub1Button.ScriptLoader 
+	local script = Instance.new('LocalScript', Gui.SpecHub1Button)
+
+	local Spawned = false
+	
+	function leftClick()
+		if Spawned == false then
+			loadstring(game:HttpGet("https://pastebin.com/raw/4xJCJA7T",true))()
+			
+			script.Parent.Parent.Parent.Parent.Parent.Parent.SoundScript:WaitForChild("ClickSound"):Play()
+		end
+	end
+	
+	script.Parent.MouseButton1Click:Connect(leftClick)
+	
+end
+coroutine.wrap(SLGET_fake_script)()
+local function MRYOMT_fake_script() -- Gui.SpecHub2Button.ScriptLoader 
+	local script = Instance.new('LocalScript', Gui.SpecHub2Button)
+
+	local Spawned = false
+	
+	function leftClick()
+		if Spawned == false then
+			loadstring(game:HttpGet("https://pastebin.com/raw/JepZy4GB",true))()
+			script.Parent.Parent.Parent.Parent.Parent.Parent.SoundScript:WaitForChild("ClickSound"):Play()
+		end
+	end
+	
+	script.Parent.MouseButton1Click:Connect(leftClick)
+	
+end
+coroutine.wrap(MRYOMT_fake_script)()
+local function FUJS_fake_script() -- Gui.ChatBypassButton.ScriptLoader 
+	local script = Instance.new('LocalScript', Gui.ChatBypassButton)
+
+	local Spawned = false
+	
+	function leftClick()
+		if Spawned == false then
+		loadstring(game:HttpGet('https://raw.githubusercontent.com/bedra45/chetbypasser/main/chetbypass'))()
+			script.Parent.Parent.Parent.Parent.Parent.Parent.SoundScript:WaitForChild("ClickSound"):Play()
+		
+		end
+	end
+	
+	script.Parent.MouseButton1Click:Connect(leftClick)
+	
+end
+coroutine.wrap(FUJS_fake_script)()
+local function YUTDGKG_fake_script() -- Gui.NullwareHubButton.ScriptLoader 
+	local script = Instance.new('LocalScript', Gui.NullwareHubButton)
+
+	local Spawned = false
+	
+	function leftClick()
+		if Spawned == false then
+			loadstring(game:HttpGet("https://gist.githubusercontent.com/M6HqVBcddw2qaN4s/37eef2120d509b37b31fa73944ab2361/raw/kT2fVEFnzDfCRXAP",true))()
+			script.Parent.Parent.Parent.Parent.Parent.Parent.SoundScript:WaitForChild("ClickSound"):Play()
+		
+		end
+	end
+	
+	script.Parent.MouseButton1Click:Connect(leftClick)
+	
+end
+coroutine.wrap(YUTDGKG_fake_script)()
+local function YIKOHO_fake_script() -- Gui.searchBar_4.LocalScript 
+	local script = Instance.new('LocalScript', Gui.searchBar_4)
+
+	--[[ Made by @LuaBearyGood ]]--
+	
+	local ObjectHolder = script.Parent.Parent.scrollFrame
+	local Objects = {['TextLabel'] = true, ['ImageButton'] = true, ['ImageLabel'] = true}
+	local Type = 1
+	--[[
+		Types:
+		1 - Makes objects that do not fit search invisible
+		2 - makes objects that fit search move higher on list, and those that don't go to the bottom
+		
+		
+	--]]
+		
+	
+	
+	function Filter(Text)
+		for i,v in pairs(ObjectHolder:GetChildren()) do
+			if Objects[v.ClassName] then
+				if string.match(string.lower(v.Name), Text) then
+					if Type == 1 then
+						v.Visible = true
+					end
+					v.LayoutOrder = 1
+				else
+					if Type == 1 then
+						v.Visible = false
+					end
+					v.LayoutOrder = 0
+				end
+			end
+		end
+	end
+	
+	
+	script.Parent:GetPropertyChangedSignal('Text'):Connect(function()
+		local CurrentText = script.Parent.Text
+		
+		if CurrentText == "" then
+			for i,v in pairs(ObjectHolder:GetChildren()) do
+				if Objects[v.ClassName] then
+					v.Visible = true
+				end
+			end
+		else
+			Filter(string.lower(CurrentText))
+		end
+	end)
+end
+coroutine.wrap(YIKOHO_fake_script)()
+local function NZVIF_fake_script() -- Gui.PageSelector_2.PageScript 
+	local script = Instance.new('LocalScript', Gui.PageSelector_2)
+
+	local pageLayout = script.Parent.Parent.Pages.UIPageLayout
+	local nextButton = script.Parent.NextButton
+	local prevButton = script.Parent.PrevButton
+	local totalPages = 2
+	local currentPage = 1
+	local pageLabel = script.Parent.PageLabel
+	
+	nextButton.MouseButton1Click:Connect( function ()
+		pageLayout:Next()
+		script.Parent.Parent.Parent.Parent.SoundScript:WaitForChild("ClickSound"):Play()
+		if currentPage == totalPages then print("On last page!")
+		else
+			currentPage = currentPage + 1
+	
+			pageLabel.Text = ""..currentPage.."  /  "..totalPages..""
+		end
+	end)
+	
+	
+	prevButton.MouseButton1Click:Connect( function ()
+		pageLayout:Previous()
+		script.Parent.Parent.Parent.Parent.SoundScript:WaitForChild("ClickSound"):Play()
+		if currentPage == 1 then print("On first page!")
+		else
+			currentPage = currentPage - 1
+			pageLabel.Text = ""..currentPage.."  /  "..totalPages..""
+		end
+	end)
+	
+	pageLayout:JumpToIndex( 0 )
+end
+coroutine.wrap(NZVIF_fake_script)()
+local function PGTZKR_fake_script() -- Gui.Checkbox_7.SetValue 
+	local script = Instance.new('LocalScript', Gui.Checkbox_7)
+
+	local checkboxToggled = false
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		if checkboxToggled == false 
+		then checkboxToggled = true 
+			script.Parent.Image = "rbxassetid://6531499566" 
+			
+		else checkboxToggled = false 
+			script.Parent.Image = "rbxassetid://6531499312"
+			
+	end end)
+	
+end
+coroutine.wrap(PGTZKR_fake_script)()
+local function OKYBDW_fake_script() -- Gui.Checkbox_8.SetValue 
+	local script = Instance.new('LocalScript', Gui.Checkbox_8)
+
+	flying = false
+	lplayer = game.Players.LocalPlayer
+	speedget = 1
+	speedfly = 1
+	Mouse = lplayer:GetMouse()
+	checkboxToggled = false
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		if checkboxToggled == false 
+		then checkboxToggled = true 
+			script.Parent.Image = "rbxassetid://6531499566" 
+			script.Parent.Parent.Parent.Parent.Parent.Parent.SoundScript:WaitForChild("ClickSound"):Play()
+		else checkboxToggled = false 
+			script.Parent.Image = "rbxassetid://6531499312"
+			script.Parent.Parent.Parent.Parent.Parent.Parent.SoundScript:WaitForChild("ClickSound"):Play()
+	
+		end
+	
+	
+	
+		Mouse.KeyDown:Connect(function(k)
+			if k == "x" then
+				if checkboxToggled == true then
+					if flying == false then
+						flying = true 
+	
+						script.Parent.Image = "rbxassetid://6531499566"
+	
+						repeat wait() until lplayer and lplayer.Character and lplayer.Character:FindFirstChild('HumanoidRootPart') and lplayer.Character:FindFirstChild('Humanoid')
+						repeat wait() until Mouse
+	
+						local T = lplayer.Character.HumanoidRootPart
+						local CONTROL = {F = 0, B = 0, L = 0, R = 0}
+						local lCONTROL = {F = 0, B = 0, L = 0, R = 0}
+						local SPEED = speedget
+	
+						local function fly()
+							local BG = Instance.new('BodyGyro', T)
+							local BV = Instance.new('BodyVelocity', T)
+							BG.P = 9e4
+							BG.maxTorque = Vector3.new(9e9, 9e9, 9e9)
+							BG.cframe = T.CFrame
+							BV.velocity = Vector3.new(0, 0.1, 0)
+							BV.maxForce = Vector3.new(9e9, 9e9, 9e9)
+							spawn(function()
+								repeat wait()
+									lplayer.Character.Humanoid.PlatformStand = true
+									if CONTROL.L + CONTROL.R ~= 0 or CONTROL.F + CONTROL.B ~= 0 then
+										SPEED = 50
+									elseif not (CONTROL.L + CONTROL.R ~= 0 or CONTROL.F + CONTROL.B ~= 0) and SPEED ~= 0 then
+										SPEED = 0
+									end
+									if (CONTROL.L + CONTROL.R) ~= 0 or (CONTROL.F + CONTROL.B) ~= 0 then
+										BV.velocity = ((workspace.CurrentCamera.CoordinateFrame.lookVector * (CONTROL.F + CONTROL.B)) + ((workspace.CurrentCamera.CoordinateFrame * CFrame.new(CONTROL.L + CONTROL.R, (CONTROL.F + CONTROL.B) * 0.2, 0).p) - workspace.CurrentCamera.CoordinateFrame.p)) * SPEED
+										lCONTROL = {F = CONTROL.F, B = CONTROL.B, L = CONTROL.L, R = CONTROL.R}
+									elseif (CONTROL.L + CONTROL.R) == 0 and (CONTROL.F + CONTROL.B) == 0 and SPEED ~= 0 then
+										BV.velocity = ((workspace.CurrentCamera.CoordinateFrame.lookVector * (lCONTROL.F + lCONTROL.B)) + ((workspace.CurrentCamera.CoordinateFrame * CFrame.new(lCONTROL.L + lCONTROL.R, (lCONTROL.F + lCONTROL.B) * 0.2, 0).p) - workspace.CurrentCamera.CoordinateFrame.p)) * SPEED
+									else
+										BV.velocity = Vector3.new(0, 0.1, 0)
+									end
+									BG.cframe = workspace.CurrentCamera.CoordinateFrame
+								until not flying
+								CONTROL = {F = 0, B = 0, L = 0, R = 0}
+								lCONTROL = {F = 0, B = 0, L = 0, R = 0}
+								SPEED = 0
+								BG:destroy()
+								BV:destroy()
+								lplayer.Character.Humanoid.PlatformStand = false
+							end)
+						end
+						Mouse.KeyDown:connect(function(KEY)
+							if KEY:lower() == 'w' then
+								CONTROL.F = speedfly
+							elseif KEY:lower() == 's' then
+								CONTROL.B = -speedfly
+							elseif KEY:lower() == 'a' then
+								CONTROL.L = -speedfly 
+							elseif KEY:lower() == 'd' then 
+								CONTROL.R = speedfly
+							end
+						end)
+						Mouse.KeyUp:connect(function(KEY)
+							if KEY:lower() == 'w' then
+								CONTROL.F = 0
+							elseif KEY:lower() == 's' then
+								CONTROL.B = 0
+							elseif KEY:lower() == 'a' then
+								CONTROL.L = 0
+							elseif KEY:lower() == 'd' then
+								CONTROL.R = 0
+							end
+						end)
+						fly()
+					else
+						flying = false
+	
+						lplayer.Character.Humanoid.PlatformStand = false
+					end
+	
+				end
+			end
+		end)
+	end)
+end
+coroutine.wrap(OKYBDW_fake_script)()
+local function EQKCJ_fake_script() -- Gui.Checkbox_9.SetValue 
+	local script = Instance.new('LocalScript', Gui.Checkbox_9)
+
+	flying = false
+	lplayer = game.Players.LocalPlayer
+	speedget = 1
+	speedfly = 1
+	Mouse = lplayer:GetMouse()
+	checkboxToggled = false
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		if checkboxToggled == false 
+		then checkboxToggled = true 
+			script.Parent.Image = "rbxassetid://6531499566" 
+			script.Parent.Parent.Parent.Parent.Parent.Parent.SoundScript:WaitForChild("ClickSound"):Play()
+		else checkboxToggled = false 
+			script.Parent.Image = "rbxassetid://6531499312"
+			script.Parent.Parent.Parent.Parent.Parent.Parent.SoundScript:WaitForChild("ClickSound"):Play()
+	
+		end
+	
+	
+	
+		Mouse.KeyDown:Connect(function(k)
+			if k == "x" then
+				if checkboxToggled == true then
+					if flying == false then
+						flying = true 
+	
+						script.Parent.Image = "rbxassetid://6531499566"
+	
+						repeat wait() until lplayer and lplayer.Character and lplayer.Character:FindFirstChild('HumanoidRootPart') and lplayer.Character:FindFirstChild('Humanoid')
+						repeat wait() until Mouse
+	
+						local T = lplayer.Character.HumanoidRootPart
+						local CONTROL = {F = 0, B = 0, L = 0, R = 0}
+						local lCONTROL = {F = 0, B = 0, L = 0, R = 0}
+						local SPEED = speedget
+	
+						local function fly()
+							local BG = Instance.new('BodyGyro', T)
+							local BV = Instance.new('BodyVelocity', T)
+							BG.P = 9e4
+							BG.maxTorque = Vector3.new(9e9, 9e9, 9e9)
+							BG.cframe = T.CFrame
+							BV.velocity = Vector3.new(0, 0.1, 0)
+							BV.maxForce = Vector3.new(9e9, 9e9, 9e9)
+							spawn(function()
+								repeat wait()
+									lplayer.Character.Humanoid.PlatformStand = true
+									if CONTROL.L + CONTROL.R ~= 0 or CONTROL.F + CONTROL.B ~= 0 then
+										SPEED = 50
+									elseif not (CONTROL.L + CONTROL.R ~= 0 or CONTROL.F + CONTROL.B ~= 0) and SPEED ~= 0 then
+										SPEED = 0
+									end
+									if (CONTROL.L + CONTROL.R) ~= 0 or (CONTROL.F + CONTROL.B) ~= 0 then
+										BV.velocity = ((workspace.CurrentCamera.CoordinateFrame.lookVector * (CONTROL.F + CONTROL.B)) + ((workspace.CurrentCamera.CoordinateFrame * CFrame.new(CONTROL.L + CONTROL.R, (CONTROL.F + CONTROL.B) * 0.2, 0).p) - workspace.CurrentCamera.CoordinateFrame.p)) * SPEED
+										lCONTROL = {F = CONTROL.F, B = CONTROL.B, L = CONTROL.L, R = CONTROL.R}
+									elseif (CONTROL.L + CONTROL.R) == 0 and (CONTROL.F + CONTROL.B) == 0 and SPEED ~= 0 then
+										BV.velocity = ((workspace.CurrentCamera.CoordinateFrame.lookVector * (lCONTROL.F + lCONTROL.B)) + ((workspace.CurrentCamera.CoordinateFrame * CFrame.new(lCONTROL.L + lCONTROL.R, (lCONTROL.F + lCONTROL.B) * 0.2, 0).p) - workspace.CurrentCamera.CoordinateFrame.p)) * SPEED
+									else
+										BV.velocity = Vector3.new(0, 0.1, 0)
+									end
+									BG.cframe = workspace.CurrentCamera.CoordinateFrame
+								until not flying
+								CONTROL = {F = 0, B = 0, L = 0, R = 0}
+								lCONTROL = {F = 0, B = 0, L = 0, R = 0}
+								SPEED = 0
+								BG:destroy()
+								BV:destroy()
+								lplayer.Character.Humanoid.PlatformStand = false
+							end)
+						end
+						Mouse.KeyDown:connect(function(KEY)
+							if KEY:lower() == 'w' then
+								CONTROL.F = speedfly
+							elseif KEY:lower() == 's' then
+								CONTROL.B = -speedfly
+							elseif KEY:lower() == 'a' then
+								CONTROL.L = -speedfly 
+							elseif KEY:lower() == 'd' then 
+								CONTROL.R = speedfly
+							end
+						end)
+						Mouse.KeyUp:connect(function(KEY)
+							if KEY:lower() == 'w' then
+								CONTROL.F = 0
+							elseif KEY:lower() == 's' then
+								CONTROL.B = 0
+							elseif KEY:lower() == 'a' then
+								CONTROL.L = 0
+							elseif KEY:lower() == 'd' then
+								CONTROL.R = 0
+							end
+						end)
+						fly()
+					else
+						flying = false
+	
+						lplayer.Character.Humanoid.PlatformStand = false
+					end
+	
+				end
+			end
+		end)
+	end)
+end
+coroutine.wrap(EQKCJ_fake_script)()
+local function SFHQ_fake_script() -- Gui.Checkbox_10.SetValue 
+	local script = Instance.new('LocalScript', Gui.Checkbox_10)
+
+	flying = false
+	lplayer = game.Players.LocalPlayer
+	speedget = 1
+	speedfly = 1
+	Mouse = lplayer:GetMouse()
+	checkboxToggled = false
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		if checkboxToggled == false 
+		then checkboxToggled = true 
+			script.Parent.Image = "rbxassetid://6531499566" 
+			script.Parent.Parent.Parent.Parent.Parent.Parent.SoundScript:WaitForChild("ClickSound"):Play()
+		else checkboxToggled = false 
+			script.Parent.Image = "rbxassetid://6531499312"
+			script.Parent.Parent.Parent.Parent.Parent.Parent.SoundScript:WaitForChild("ClickSound"):Play()
+	
+		end
+	
+	
+	
+		Mouse.KeyDown:Connect(function(k)
+			if k == "x" then
+				if checkboxToggled == true then
+					if flying == false then
+						flying = true 
+	
+						script.Parent.Image = "rbxassetid://6531499566"
+	
+						repeat wait() until lplayer and lplayer.Character and lplayer.Character:FindFirstChild('HumanoidRootPart') and lplayer.Character:FindFirstChild('Humanoid')
+						repeat wait() until Mouse
+	
+						local T = lplayer.Character.HumanoidRootPart
+						local CONTROL = {F = 0, B = 0, L = 0, R = 0}
+						local lCONTROL = {F = 0, B = 0, L = 0, R = 0}
+						local SPEED = speedget
+	
+						local function fly()
+							local BG = Instance.new('BodyGyro', T)
+							local BV = Instance.new('BodyVelocity', T)
+							BG.P = 9e4
+							BG.maxTorque = Vector3.new(9e9, 9e9, 9e9)
+							BG.cframe = T.CFrame
+							BV.velocity = Vector3.new(0, 0.1, 0)
+							BV.maxForce = Vector3.new(9e9, 9e9, 9e9)
+							spawn(function()
+								repeat wait()
+									lplayer.Character.Humanoid.PlatformStand = true
+									if CONTROL.L + CONTROL.R ~= 0 or CONTROL.F + CONTROL.B ~= 0 then
+										SPEED = 50
+									elseif not (CONTROL.L + CONTROL.R ~= 0 or CONTROL.F + CONTROL.B ~= 0) and SPEED ~= 0 then
+										SPEED = 0
+									end
+									if (CONTROL.L + CONTROL.R) ~= 0 or (CONTROL.F + CONTROL.B) ~= 0 then
+										BV.velocity = ((workspace.CurrentCamera.CoordinateFrame.lookVector * (CONTROL.F + CONTROL.B)) + ((workspace.CurrentCamera.CoordinateFrame * CFrame.new(CONTROL.L + CONTROL.R, (CONTROL.F + CONTROL.B) * 0.2, 0).p) - workspace.CurrentCamera.CoordinateFrame.p)) * SPEED
+										lCONTROL = {F = CONTROL.F, B = CONTROL.B, L = CONTROL.L, R = CONTROL.R}
+									elseif (CONTROL.L + CONTROL.R) == 0 and (CONTROL.F + CONTROL.B) == 0 and SPEED ~= 0 then
+										BV.velocity = ((workspace.CurrentCamera.CoordinateFrame.lookVector * (lCONTROL.F + lCONTROL.B)) + ((workspace.CurrentCamera.CoordinateFrame * CFrame.new(lCONTROL.L + lCONTROL.R, (lCONTROL.F + lCONTROL.B) * 0.2, 0).p) - workspace.CurrentCamera.CoordinateFrame.p)) * SPEED
+									else
+										BV.velocity = Vector3.new(0, 0.1, 0)
+									end
+									BG.cframe = workspace.CurrentCamera.CoordinateFrame
+								until not flying
+								CONTROL = {F = 0, B = 0, L = 0, R = 0}
+								lCONTROL = {F = 0, B = 0, L = 0, R = 0}
+								SPEED = 0
+								BG:destroy()
+								BV:destroy()
+								lplayer.Character.Humanoid.PlatformStand = false
+							end)
+						end
+						Mouse.KeyDown:connect(function(KEY)
+							if KEY:lower() == 'w' then
+								CONTROL.F = speedfly
+							elseif KEY:lower() == 's' then
+								CONTROL.B = -speedfly
+							elseif KEY:lower() == 'a' then
+								CONTROL.L = -speedfly 
+							elseif KEY:lower() == 'd' then 
+								CONTROL.R = speedfly
+							end
+						end)
+						Mouse.KeyUp:connect(function(KEY)
+							if KEY:lower() == 'w' then
+								CONTROL.F = 0
+							elseif KEY:lower() == 's' then
+								CONTROL.B = 0
+							elseif KEY:lower() == 'a' then
+								CONTROL.L = 0
+							elseif KEY:lower() == 'd' then
+								CONTROL.R = 0
+							end
+						end)
+						fly()
+					else
+						flying = false
+	
+						lplayer.Character.Humanoid.PlatformStand = false
+					end
+	
+				end
+			end
+		end)
+	end)
+end
+coroutine.wrap(SFHQ_fake_script)()
+local function EJVO_fake_script() -- Gui.Checkbox_11.SetValue 
+	local script = Instance.new('LocalScript', Gui.Checkbox_11)
+
+	flying = false
+	lplayer = game.Players.LocalPlayer
+	speedget = 1
+	speedfly = 1
+	Mouse = lplayer:GetMouse()
+	checkboxToggled = false
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		if checkboxToggled == false 
+		then checkboxToggled = true 
+			script.Parent.Image = "rbxassetid://6531499566" 
+			script.Parent.Parent.Parent.Parent.Parent.Parent.SoundScript:WaitForChild("ClickSound"):Play()
+		else checkboxToggled = false 
+			script.Parent.Image = "rbxassetid://6531499312"
+			script.Parent.Parent.Parent.Parent.Parent.Parent.SoundScript:WaitForChild("ClickSound"):Play()
+	
+		end
+	
+	
+	
+		Mouse.KeyDown:Connect(function(k)
+			if k == "x" then
+				if checkboxToggled == true then
+					if flying == false then
+						flying = true 
+	
+						script.Parent.Image = "rbxassetid://6531499566"
+	
+						repeat wait() until lplayer and lplayer.Character and lplayer.Character:FindFirstChild('HumanoidRootPart') and lplayer.Character:FindFirstChild('Humanoid')
+						repeat wait() until Mouse
+	
+						local T = lplayer.Character.HumanoidRootPart
+						local CONTROL = {F = 0, B = 0, L = 0, R = 0}
+						local lCONTROL = {F = 0, B = 0, L = 0, R = 0}
+						local SPEED = speedget
+	
+						local function fly()
+							local BG = Instance.new('BodyGyro', T)
+							local BV = Instance.new('BodyVelocity', T)
+							BG.P = 9e4
+							BG.maxTorque = Vector3.new(9e9, 9e9, 9e9)
+							BG.cframe = T.CFrame
+							BV.velocity = Vector3.new(0, 0.1, 0)
+							BV.maxForce = Vector3.new(9e9, 9e9, 9e9)
+							spawn(function()
+								repeat wait()
+									lplayer.Character.Humanoid.PlatformStand = true
+									if CONTROL.L + CONTROL.R ~= 0 or CONTROL.F + CONTROL.B ~= 0 then
+										SPEED = 50
+									elseif not (CONTROL.L + CONTROL.R ~= 0 or CONTROL.F + CONTROL.B ~= 0) and SPEED ~= 0 then
+										SPEED = 0
+									end
+									if (CONTROL.L + CONTROL.R) ~= 0 or (CONTROL.F + CONTROL.B) ~= 0 then
+										BV.velocity = ((workspace.CurrentCamera.CoordinateFrame.lookVector * (CONTROL.F + CONTROL.B)) + ((workspace.CurrentCamera.CoordinateFrame * CFrame.new(CONTROL.L + CONTROL.R, (CONTROL.F + CONTROL.B) * 0.2, 0).p) - workspace.CurrentCamera.CoordinateFrame.p)) * SPEED
+										lCONTROL = {F = CONTROL.F, B = CONTROL.B, L = CONTROL.L, R = CONTROL.R}
+									elseif (CONTROL.L + CONTROL.R) == 0 and (CONTROL.F + CONTROL.B) == 0 and SPEED ~= 0 then
+										BV.velocity = ((workspace.CurrentCamera.CoordinateFrame.lookVector * (lCONTROL.F + lCONTROL.B)) + ((workspace.CurrentCamera.CoordinateFrame * CFrame.new(lCONTROL.L + lCONTROL.R, (lCONTROL.F + lCONTROL.B) * 0.2, 0).p) - workspace.CurrentCamera.CoordinateFrame.p)) * SPEED
+									else
+										BV.velocity = Vector3.new(0, 0.1, 0)
+									end
+									BG.cframe = workspace.CurrentCamera.CoordinateFrame
+								until not flying
+								CONTROL = {F = 0, B = 0, L = 0, R = 0}
+								lCONTROL = {F = 0, B = 0, L = 0, R = 0}
+								SPEED = 0
+								BG:destroy()
+								BV:destroy()
+								lplayer.Character.Humanoid.PlatformStand = false
+							end)
+						end
+						Mouse.KeyDown:connect(function(KEY)
+							if KEY:lower() == 'w' then
+								CONTROL.F = speedfly
+							elseif KEY:lower() == 's' then
+								CONTROL.B = -speedfly
+							elseif KEY:lower() == 'a' then
+								CONTROL.L = -speedfly 
+							elseif KEY:lower() == 'd' then 
+								CONTROL.R = speedfly
+							end
+						end)
+						Mouse.KeyUp:connect(function(KEY)
+							if KEY:lower() == 'w' then
+								CONTROL.F = 0
+							elseif KEY:lower() == 's' then
+								CONTROL.B = 0
+							elseif KEY:lower() == 'a' then
+								CONTROL.L = 0
+							elseif KEY:lower() == 'd' then
+								CONTROL.R = 0
+							end
+						end)
+						fly()
+					else
+						flying = false
+	
+						lplayer.Character.Humanoid.PlatformStand = false
+					end
+	
+				end
+			end
+		end)
+	end)
+end
+coroutine.wrap(EJVO_fake_script)()
+local function EUECGAK_fake_script() -- Gui.applyBtn_2.ScriptLoader 
+	local script = Instance.new('LocalScript', Gui.applyBtn_2)
+
+	
+	local plr = game.Players.LocalPlayer
+	local trueImage = 'rbxassetid://6531499566'
+	
+	function leftClick()
+		
+		local tool = plr.Character:FindFirstChildOfClass('Tool')
+		
+		local selectedSize1 = tostring(script.Parent.Parent.Parent.listFrame['1_Size'].num1.num1input.Text)
+		local selectedSize2 = tostring(script.Parent.Parent.Parent.listFrame['1_Size'].num2.num2input.Text)
+		local selectedSize3 = tostring(script.Parent.Parent.Parent.listFrame['1_Size'].num3.num3input.Text)
+		local selectedTransparency = tostring(script.Parent.Parent.Parent.listFrame['2_Transparency'].transparencyValue.transparencyinput.Text)
+		
+		for i, v in ipairs(tool:GetDescendants()) do
+			if v.Name == 'Handle'
+			then  toolHandle = v 
+			end 
+			if v:IsA('SpecialMesh')
+			then  toolMesh = v
+			end
+			if v:IsA('Decal') 
+			then  toolDecal = v
+			end
+		end
+		
+		if selectedSize1 ~= '' and selectedSize2 ~= '' and selectedSize3 ~= '' then 
+			toolHandle.Size = Vector3.new(selectedSize1, selectedSize2, selectedSize3)
+			else toolHandle.Size = Vector3.new(1,1,1)
+		end
+		
+		if script.Parent.Parent.Parent.listFrame['3_Massless'].Checkbox.Image == trueImage then
+			toolHandle.Massless = true else toolHandle.Massless = false
+		end
+		
+		if selectedTransparency ~= '' then 
+			toolHandle.Transparency = selectedTransparency
+			else 
+			toolHandle.Transparency = 0
+		end
+		
+		if script.Parent.Parent.Parent.listFrame['5_HasDecal'].Checkbox.Image == trueImage and toolDecal ~= nil then
+			toolDecal:Destroy()
+		end
+		
+		if script.Parent.Parent.Parent.listFrame['4_HasMesh'].Checkbox.Image == trueImage and toolMesh ~= nil then
+			toolMesh:Destroy()
+		end
+		
+		if script.Parent.Parent.Parent.listFrame['6_CastShadow'].Checkbox.Image == trueImage and toolHandle ~= nil then
+			toolHandle.CastShadow = true else toolHandle.CastShadow = false
+		end
+		
+		if script.Parent.Parent.Parent.listFrame['7_CanCollide'].Checkbox.Image == trueImage and toolHandle ~= nil then
+			toolHandle.CanCollide = true else toolHandle.CanCollide = false
+		end
+		
+	end
+	
+	
+	script.Parent.MouseButton1Click:Connect(leftClick)
+	
+end
+coroutine.wrap(EUECGAK_fake_script)()
