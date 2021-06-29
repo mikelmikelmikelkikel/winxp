@@ -1,0 +1,652 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local WindowsXP = Instance.new("ScreenGui")
+local MainFrame = Instance.new("Frame")
+local DragFrame = Instance.new("Frame")
+local XPBackground = Instance.new("ImageLabel")
+local Title = Instance.new("TextLabel")
+local Close = Instance.new("ImageButton")
+local Maximize = Instance.new("ImageButton")
+local Minimize = Instance.new("ImageButton")
+local Home = Instance.new("ImageButton")
+local Sidebar = Instance.new("Frame")
+local Arrow = Instance.new("ImageButton")
+local Buttons = Instance.new("Frame")
+local Character = Instance.new("ImageButton")
+local Scripts = Instance.new("ImageButton")
+local HatScripts = Instance.new("ImageButton")
+local Tool = Instance.new("ImageButton")
+local Players = Instance.new("ImageButton")
+local Menus = Instance.new("Frame")
+local Welcome = Instance.new("Frame")
+local Title_2 = Instance.new("TextLabel")
+local Line = Instance.new("ImageLabel")
+local randomizedtext = Instance.new("TextLabel")
+local randomizedimage = Instance.new("ImageLabel")
+local version = Instance.new("TextLabel")
+local invisHolderFrame = Instance.new("Frame")
+local plrLeaderboardTemplate = Instance.new("ImageLabel")
+local plrUser = Instance.new("TextLabel")
+local spectate = Instance.new("ImageButton")
+local teleport = Instance.new("ImageButton")
+local plrImage = Instance.new("ImageLabel")
+
+--Properties:
+
+WindowsXP.Name = "WindowsXP"
+WindowsXP.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+WindowsXP.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+WindowsXP.ResetOnSpawn = false
+
+MainFrame.Name = "MainFrame"
+MainFrame.Parent = WindowsXP
+MainFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+MainFrame.BackgroundTransparency = 1.000
+MainFrame.Position = UDim2.new(0.381033212, 0, 0.235494807, 0)
+MainFrame.Size = UDim2.new(0, 278, 0, 465)
+
+DragFrame.Name = "DragFrame"
+DragFrame.Parent = MainFrame
+DragFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+DragFrame.BackgroundTransparency = 1.000
+DragFrame.Position = UDim2.new(0.101372041, 0, 0, 0)
+DragFrame.Size = UDim2.new(0, 141, 0, 31)
+DragFrame.Visible = false
+
+XPBackground.Name = "XPBackground"
+XPBackground.Parent = MainFrame
+XPBackground.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+XPBackground.BackgroundTransparency = 1.000
+XPBackground.Position = UDim2.new(0.097774975, 0, 0, 0)
+XPBackground.Size = UDim2.new(0.901320159, 0, 1.00000024, 0)
+XPBackground.Image = "http://www.roblox.com/asset/?id=6588897542"
+XPBackground.ScaleType = Enum.ScaleType.Slice
+XPBackground.SliceCenter = Rect.new(20, 250, 20, 250)
+
+Title.Name = "Title"
+Title.Parent = XPBackground
+Title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Title.BackgroundTransparency = 1.000
+Title.Position = UDim2.new(0.0399094559, 0, 0, 0)
+Title.Size = UDim2.new(0, 126, 0, 31)
+Title.ZIndex = 2
+Title.Font = Enum.Font.Arcade
+Title.Text = "Windows XPˡᵒᶦᵗ"
+Title.TextColor3 = Color3.fromRGB(209, 209, 209)
+Title.TextScaled = true
+Title.TextSize = 14.000
+Title.TextWrapped = true
+
+Close.Name = "Close"
+Close.Parent = XPBackground
+Close.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Close.BackgroundTransparency = 1.000
+Close.Position = UDim2.new(0.867222428, 0, 0.00645160675, 0)
+Close.Size = UDim2.new(0, 25, 0, 25)
+Close.ZIndex = 15
+Close.Image = "rbxasset://textures/ui/GuiImagePlaceholder.png"
+Close.ImageTransparency = 1.000
+
+Maximize.Name = "Maximize"
+Maximize.Parent = XPBackground
+Maximize.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Maximize.BackgroundTransparency = 1.000
+Maximize.Position = UDim2.new(0.767448723, 0, 0.00645160675, 0)
+Maximize.Size = UDim2.new(0, 25, 0, 25)
+Maximize.ZIndex = 15
+Maximize.Image = "rbxasset://textures/ui/GuiImagePlaceholder.png"
+Maximize.ImageTransparency = 1.000
+
+Minimize.Name = "Minimize"
+Minimize.Parent = XPBackground
+Minimize.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Minimize.BackgroundTransparency = 1.000
+Minimize.Position = UDim2.new(0.667675018, 0, 0.00645160675, 0)
+Minimize.Size = UDim2.new(0, 25, 0, 25)
+Minimize.ZIndex = 15
+Minimize.Image = "rbxasset://textures/ui/GuiImagePlaceholder.png"
+Minimize.ImageTransparency = 1.000
+
+Home.Name = "Home"
+Home.Parent = XPBackground
+Home.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Home.BackgroundTransparency = 1.000
+Home.Position = UDim2.new(0.567901313, 0, 0.00645160675, 0)
+Home.Size = UDim2.new(0, 25, 0, 25)
+Home.ZIndex = 15
+Home.Image = "rbxasset://textures/ui/GuiImagePlaceholder.png"
+Home.ImageTransparency = 1.000
+
+Sidebar.Name = "Sidebar"
+Sidebar.Parent = MainFrame
+Sidebar.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Sidebar.BackgroundTransparency = 1.000
+Sidebar.ClipsDescendants = true
+Sidebar.Position = UDim2.new(0, 0, 0.0666666701, 0)
+Sidebar.Size = UDim2.new(0, 27, 0, 434)
+
+Arrow.Name = "Arrow"
+Arrow.Parent = Sidebar
+Arrow.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Arrow.BackgroundTransparency = 1.000
+Arrow.Size = UDim2.new(0, 27, 0, 27)
+Arrow.Image = "rbxassetid://6531531599"
+
+Buttons.Name = "Buttons"
+Buttons.Parent = Sidebar
+Buttons.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Buttons.BackgroundTransparency = 1.000
+Buttons.Position = UDim2.new(1, 0, 0.0622119829, 0)
+Buttons.Size = UDim2.new(0, 27, 0, 407)
+
+Character.Name = "Character"
+Character.Parent = Buttons
+Character.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Character.BackgroundTransparency = 1.000
+Character.Position = UDim2.new(0, 0, 0.0221130215, 0)
+Character.Size = UDim2.new(0, 27, 0, 27)
+Character.ZIndex = 0
+Character.Image = "rbxassetid://6531571204"
+
+Scripts.Name = "Scripts"
+Scripts.Parent = Buttons
+Scripts.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Scripts.BackgroundTransparency = 1.000
+Scripts.Position = UDim2.new(0, 0, 0.0884520859, 0)
+Scripts.Size = UDim2.new(0, 27, 0, 27)
+Scripts.ZIndex = 0
+Scripts.Image = "rbxassetid://6535321027"
+
+HatScripts.Name = "HatScripts"
+HatScripts.Parent = Buttons
+HatScripts.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+HatScripts.BackgroundTransparency = 1.000
+HatScripts.Position = UDim2.new(0, 0, 0.154791161, 0)
+HatScripts.Size = UDim2.new(0, 27, 0, 27)
+HatScripts.ZIndex = 0
+HatScripts.Image = "rbxassetid://6539884475"
+
+Tool.Name = "Tool"
+Tool.Parent = Buttons
+Tool.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Tool.BackgroundTransparency = 1.000
+Tool.Position = UDim2.new(0, 0, 0.221130222, 0)
+Tool.Size = UDim2.new(0, 27, 0, 27)
+Tool.ZIndex = 0
+Tool.Image = "rbxassetid://6966948155"
+
+Players.Name = "Players"
+Players.Parent = Buttons
+Players.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Players.BackgroundTransparency = 1.000
+Players.Position = UDim2.new(0, 0, 0.287469298, 0)
+Players.Size = UDim2.new(0, 27, 0, 27)
+Players.ZIndex = 0
+Players.Image = "rbxassetid://6979979899"
+
+Menus.Name = "Menus"
+Menus.Parent = MainFrame
+Menus.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Menus.BackgroundTransparency = 1.000
+Menus.Position = UDim2.new(0.0971223041, 0, 0.0666666701, 0)
+Menus.Size = UDim2.new(0, 250, 0, 434)
+
+Welcome.Name = "Welcome"
+Welcome.Parent = Menus
+Welcome.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Welcome.BackgroundTransparency = 1.000
+Welcome.Size = UDim2.new(0, 250, 0, 434)
+Welcome.ZIndex = 2
+
+Title_2.Name = "Title"
+Title_2.Parent = Welcome
+Title_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Title_2.BackgroundTransparency = 1.000
+Title_2.Size = UDim2.new(0, 250, 0, 36)
+Title_2.ZIndex = 2
+Title_2.Font = Enum.Font.Arcade
+Title_2.Text = "Welcome!"
+Title_2.TextColor3 = Color3.fromRGB(139, 139, 139)
+Title_2.TextScaled = true
+Title_2.TextSize = 14.000
+Title_2.TextWrapped = true
+
+Line.Name = "Line"
+Line.Parent = Welcome
+Line.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Line.BackgroundTransparency = 1.000
+Line.Position = UDim2.new(0.00472570816, 0, 0.0829493105, 0)
+Line.Size = UDim2.new(0, 249, 0, 6)
+Line.Image = "rbxassetid://6531586437"
+
+randomizedtext.Name = "randomizedtext"
+randomizedtext.Parent = Welcome
+randomizedtext.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+randomizedtext.BackgroundTransparency = 1.000
+randomizedtext.Position = UDim2.new(0.040725708, 0, 0.0967741907, 0)
+randomizedtext.Size = UDim2.new(0, 230, 0, 217)
+randomizedtext.ZIndex = 2
+randomizedtext.Font = Enum.Font.Arcade
+randomizedtext.Text = "test"
+randomizedtext.TextColor3 = Color3.fromRGB(139, 139, 139)
+randomizedtext.TextScaled = true
+randomizedtext.TextSize = 14.000
+randomizedtext.TextWrapped = true
+
+randomizedimage.Name = "randomizedimage"
+randomizedimage.Parent = Welcome
+randomizedimage.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+randomizedimage.BackgroundTransparency = 1.000
+randomizedimage.Position = UDim2.new(0.114, 0, 0.59677422, 0)
+randomizedimage.Size = UDim2.new(0, 193, 0, 139)
+randomizedimage.Image = "rbxassetid://374838431"
+
+version.Name = "version"
+version.Parent = Welcome
+version.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+version.BackgroundTransparency = 1.000
+version.Position = UDim2.new(0.772000015, 0, 0.947004735, 0)
+version.Size = UDim2.new(0, 47, 0, 17)
+version.ZIndex = 2
+version.Font = Enum.Font.Arcade
+version.Text = "v1.1"
+version.TextColor3 = Color3.fromRGB(139, 139, 139)
+version.TextScaled = true
+version.TextSize = 14.000
+version.TextWrapped = true
+
+invisHolderFrame.Name = "invisHolderFrame"
+invisHolderFrame.Parent = MainFrame
+invisHolderFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+invisHolderFrame.Size = UDim2.new(0, 100, 0, 100)
+invisHolderFrame.Visible = false
+
+plrLeaderboardTemplate.Name = "plrLeaderboardTemplate"
+plrLeaderboardTemplate.Parent = invisHolderFrame
+plrLeaderboardTemplate.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+plrLeaderboardTemplate.BackgroundTransparency = 1.000
+plrLeaderboardTemplate.Position = UDim2.new(0, 0, 1.72904129e-06, 0)
+plrLeaderboardTemplate.Size = UDim2.new(0, 238, 0, 70)
+plrLeaderboardTemplate.Image = "rbxassetid://6533134734"
+
+plrUser.Name = "plrUser"
+plrUser.Parent = plrLeaderboardTemplate
+plrUser.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+plrUser.BackgroundTransparency = 1.000
+plrUser.Position = UDim2.new(0.340588212, 0, 0, 0)
+plrUser.Size = UDim2.new(0, 149, 0, 22)
+plrUser.ZIndex = 2
+plrUser.Font = Enum.Font.Arcade
+plrUser.Text = "WWWWWWWWWWWWWWWWWWWWW"
+plrUser.TextColor3 = Color3.fromRGB(139, 139, 139)
+plrUser.TextScaled = true
+plrUser.TextSize = 14.000
+plrUser.TextWrapped = true
+
+spectate.Name = "spectate"
+spectate.Parent = plrLeaderboardTemplate
+spectate.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+spectate.BackgroundTransparency = 1.000
+spectate.Position = UDim2.new(0.565245092, 0, 0.314285725, 0)
+spectate.Size = UDim2.new(0, 41, 0, 41)
+spectate.Image = "rbxassetid://7019612109"
+
+teleport.Name = "teleport"
+teleport.Parent = plrLeaderboardTemplate
+teleport.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+teleport.BackgroundTransparency = 1.000
+teleport.Position = UDim2.new(0.796337485, 0, 0.314285725, 0)
+teleport.Size = UDim2.new(0, 41, 0, 41)
+teleport.Image = "rbxassetid://7019625147"
+
+plrImage.Name = "plrImage"
+plrImage.Parent = plrLeaderboardTemplate
+plrImage.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+plrImage.BackgroundTransparency = 1.000
+plrImage.Position = UDim2.new(0.00840336177, 0, 0, 0)
+plrImage.Size = UDim2.new(0, 70, 0, 70)
+plrImage.Image = "rbxasset://textures/ui/GuiImagePlaceholder.png"
+
+-- Scripts:
+
+local function PHZGU_fake_script() -- MainFrame.DragScript 
+	local script = Instance.new('LocalScript', MainFrame)
+
+	script.Name = "DragScript"
+	
+	local UserInputService = game:GetService("UserInputService")
+	
+	local gui = script.Parent
+	
+	local dragging
+	local dragInput
+	local dragStart
+	local startPos
+	
+	local function update(input)
+		local delta = input.Position - dragStart
+		gui.Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+	end
+	
+	gui.DragFrame.InputBegan:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+			dragging = true
+			dragStart = input.Position
+			startPos = gui.Position
+	
+			input.Changed:Connect(function()
+				if input.UserInputState == Enum.UserInputState.End then
+					dragging = false
+				end
+			end)
+		end
+	end)
+	
+	gui.InputChanged:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+			dragInput = input
+		end
+	end)
+	
+	UserInputService.InputChanged:Connect(function(input)
+		if input == dragInput and dragging then
+			update(input)
+		end
+	end)
+end
+coroutine.wrap(PHZGU_fake_script)()
+local function WIDRB_fake_script() -- MainFrame.SoundScript 
+	local script = Instance.new('LocalScript', MainFrame)
+
+	script.Name = "SoundScript"
+	
+	local ClickSound = Instance.new("Sound")
+	ClickSound.Name = "ClickSound"
+	ClickSound.Parent = script
+	ClickSound.SoundId = "rbxassetid://907514098"
+	
+	local ShutdownSound = Instance.new("Sound")
+	ShutdownSound.Name = "ShutdownSound"
+	ShutdownSound.Parent = script
+	ShutdownSound.SoundId = "rbxassetid://784747919"
+	
+	local ErrorSound = Instance.new("Sound")
+	ErrorSound.Name = "ErrorSound"
+	ErrorSound.Parent = script
+	ErrorSound.SoundId = "rbxassetid://3041205264"
+end
+coroutine.wrap(WIDRB_fake_script)()
+local function SFZFM_fake_script() -- Close.CloseScript 
+	local script = Instance.new('LocalScript', Close)
+
+	function leftClick()
+		script.Parent.Parent.Parent.SoundScript:WaitForChild("ShutdownSound"):Play()
+		script.Parent.Parent.Parent.Parent:Destroy()
+	end
+	
+	script.Parent.MouseButton1Click:Connect(leftClick)
+	
+end
+coroutine.wrap(SFZFM_fake_script)()
+local function YKJRAB_fake_script() -- Maximize.MaximizeScript 
+	local script = Instance.new('LocalScript', Maximize)
+
+	function leftClick()
+		script.Parent.Parent.Parent.SoundScript:WaitForChild("ClickSound"):Play()
+		script.Parent.Parent.Parent.Position = UDim2.new(0.01, 0,0.181, 0)
+	end
+	
+	script.Parent.MouseButton1Click:Connect(leftClick)
+	
+end
+coroutine.wrap(YKJRAB_fake_script)()
+local function MWWHTOB_fake_script() -- Minimize.MinimizeScript 
+	local script = Instance.new('LocalScript', Minimize)
+
+	function leftClick()
+		script.Parent.Parent.Parent.SoundScript:WaitForChild("ClickSound"):Play()
+		script.Parent.Parent.Parent.Position = UDim2.new(0.02,-0,0.966,-0)
+	end 
+	
+	script.Parent.MouseButton1Click:Connect(leftClick)
+	
+end
+coroutine.wrap(MWWHTOB_fake_script)()
+local function EWAPVR_fake_script() -- Home.HomeScript 
+	local script = Instance.new('LocalScript', Home)
+
+	local Menus = script.Parent.Parent.Parent:WaitForChild("Menus")
+	
+	function leftClick()
+		script.Parent.Parent.Parent.SoundScript:WaitForChild("ClickSound"):Play()
+		Menus.Welcome.Visible = true
+		Menus.Character.Visible = false
+		Menus.Scripts.Visible = false
+		Menus.HatScripts.Visible = false
+		Menus.AudioLogger.Visible = false
+	end 
+	
+	script.Parent.MouseButton1Click:Connect(leftClick)
+	
+end
+coroutine.wrap(EWAPVR_fake_script)()
+local function XUIUN_fake_script() -- Arrow.OpenScript 
+	local script = Instance.new('LocalScript', Arrow)
+
+	local Open = false
+	
+	function leftClick()
+		script.Parent.Image = "rbxassetid://6531531478"
+		script.Parent.Parent.Parent.SoundScript:WaitForChild("ClickSound"):Play()
+		if Open == false  
+		then script.Parent.Parent.Buttons:TweenPosition(UDim2.new(0, 0,0.062, 0), 'Out', 'Bounce', '.5')
+			Open = true
+		else
+			script.Parent.Image = "rbxassetid://6531531599"
+			script.Parent.Parent.Parent.SoundScript:WaitForChild("ClickSound"):Play()
+			Open = false
+			script.Parent.Parent.Buttons:TweenPosition(UDim2.new(1, 0,0.062, 0), 'Out', 'Bounce', '.5')
+		end
+	end
+	
+	
+	script.Parent.MouseButton1Click:Connect(leftClick)
+	
+end
+coroutine.wrap(XUIUN_fake_script)()
+local function LETZR_fake_script() -- Character.LocalScript 
+	local script = Instance.new('LocalScript', Character)
+
+	local Menus = script.Parent.Parent.Parent.Parent.Menus
+	
+	
+	function leftClick()
+		script.Parent.Parent.Parent.Parent.SoundScript:WaitForChild("ClickSound"):Play()
+		Menus.Welcome.Visible = false
+		Menus.Character.Visible = true
+		Menus.Scripts.Visible = false
+		Menus.HatScripts.Visible = false
+		Menus.ToolConfig.Visible = false
+		Menus.PlayerTP.Visible = false
+		
+	end
+	
+	
+	script.Parent.MouseButton1Click:Connect(leftClick)
+	
+end
+coroutine.wrap(LETZR_fake_script)()
+local function BWCW_fake_script() -- Scripts.LocalScript 
+	local script = Instance.new('LocalScript', Scripts)
+
+	local Menus = script.Parent.Parent.Parent.Parent.Menus
+	
+	
+	function leftClick()
+		script.Parent.Parent.Parent.Parent.SoundScript:WaitForChild("ClickSound"):Play()
+		Menus.Welcome.Visible = false
+		Menus.Character.Visible = false
+		Menus.Scripts.Visible = true
+		Menus.HatScripts.Visible = false
+		Menus.ToolConfig.Visible = false
+		Menus.PlayerTP.Visible = false
+	
+	end
+	
+	
+	script.Parent.MouseButton1Click:Connect(leftClick)
+	
+end
+coroutine.wrap(BWCW_fake_script)()
+local function SVFOBR_fake_script() -- HatScripts.LocalScript 
+	local script = Instance.new('LocalScript', HatScripts)
+
+	local Menus = script.Parent.Parent.Parent.Parent.Menus
+	
+	
+	function leftClick()
+		script.Parent.Parent.Parent.Parent.SoundScript:WaitForChild("ClickSound"):Play()
+		Menus.Welcome.Visible = false
+		Menus.Character.Visible = false
+		Menus.Scripts.Visible = false
+		Menus.HatScripts.Visible = true
+		Menus.ToolConfig.Visible = false
+		Menus.PlayerTP.Visible = false
+		
+	end
+	
+	
+	script.Parent.MouseButton1Click:Connect(leftClick)
+	
+end
+coroutine.wrap(SVFOBR_fake_script)()
+local function VKIQ_fake_script() -- Tool.LocalScript 
+	local script = Instance.new('LocalScript', Tool)
+
+	local Menus = script.Parent.Parent.Parent.Parent.Menus
+	
+	
+	function leftClick()
+		script.Parent.Parent.Parent.Parent.SoundScript:WaitForChild("ClickSound"):Play()
+		Menus.Welcome.Visible = false
+		Menus.Character.Visible = false
+		Menus.Scripts.Visible = false
+		Menus.HatScripts.Visible = false
+		Menus.ToolConfig.Visible = true
+		Menus.PlayerTP.Visible = false
+	
+	end
+	
+	
+	script.Parent.MouseButton1Click:Connect(leftClick)
+	
+end
+coroutine.wrap(VKIQ_fake_script)()
+local function VNRDZEO_fake_script() -- Players.LocalScript 
+	local script = Instance.new('LocalScript', Players)
+
+	local Menus = script.Parent.Parent.Parent.Parent.Menus
+	
+	
+	function leftClick()
+		script.Parent.Parent.Parent.Parent.SoundScript:WaitForChild("ClickSound"):Play()
+		Menus.Welcome.Visible = false
+		Menus.Character.Visible = false
+		Menus.Scripts.Visible = false
+		Menus.HatScripts.Visible = false
+		Menus.ToolConfig.Visible = false
+		Menus.PlayerTP.Visible = true
+		
+	end
+	
+	
+	script.Parent.MouseButton1Click:Connect(leftClick)
+	
+end
+coroutine.wrap(VNRDZEO_fake_script)()
+local function YBPHD_fake_script() -- randomizedtext.randomized; 
+	local script = Instance.new('LocalScript', randomizedtext)
+
+	local Sentences = {"sorry bro im neutered","mikeliscoolerthansomeshit","sorry about saying only biden suppoerts like pepsi i had some bottled cold and it was good", "#### ###", "amogus", "windmill of friendship 卐", "dougie help im bouta bust", "ayo dougie, im from the sah-ooth", "alright Dougie, your time is up", "henry jr and henry cr just chillin on the stairs until roberta kicks jr:(","ahahahaahah pointy plane go BRRRRRRRRRRRRRRR", "420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420 420", "😳 bro?", "cnn fakes their news cause gay", "we had to call the popo to fix a pipe in the pines house today LOL", "buddy is currently on my epik blue gaming chair trying to eat my mcdonalds sandwhich","biden licks little boys","ranch dip","this text is randomly generated lmao","biden is a garbage president","diet coke tastes very good L","cheese", "alpharad makes good content", "follow DietCokeTastesGood on roblox or you're gay", "only biden supporters like pepsi", "f", "windows pog?!??!?", "ivan is cool", "#superstraight", "heterosexual is the best kind of sexual", "alt+f4 pls", "i just ate a Chobani flip S'more yogurt and it was  good", "bottom text", "top text", "69 69 69 69 69 69 69 69 69 69 69 69 69 69 69 69 69 69 69 69 69 69 69 69 69 69 69 69 69 69 69 69 69 69 69 69 69 69 69 69 69 69 69 69 69 69 69 69 69 69 69 69 69 69 69 69 69 69 69 69 69 69 69 69 69 69 69 69 69", "Ivan is eating yummy chips rn and they r very pog", "drippy drippy goku XDXDXD"}
+	while true do 
+		script.Parent.Text = Sentences[math.random(1,#Sentences)]
+		wait(6.9) 
+	end
+	
+	
+end
+coroutine.wrap(YBPHD_fake_script)()
+local function HVDZNV_fake_script() -- randomizedimage.randomized; 
+	local script = Instance.new('LocalScript', randomizedimage)
+
+	local Images = {"rbxassetid://4759703774", "rbxassetid://1505144534", "rbxassetid://2663223907", "rbxassetid://5666154615", "rbxassetid://1639707845", "rbxassetid://1315317859", "rbxassetid://6464730351", "rbxassetid://6494652399", "rbxassetid://6437395672", "rbxassetid://6425796280", "rbxassetid://6075395846", "rbxassetid://5584500731", "rbxassetid://5610942639", "rbxassetid://5160712341", "rbxassetid://6549351471", "rbxassetid://6550268109", "rbxassetid://5655028554", "rbxassetid://4933468761", "rbxassetid://5710497007", "rbxassetid://5741657918", "rbxassetid://5768229099", "rbxassetid://5898091102", "rbxassetid://5952824955", "rbxassetid://5947794308", "rbxassetid://6032841223", "rbxassetid://4806105685", "rbxassetid://6093779811", "rbxassetid://6117941170", "rbxassetid://6116415183", "rbxassetid://6117966004", "rbxassetid://6109937685", "rbxassetid://5460374612", "rbxassetid://6165969352", "rbxassetid://6002645804", "rbxassetid://6197068901", "rbxassetid://6370900679", "rbxassetid://6243555061", "rbxassetid://6251050057", "rbxassetid://374838431", "rbxassetid://6523940003", "rbxassetid://6447447883"}
+	while true do 
+		script.Parent.Image = Images[math.random(1,#Images)]
+		wait(6.9) 
+	end
+end
+coroutine.wrap(HVDZNV_fake_script)()
+local function PKTUU_fake_script() -- plrLeaderboardTemplate.handler 
+	local script = Instance.new('LocalScript', plrLeaderboardTemplate)
+
+	
+	local plr = game.Players.LocalPlayer
+	
+	
+	script.Parent:GetPropertyChangedSignal("Name"):Connect(function()
+		
+		victimName = script.Parent.Name
+		print(victimName)
+		
+		script.Parent.plrImage.Image = 'https://www.roblox.com/bust-thumbnail/image?userId=' .. game.Players[victimName].UserId .. '&width=420&height=420&format=png'
+		
+	end)
+	
+	
+	script.Parent.teleport.MouseButton1Click:connect(function()
+		
+		local desiredPlrPosition = game.Workspace[victimName].HumanoidRootPart.CFrame
+		
+		plr.Character:SetPrimaryPartCFrame(desiredPlrPosition + Vector3.new(0, 0, 3))
+		
+	end)
+	
+	
+	
+	currentlySpectating = false
+	
+	script.Parent.spectate.MouseButton1Click:connect(function()
+		local cam = game.Workspace.CurrentCamera
+		if currentlySpectating == false then 
+			local victomModel = game.Workspace[victimName]
+			cam.CameraSubject = victomModel.Head
+			cam.CameraType = "Follow"
+			currentlySpectating = true
+			
+			for i, v in ipairs(script.Parent.Parent:GetDescendants()) do
+				if v.Name == 'spectate' then v.Image = 'rbxassetid://7019612109'
+			end end
+				
+			script.Parent.spectate.Image = 'rbxassetid://7019611999'
+			
+		else
+			
+			cam.CameraSubject = plr.Character:FindFirstChild("Humanoid")
+			cam.CameraType = "Custom"
+			currentlySpectating = false
+			
+			script.Parent.spectate.Image = 'rbxassetid://7019612109'
+			
+		end
+	
+	end)
+	
+	
+	
+	
+	
+end
+coroutine.wrap(PKTUU_fake_script)()
